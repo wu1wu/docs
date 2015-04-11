@@ -1,0 +1,11 @@
+doctype html
+html
+  include head
+  link(rel='stylesheet', href='css/full.css')
+
+  body
+    a.logo(href="/") CraftML
+    div
+        != typogr(page.html).typogrify()    
+
+    include scripts
