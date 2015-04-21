@@ -12,7 +12,18 @@ block content
                                 img(src='tutorials/#{key}/example.png', width="100%")
                                 div(style="position:relative;top:-40px;background-color:#ffffff; opacity:0.8; font-size:120%;")= key
 
-    .content.blog.col.span_10_of_12   
+    .content.blog.col.span_10_of_12
         h3= page.metadata.title         
         != page.html
+        
+        script(src='/js/jquery-2.1.0.min.js')      
+        script(src="/js/craftml-editor.js")
+        script(type='text/javascript').
+            var options = {            
+                basePath: '',
+                autoResize: 'container'
+            }
+            $('.craftml').each(function(){
+                craftml.edit(this, options)
+            })
       
