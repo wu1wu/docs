@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>translate | Introduction</title>
+        <title>craft | Introduction</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -33,10 +33,10 @@
         
     
     
-    <link rel="next" href="../../language/transform/scale.html" />
+    <link rel="next" href="../../language/module/parameter.html" />
     
     
-    <link rel="prev" href="../../language/transform/index.html" />
+    <link rel="prev" href="../../language/module/index.html" />
     
 
         <!-- head:end -->
@@ -45,7 +45,7 @@
         <script src="http://cdn.craftml.io/craftml-editor.js"></script>
 <!-- body:start -->
         
-    <div class="book" data-level="3.1" data-basepath="../.." data-revision="Wed Aug 19 2015 05:58:47 GMT-0600 (MDT)">
+    <div class="book" data-level="5.1" data-basepath="../.." data-revision="Wed Aug 19 2015 05:58:47 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -340,7 +340,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="3.1" data-path="language/transform/translate.html">
+        <li class="chapter " data-level="3.1" data-path="language/transform/translate.html">
             
                 
                     <a href="../../language/transform/translate.html">
@@ -502,7 +502,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="5.1" data-path="language/module/craft.html">
+        <li class="chapter active" data-level="5.1" data-path="language/module/craft.html">
             
                 
                     <a href="../../language/module/craft.html">
@@ -693,22 +693,34 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="translate">translate</h1>
+                        <h1 id="craft">craft</h1>
 <p><div class="craftml"><!--
 <craft>
-    <cube></cube>
-    <prism t="translate(40 0 0)"></prism>
-    <sphere t="translate(-20 0 0)"></sphere>
-    <cylinder t="translate(0 20 0)"></cylinder>
-    <dome t="translate(0 -40 0)"></dome>
+    <craft name="three-by-three-cubes">
+        <col spacing="2">
+            <repeat n="3">
+                <row spacing="2">
+                    <repeat n="3">
+                        <cube></cube>
+                    </repeat>
+                </row>
+        </col>
+    </craft>
+
+    <three-by-three-cubes></three-by-three-cubes>
 </craft>
 --></div></p>
+<h2 id="importing-a-craft-from-craftml-io">Importing a craft from craftml.io</h2>
+<p><a href="http://craftml.io/" target="_blank">craftml.io</a> is an online platform for the community to
+easily create, edit, and share their crafts. Each craft created on
+<a href="http://craftml.io/" target="_blank">craftml.io</a> has a unique identifier you can use to import
+into your own craft.</p>
+<p>For example, craft <a href="http://craftml.io/4yS59" target="_blank">4yS59</a> is a heart, created by <a href="http://craftml.io/~calebhsu" target="_blank">calebhsu</a>.
+We can import this craft and give it any name, say <em>heart</em>.</p>
 <p><div class="craftml"><!--
 <craft>
-    <row>
-        <cube t="scale(2 2 2)"></cube>
-        <cube t="scale(2)"></cube>
-    </row>
+    <craft name="heart" module="4yS59"/>
+    <heart></heart>
 </craft>
 --></div></p>
 
@@ -721,10 +733,10 @@
         </div>
 
         
-        <a href="../../language/transform/index.html" class="navigation navigation-prev " aria-label="Previous page: Transform"><i class="fa fa-angle-left"></i></a>
+        <a href="../../language/module/index.html" class="navigation navigation-prev " aria-label="Previous page: Module"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../language/transform/scale.html" class="navigation navigation-next " aria-label="Next page: scale"><i class="fa fa-angle-right"></i></a>
+        <a href="../../language/module/parameter.html" class="navigation navigation-next " aria-label="Next page: parameter"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
