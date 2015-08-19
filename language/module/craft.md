@@ -26,7 +26,7 @@ easily create, edit, and share their crafts. Each craft created on
 into your own craft.
 
 For example, craft [4yS59](http://craftml.io/4yS59) is a heart, created by [calebhsu](http://craftml.io/~calebhsu).
-We can import this craft and give it any name, say _heart_.
+You can import this craft and give it any name, say _heart_.
 
 {% craftml %}
 <craft>
