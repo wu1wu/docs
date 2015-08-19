@@ -1,0 +1,36 @@
+# craft
+
+{% craftml %}
+<craft>
+    <craft name="three-by-three-cubes">
+        <col spacing="2">
+            <repeat n="3">
+                <row spacing="2">
+                    <repeat n="3">
+                        <cube></cube>
+                    </repeat>
+                </row>
+        </col>
+    </craft>
+
+    <three-by-three-cubes></three-by-three-cubes>
+</craft>
+{% endcraftml %}
+
+
+## Importing a craft from craftml.io
+
+[craftml.io](http://craftml.io/) is an online platform for the community to
+easily create, edit, and share their crafts. Each craft created on
+[craftml.io](http://craftml.io/) has a unique identifier you can use to import
+into your own craft.
+
+For example, craft [4yS59](http://craftml.io/4yS59) is a heart, created by [calebhsu](http://craftml.io/~calebhsu).
+We can import this craft and give it any name, say _heart_.
+
+{% craftml %}
+<craft>
+    <craft name="heart" module="4yS59"/>
+    <heart></heart>
+</craft>
+{% endcraftml %}

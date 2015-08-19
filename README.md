@@ -1,11 +1,9 @@
 # Introduction
 
-Hi
-
-# Headings
-
 {% craftml %}
 <craft>
-    <cube></cube>
+    <div>
+        Hello <cube></cube>
+    </div>
 </craft>
 {% endcraftml %}
