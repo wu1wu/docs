@@ -57,9 +57,9 @@ The content tag can be used together with other tags.
 </craft>
 {% endcraftml %}
 
-## Named Contents Tags
+## Named content tags
 
-Content tags can be individually named to take on different roles.
+Content tags can be individually named to take on distinct roles.
 
 {% craftml %}
 <craft>
