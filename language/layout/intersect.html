@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>stack | Introduction</title>
+        <title>intersect | Introduction</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -33,10 +33,10 @@
         
     
     
-    <link rel="next" href="../../language/structure/repeat.html" />
+    <link rel="next" href="../../language/module/index.html" />
     
     
-    <link rel="prev" href="../../language/structure/col.html" />
+    <link rel="prev" href="../../language/layout/cut.html" />
     
 
         <!-- head:end -->
@@ -45,7 +45,7 @@
         <script src="http://cdn.craftml.io/craftml-editor.js"></script>
 <!-- body:start -->
         
-    <div class="book" data-level="2.3" data-basepath="../.." data-revision="Sat Aug 22 2015 07:24:12 GMT-0600 (MDT)">
+    <div class="book" data-level="4.5" data-basepath="../.." data-revision="Sat Aug 22 2015 07:24:12 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -289,7 +289,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.3" data-path="language/structure/stack.html">
+        <li class="chapter " data-level="2.3" data-path="language/structure/stack.html">
             
                 
                     <a href="../../language/structure/stack.html">
@@ -571,7 +571,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.5" data-path="language/layout/intersect.html">
+        <li class="chapter active" data-level="4.5" data-path="language/layout/intersect.html">
             
                 
                     <a href="../../language/layout/intersect.html">
@@ -798,16 +798,41 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="stack">stack</h1>
+                        <h1 id="intersect">intersect</h1>
+<p>Before</p>
 <p><div class="craftml"><!--
 <craft>
-    <stack>
-        <cube></cube>
-        <cube></cube>
-        <cube></cube>
-        <cube></cube>
-        <cube></cube>
-    </stack>
+    <craft name="four-cubes">
+        <row spacing="5" t="sizeY(60)">
+            <cube/><cube/><cube/><cube/>
+        </row>
+    </craft>
+
+    <g l="centerXY()">
+        <four-cubes/>
+        <cylinder t="size(60 60 10)"
+            style="opacity:0.5;">
+        </cylinder>
+    </g>
+
+</craft>
+--></div></p>
+<p><code>select(four-cubes) intersect(cylinder)</code></p>
+<p><div class="craftml"><!--
+<craft>
+    <craft name="four-cubes">
+        <row spacing="5" t="sizeY(60)">
+            <cube/><cube/><cube/><cube/>
+        </row>
+    </craft>
+
+    <g l="centerXY() select(four-cubes) intersect(cylinder)">
+        <four-cubes/>
+        <cylinder t="size(60 60 10)"
+            style="opacity:0.5;">
+        </cylinder>
+    </g>
+
 </craft>
 --></div></p>
 
@@ -820,10 +845,10 @@
         </div>
 
         
-        <a href="../../language/structure/col.html" class="navigation navigation-prev " aria-label="Previous page: col"><i class="fa fa-angle-left"></i></a>
+        <a href="../../language/layout/cut.html" class="navigation navigation-prev " aria-label="Previous page: cut"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../language/structure/repeat.html" class="navigation navigation-next " aria-label="Next page: repeat"><i class="fa fa-angle-right"></i></a>
+        <a href="../../language/module/index.html" class="navigation navigation-next " aria-label="Next page: Module"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
