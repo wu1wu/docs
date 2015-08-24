@@ -2,7 +2,7 @@
 
 {% craftml %}
 <craft>
-    <row spacing="5">
+    <row spacing="10">
         <cube></cube>
         <cylinder></cylinder>
         <sphere></sphere>

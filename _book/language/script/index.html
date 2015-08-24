@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>repeat | Introduction</title>
+        <title>Script | Introduction</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -33,10 +33,10 @@
         
     
     
-    <link rel="next" href="../../language/transform/index.html" />
+    <link rel="next" href="../../language/script/this.html" />
     
     
-    <link rel="prev" href="../../language/structure/stack.html" />
+    <link rel="prev" href="../../language/html/headings.html" />
     
 
         <!-- head:end -->
@@ -45,7 +45,7 @@
         <script src="http://cdn.craftml.io/craftml-editor.js"></script>
 <!-- body:start -->
         
-    <div class="book" data-level="2.4" data-basepath="../.." data-revision="Sun Aug 23 2015 19:49:04 GMT-0600 (MDT)">
+    <div class="book" data-level="8" data-basepath="../.." data-revision="Sun Aug 23 2015 19:49:04 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -334,7 +334,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.4" data-path="language/structure/repeat.html">
+        <li class="chapter " data-level="2.4" data-path="language/structure/repeat.html">
             
                 
                     <a href="../../language/structure/repeat.html">
@@ -789,7 +789,7 @@
             
         </li>
     
-        <li class="chapter " data-level="8" data-path="language/script/index.html">
+        <li class="chapter active" data-level="8" data-path="language/script/index.html">
             
                 
                     <a href="../../language/script/index.html">
@@ -930,37 +930,21 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="repeat">repeat</h1>
-<p><div class="craftml"><!--
-<craft>
-    <row>
-        <repeat n="5">
-            <cube></cube>
-        </repeat>
-    </row>
-</craft>
---></div></p>
-<p><div class="craftml"><!--
-<craft>
-    <row>
-        <repeat each="i" in="{{ [1,2,3] }}">
-            <cube t="scale({{i}})"></cube>
-        </repeat>
-    </row>
-</craft>
---></div></p>
-<p><div class="craftml"><!--
-<craft>
-    <script>
-        $scope.is = [1,2,3]
-    </script>
-    <row>
-        <repeat each="i" in="{{ is }}">
-            <cube t="scale({{i}})"></cube>
-        </repeat>
-    </row>
-</craft>
---></div></p>
+                        <h1 id="script">script</h1>
+<p>CraftML&apos;s rendering engine takes a source DOM and transforms it a solid DOM.
+The <code>&lt;script&gt;</code>tag makes it possible to define custom transformations.</p>
+<p>Three special variables are made available in a script block.</p>
+<ul>
+<li><code>this</code> the current solid element</li>
+<li><code>$scope</code> the scope in which this solid element is constructed</li>
+<li><code>$</code> the query function for searching, navigating, and manipulating the solid DOM</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="d">
+    <span class="hljs-keyword">this</span>
+    $<span class="hljs-keyword">scope</span>
+    $
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
 
                     
                     </section>
@@ -971,10 +955,10 @@
         </div>
 
         
-        <a href="../../language/structure/stack.html" class="navigation navigation-prev " aria-label="Previous page: stack"><i class="fa fa-angle-left"></i></a>
+        <a href="../../language/html/headings.html" class="navigation navigation-prev " aria-label="Previous page: headings"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../language/transform/index.html" class="navigation navigation-next " aria-label="Next page: Transform"><i class="fa fa-angle-right"></i></a>
+        <a href="../../language/script/this.html" class="navigation navigation-next " aria-label="Next page: this"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

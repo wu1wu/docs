@@ -7,6 +7,8 @@
 {% endcraftml %}
 
 
+## `size="integer integer integer"`
+
 {% craftml %}
 <craft>
     <cube size="40 20 10"></cube>

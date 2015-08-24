@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>repeat | Introduction</title>
+        <title>div | Introduction</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -33,10 +33,10 @@
         
     
     
-    <link rel="next" href="../../language/transform/index.html" />
+    <link rel="next" href="../../language/html/headings.html" />
     
     
-    <link rel="prev" href="../../language/structure/stack.html" />
+    <link rel="prev" href="../../language/html/index.html" />
     
 
         <!-- head:end -->
@@ -45,7 +45,7 @@
         <script src="http://cdn.craftml.io/craftml-editor.js"></script>
 <!-- body:start -->
         
-    <div class="book" data-level="2.4" data-basepath="../.." data-revision="Sun Aug 23 2015 19:49:04 GMT-0600 (MDT)">
+    <div class="book" data-level="7.1" data-basepath="../.." data-revision="Sun Aug 23 2015 19:49:04 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -334,7 +334,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.4" data-path="language/structure/repeat.html">
+        <li class="chapter " data-level="2.4" data-path="language/structure/repeat.html">
             
                 
                     <a href="../../language/structure/repeat.html">
@@ -754,7 +754,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="7.1" data-path="language/html/div.html">
+        <li class="chapter active" data-level="7.1" data-path="language/html/div.html">
             
                 
                     <a href="../../language/html/div.html">
@@ -930,35 +930,38 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="repeat">repeat</h1>
+                        <h1 id="div">div</h1>
 <p><div class="craftml"><!--
 <craft>
-    <row>
-        <repeat n="5">
-            <cube></cube>
-        </repeat>
-    </row>
+    <div>
+        <repeat n="5"><cube/></repeat>
+        Hello
+    </div>
+</craft>
+--></div></p>
+<h2 id="div-style">div style</h2>
+<p><div class="craftml"><!--
+<craft>
+    <div style="width: 50;">
+        <repeat n="5"><cube/></repeat>
+        Hello
+    </div>
 </craft>
 --></div></p>
 <p><div class="craftml"><!--
 <craft>
-    <row>
-        <repeat each="i" in="{{ [1,2,3] }}">
-            <cube t="scale({{i}})"></cube>
-        </repeat>
-    </row>
+    <div style="width: 50; text-align:right; ">
+        <repeat n="5"><cube/></repeat>
+        Hello
+    </div>
 </craft>
 --></div></p>
 <p><div class="craftml"><!--
 <craft>
-    <script>
-        $scope.is = [1,2,3]
-    </script>
-    <row>
-        <repeat each="i" in="{{ is }}">
-            <cube t="scale({{i}})"></cube>
-        </repeat>
-    </row>
+    <div style="width: 50; text-align:center; ">
+        <repeat n="5"><cube/></repeat>
+        Hello
+    </div>
 </craft>
 --></div></p>
 
@@ -971,10 +974,10 @@
         </div>
 
         
-        <a href="../../language/structure/stack.html" class="navigation navigation-prev " aria-label="Previous page: stack"><i class="fa fa-angle-left"></i></a>
+        <a href="../../language/html/index.html" class="navigation navigation-prev " aria-label="Previous page: HTML"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../language/transform/index.html" class="navigation navigation-next " aria-label="Next page: Transform"><i class="fa fa-angle-right"></i></a>
+        <a href="../../language/html/headings.html" class="navigation navigation-next " aria-label="Next page: headings"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

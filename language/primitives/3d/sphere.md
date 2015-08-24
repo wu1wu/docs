@@ -7,9 +7,11 @@
 {% endcraftml %}
 
 
+## `radius="float"`
+
 {% craftml %}
 <craft>
-    <row>
+    <row spacing="10">
         <sphere radius="5"></sphere>
         <sphere radius="10"></sphere>
         <sphere radius="15"></sphere>
