@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>repeat | Introduction</title>
+        <title>this | Introduction</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -33,10 +33,8 @@
         
     
     
-    <link rel="next" href="../../language/transform/index.html" />
     
-    
-    <link rel="prev" href="../../language/structure/stack.html" />
+    <link rel="prev" href="../../language/script/index.html" />
     
 
         <!-- head:end -->
@@ -45,7 +43,7 @@
         <script src="http://cdn.craftml.io/craftml-editor.js"></script>
 <!-- body:start -->
         
-    <div class="book" data-level="2.4" data-basepath="../.." data-revision="Sun Aug 23 2015 19:49:04 GMT-0600 (MDT)">
+    <div class="book" data-level="8.1" data-basepath="../.." data-revision="Sun Aug 23 2015 19:49:04 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -334,7 +332,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.4" data-path="language/structure/repeat.html">
+        <li class="chapter " data-level="2.4" data-path="language/structure/repeat.html">
             
                 
                     <a href="../../language/structure/repeat.html">
@@ -805,7 +803,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="8.1" data-path="language/script/this.html">
+        <li class="chapter active" data-level="8.1" data-path="language/script/this.html">
             
                 
                     <a href="../../language/script/this.html">
@@ -930,37 +928,164 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="repeat">repeat</h1>
-<p><div class="craftml"><!--
-<craft>
-    <row>
-        <repeat n="5">
-            <cube></cube>
-        </repeat>
-    </row>
-</craft>
---></div></p>
-<p><div class="craftml"><!--
-<craft>
-    <row>
-        <repeat each="i" in="{{ [1,2,3] }}">
-            <cube t="scale({{i}})"></cube>
-        </repeat>
-    </row>
-</craft>
---></div></p>
-<p><div class="craftml"><!--
-<craft>
-    <script>
-        $scope.is = [1,2,3]
-    </script>
-    <row>
-        <repeat each="i" in="{{ is }}">
-            <cube t="scale({{i}})"></cube>
-        </repeat>
-    </row>
-</craft>
---></div></p>
+                        <h1 id="this">this</h1>
+<p><code>this</code> refers to the solid element that contains the script block.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">g</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;foo&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">cube</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">cube</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
+        this<span class="hljs-class">.id</span>
+        <span class="hljs-comment">// =&gt; foo</span>
+
+        this<span class="hljs-class">.children</span>
+        <span class="hljs-comment">// =&gt; [cube]</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
+</code></pre>
+<p><code>this.children</code> only contains solid elements constructed right <em>before</em> the script block; it does not contain solid elements <em>after</em> the script block that have not yet been constructed.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">g</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;foo&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">cube</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">cube</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
+        this<span class="hljs-class">.id</span>
+        <span class="hljs-comment">// =&gt; foo</span>
+
+        this<span class="hljs-class">.children</span>
+        <span class="hljs-comment">// =&gt; [cube]</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">sphere</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">sphere</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
+</code></pre>
+<p>In addition, source elements that do not generate solids will not be parts of  <code>this.children</code>.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">g</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;foo&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">parameter</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;foo&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;int&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">craft</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;bar&quot;</span> <span class="hljs-attribute">module</span>=<span class="hljs-value">&quot;XYZ123&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">cube</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">cube</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
+        this<span class="hljs-class">.id</span>
+        <span class="hljs-comment">// =&gt; foo</span>
+
+        this<span class="hljs-class">.children</span>
+        <span class="hljs-comment">// =&gt; [cube]</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">sphere</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">sphere</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
+</code></pre>
+<h2 id="adding-elements">Adding Elements</h2>
+<pre><code class="lang-html">// source DOM
+<span class="hljs-tag">&lt;<span class="hljs-title">g</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">cube</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">cube</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
+        this.<span class="hljs-function"><span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-string">&apos;&lt;sphere&gt;&lt;/sphere&gt;&apos;</span>)</span></span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
+
+// =&gt; solid DOM
+<span class="hljs-tag">&lt;<span class="hljs-title">g</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">cube</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">cube</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">sphere</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">sphere</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
+</code></pre>
+<p>The transformation between a source element and a solid element is not necessarily an one-to-one relationship. A source element may generate one or more solid elements or even none at all.</p>
+<pre><code class="lang-html">// source DOM
+<span class="hljs-tag">&lt;<span class="hljs-title">parameter</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;a&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;int&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">craft</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;bar&quot;</span> <span class="hljs-attribute">module</span>=<span class="hljs-value">&quot;craft-bar&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">cube</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">cube</span>&gt;</span>
+
+// =&gt; solid DOM
+<span class="hljs-tag">&lt;<span class="hljs-title">cube</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">cube</span>&gt;</span>
+</code></pre>
+<p>Similarly, a script tag can add more than one solid elements to the solid DOM.</p>
+<pre><code class="lang-html">// source DOM
+<span class="hljs-tag">&lt;<span class="hljs-title">g</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">sphere</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">sphere</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
+        this.<span class="hljs-function"><span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-string">&apos;&lt;cube&gt;&lt;/cube&gt;&apos;</span>)</span></span>
+        this.<span class="hljs-function"><span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-string">&apos;&lt;cube&gt;&lt;/cube&gt;&apos;</span>)</span></span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
+
+// =&gt; solid DOM
+<span class="hljs-tag">&lt;<span class="hljs-title">g</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">sphere</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">sphere</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">cube</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">cube</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">cube</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">cube</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
+</code></pre>
+<p>Or it can add none at all.</p>
+<pre><code class="lang-html">// source DOM
+<span class="hljs-tag">&lt;<span class="hljs-title">g</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">sphere</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">sphere</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="1c">
+        <span class="hljs-comment">// does nothing</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
+
+// =&gt; solid DOM
+<span class="hljs-tag">&lt;<span class="hljs-title">g</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">sphere</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">sphere</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
+</code></pre>
+<p>Here are more examples.</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// add a cube</span>
+<span class="hljs-keyword">this</span>.add(<span class="hljs-string">&apos;&lt;cube&gt;&lt;/cube&gt;&apos;</span>)
+
+<span class="hljs-comment">// add a sphere</span>
+<span class="hljs-keyword">this</span>.add(<span class="hljs-string">&apos;&lt;sphere&gt;&lt;/sphere&gt;&apos;</span>)
+
+<span class="hljs-comment">// add a cube with parameters</span>
+<span class="hljs-keyword">this</span>.add(<span class="hljs-string">&apos;&lt;cube size=&quot;10 5 5&quot;&gt;&lt;/cube&gt;&apos;</span>)
+
+<span class="hljs-comment">// add a cube with template parameters</span>
+<span class="hljs-keyword">this</span>.add(<span class="hljs-string">&apos;&lt;cube size=&quot;{{s}} 5 5&quot;&gt;&lt;/cube&gt;&apos;</span>)
+
+<span class="hljs-comment">// add multiple cubes</span>
+<span class="hljs-keyword">this</span>.add(<span class="hljs-string">&apos;&lt;cube/&gt;&lt;cube/&gt;&lt;cube/&gt;&lt;cube/&gt;&apos;</span>)
+</code></pre>
+<h3 id="asynchronous-construction">Asynchronous Construction</h3>
+<p>Solid elements are constructed <em>asynchronously</em>. Why? Concurrency. Some elements may wait for files to be downloaded over the network. While waiting, the rendering engine can start working on constructing other elements, rather than being stuck waiting.</p>
+<p>Consider the example below. Suppose the construction of <code>&lt;remote-object&gt;</code> involves downloading an STL file, which takes 1 second. The call to <code>this.add</code> will return immediately instead of blocking for 1 second. If we try to access the size of <code>&lt;remote-object&gt;</code> in the next line, we will get <code>undefined</code> because the object is still being constructed.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">g</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">cube</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">cube</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
+        this.<span class="hljs-function"><span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-string">&apos;&lt;remote-object&gt;&lt;/remote-object&gt;&apos;</span>)</span></span>
+        <span class="hljs-comment">// return immediately</span>
+
+        this<span class="hljs-class">.children</span>[<span class="hljs-number">1</span>]<span class="hljs-class">.size</span>
+        <span class="hljs-comment">// =&gt; undefined</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
+</code></pre>
+<p>What if we need to access the size or location of <code>&lt;remote-object&gt;</code>? We can do that in the next script block like this.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">g</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">cube</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">cube</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
+        this.<span class="hljs-function"><span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-string">&apos;&lt;remote-object&gt;&lt;/remote-object&gt;&apos;</span>)</span></span>
+        <span class="hljs-comment">// return immediately</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
+        this<span class="hljs-class">.children</span>[<span class="hljs-number">1</span>]<span class="hljs-class">.size</span>
+        <span class="hljs-comment">// =&gt; {x: 10, y:10, z:10}</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
+</code></pre>
+<p>The rendering engine ensures that all the pending child elements will get fully constructed before executing a new script block. In other words, solid elements added in one script block may not necessarily be fully constructed within the same script block, but will certainly be fully constructed before the next script block begins.</p>
+<p>Q: Are transformation and layout methods also asynchronous?</p>
+<p>No. All transformation and layout methods are synchronous because they are compute-bound operations (matrix mulplitcations ... etc.) and do not involve I/O operations.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">g</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">cube</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">cube</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
+        <span class="hljs-tag">var</span> c = this<span class="hljs-class">.children</span>[<span class="hljs-number">0</span>]
+        <span class="hljs-comment">// =&gt; c === &lt;cube&gt;</span>
+
+        c<span class="hljs-class">.size</span><span class="hljs-class">.x</span>
+        <span class="hljs-comment">// =&gt; 10</span>
+
+        c.<span class="hljs-function"><span class="hljs-title">scale</span><span class="hljs-params">(<span class="hljs-number">2</span>)</span></span>
+
+        c<span class="hljs-class">.size</span><span class="hljs-class">.x</span>
+        <span class="hljs-comment">// =&gt; 20 (the effect is immediate)</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
+</code></pre>
 
                     
                     </section>
@@ -971,10 +1096,8 @@
         </div>
 
         
-        <a href="../../language/structure/stack.html" class="navigation navigation-prev " aria-label="Previous page: stack"><i class="fa fa-angle-left"></i></a>
+        <a href="../../language/script/index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Script"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../../language/transform/index.html" class="navigation navigation-next " aria-label="Next page: Transform"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
