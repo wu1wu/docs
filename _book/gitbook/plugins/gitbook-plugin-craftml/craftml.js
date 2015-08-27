@@ -1,11 +1,11 @@
 require(["gitbook", "jquery"], function(gitbook, $) {
 
   var init = function(){
-    $('.craftml').each(function(){    
+    $('.craftml').each(function(){
         var options = {
             autoResize: 'container'
         }
-        craftml.edit(this, options)
+        Craftml.IDE.edit(this, options)
     })
   }
 
