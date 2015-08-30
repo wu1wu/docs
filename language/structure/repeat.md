@@ -25,7 +25,7 @@
 {% craftml %}
 <craft>
     <script>
-        $scope.is = [1,2,3]
+        $params.is = [1,2,3]
     </script>
     <row>
         <repeat each="i" in="{: is :}">
