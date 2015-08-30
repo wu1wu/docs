@@ -3,7 +3,7 @@
 {% craftml %}
 <craft>
     <craft name="n-by-n">
-        <parameter name="n" type="int" default="3"/>
+        <param name="n" type="int" default="3"/>
         <col spacing="2">
             <repeat n="{:n:}">
             <row spacing="2">

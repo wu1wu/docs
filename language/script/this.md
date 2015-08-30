@@ -35,7 +35,7 @@ In addition, source elements that do not generate solids will not be parts of  `
 
 ```html
 <g id="foo">
-	<parameter name="foo" type="int"/>
+	<param name="foo" type="int"/>
 	<craft name="bar" module="XYZ123"/>
 	<cube></cube>
 	<script>
@@ -72,7 +72,7 @@ The transformation between a source element and a solid element is not necessari
 
 ```html
 // source DOM
-<parameter name="a" type="int"/>
+<param name="a" type="int"/>
 <craft name="bar" module="craft-bar"/>
 <cube></cube>
 
