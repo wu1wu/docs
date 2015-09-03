@@ -45,7 +45,7 @@
         <script src="http://cdn.craftml.io/craftml-all-latest.js"></script>
 <!-- body:start -->
         
-    <div class="book" data-level="2.4" data-basepath="../.." data-revision="Sun Aug 30 2015 12:00:14 GMT-0600 (MDT)">
+    <div class="book" data-level="2.4" data-basepath="../.." data-revision="Thu Sep 03 2015 11:11:08 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -943,8 +943,8 @@
 <p><div class="craftml"><!--
 <craft>
     <row>
-        <repeat each="i" in="{{ [1,2,3] }}">
-            <cube t="scale({{i}})"></cube>
+        <repeat each="i" in="{: [1,2,3] :}">
+            <cube t="scale({:i:})"></cube>
         </repeat>
     </row>
 </craft>
@@ -955,8 +955,8 @@
         $params.is = [1,2,3]
     </script>
     <row>
-        <repeat each="i" in="{{ is }}">
-            <cube t="scale({{i}})"></cube>
+        <repeat each="i" in="{: is :}">
+            <cube t="scale({:i:})"></cube>
         </repeat>
     </row>
 </craft>
@@ -988,6 +988,10 @@
 
     
     <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>
