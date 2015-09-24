@@ -6,7 +6,8 @@ Change the position of a solid
 <craft>
 
     <cube style="color:pink;"/>
-    <cube t="position(30 30 30)" style="color:red;"/>
+    <cube t="position(30 30 -5)"
+          style="color:red;"/>
 
 </craft>
 {% endcraftml %}
@@ -18,7 +19,8 @@ Change the position of a solid
 <craft>
 
     <cube style="color:pink;"/>
-    <cube t="positionX(30)" style="color:red;"/>
+    <cube t="positionX(30)"
+          style="color:red;"/>
 
 </craft>
 {% endcraftml %}
@@ -29,7 +31,8 @@ Change the position of a solid
 <craft>
 
     <cube style="color:pink;"/>
-    <cube t="positionY(30)" style="color:red;"/>
+    <cube t="positionY(30)"
+          style="color:red;"/>
 
 </craft>
 {% endcraftml %}
@@ -40,7 +43,8 @@ Change the position of a solid
 <craft>
 
     <cube style="color:pink;"/>
-    <cube t="positionZ(30)" style="color:red;"/>
+    <cube t="positionZ(30)"
+          style="color:red;"/>
 
 </craft>
 {% endcraftml %}

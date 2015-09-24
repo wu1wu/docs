@@ -2,11 +2,11 @@
 
 {% craftml %}
 <craft>
-    <cube></cube>
-    <prism t="translate(40 0 0)"></prism>
-    <sphere t="translate(-20 0 0)"></sphere>
-    <cylinder t="translate(0 20 0)"></cylinder>
-    <dome t="translate(0 -40 0)"></dome>
+    <cube/>
+    <prism t="translate(40 0 0)"/>
+    <sphere t="translate(-20 0 0)"/>
+    <cylinder t="translate(0 20 0)"/>
+    <dome t="translate(0 -40 0)"/>
 </craft>
 {% endcraftml %}
 
