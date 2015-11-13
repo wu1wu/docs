@@ -6,7 +6,7 @@ function printVersions(){
     console.debug(string)
 }
 
-printVersions()
+// printVersions()
 
 env = {}
 

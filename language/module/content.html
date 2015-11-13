@@ -8,7 +8,7 @@
         <title>content | Introduction</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.2.0">
+        <meta name="generator" content="GitBook 2.4.3">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -25,11 +25,11 @@
         
     
         
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
         
-        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
         
     
     
@@ -46,25 +46,25 @@
         <!-- head:end -->
     </head>
     <body>
-        <script src="http://cdn.craftml.io/craftml-all-staging.js"></script>
-<!-- body:start -->
+        <!-- body:start -->
         
-    <div class="book" data-level="5.3" data-basepath="../.." data-revision="Thu Sep 24 2015 16:33:21 GMT-0600 (MDT)">
+    <div class="book" data-level="5.3" data-basepath="../.." data-revision="Thu Nov 12 2015 21:46:45 GMT-0700 (MST)">
     
 
 <div class="book-summary">
-    <div class="book-search">
+    <div class="book-search" role="search">
         <input type="text" placeholder="Type to search" class="form-control" />
     </div>
-    <ul class="summary">
-        
-        
-        
-        
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
 
-        
+            
 
-        
+            
     
         <li class="chapter " data-level="0" data-path="index.html">
             
@@ -831,20 +831,21 @@
     
 
 
-        
-        <li class="divider"></li>
-        <li>
-            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-                Published with GitBook
-            </a>
-        </li>
-        
-    </ul>
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
 </div>
 
     <div class="book-body">
         <div class="body-inner">
-            <div class="book-header">
+            <div class="book-header" role="navigation">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
     <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
@@ -928,87 +929,21 @@
     </h1>
 </div>
 
-            <div class="page-wrapper" tabindex="-1">
+            <div class="page-wrapper" tabindex="-1" role="main">
                 <div class="page-inner">
                 
                 
                     <section class="normal" id="section-">
                     
                         <h1 id="content">content</h1>
-<p><div class="craftml"><!--
-<craft>
-    <craft name="n-by-n">
-        <param name="n" type="int" default="3"/>
-        <col spacing="2">
-            <repeat n="{{n}}">
-            <row spacing="2">
-                <repeat n="{{n}}">
-                    <content></content>
-                </repeat>
-            </row>
-        </col>
-    </craft>
-
-    <n-by-n n="3">
-        <!-- Try it! Change <cube/> to <sphere/> -- >
-        <cube/>
-    </n-by-n>
-</craft>
---></div></p>
+<p><iframe src="http://localhost:5000/v?content=%0A%3Ccraft%3E%0A%20%20%3Ccraft%20name%3D%22n-by-n%22%3E%0A%20%20%20%20%3Cparam%20name%3D%22n%22%20type%3D%22int%22%20default%3D%223%22%2F%3E%0A%20%20%20%20%3Ccol%20spacing%3D%222%22%3E%0A%20%20%20%20%20%20%3Crepeat%20n%3D%22%7B%7Bn%7D%7D%22%3E%0A%20%20%20%20%20%20%20%20%3Crow%20spacing%3D%222%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Crepeat%20n%3D%22%7B%7Bn%7D%7D%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ccontent%3E%3C%2Fcontent%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2Frepeat%3E%0A%20%20%20%20%20%20%20%20%3C%2Frow%3E%0A%20%20%20%20%20%20%3C%2Frepeat%3E%0A%20%20%20%20%3C%2Fcol%3E%0A%20%20%3C%2Fcraft%3E%0A%0A%20%20%3Cn-by-n%20n%3D%223%22%3E%0A%20%20%20%20%3C!--%20Try%20it!%20Change%20%3Ccube%2F%3E%20to%20%3Csphere%2F%3E%20--%3E%0A%20%20%20%20%3Ccube%2F%3E%0A%20%20%3C%2Fn-by-n%3E%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
 <p>The content tag can be used more than one time.</p>
-<p><div class="craftml"><!--
-<craft>
-    <craft name="triple">
-        <row>
-            <content></content>
-            <content></content>
-            <content></content>
-        </row>
-    </craft>
-
-    <triple>
-        <cube></cube>
-    </triple>
-</craft>
---></div></p>
+<p><iframe src="http://localhost:5000/v?content=%0A%3Ccraft%3E%0A%20%20%3Ccraft%20name%3D%22triple%22%3E%0A%20%20%20%20%3Crow%3E%0A%20%20%20%20%20%20%3Ccontent%3E%3C%2Fcontent%3E%0A%20%20%20%20%20%20%3Ccontent%3E%3C%2Fcontent%3E%0A%20%20%20%20%20%20%3Ccontent%3E%3C%2Fcontent%3E%0A%20%20%20%20%3C%2Frow%3E%0A%20%20%3C%2Fcraft%3E%0A%0A%20%20%3Ctriple%3E%0A%20%20%20%20%3Ccube%3E%3C%2Fcube%3E%0A%20%20%3C%2Ftriple%3E%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
 <p>The content tag can be used together with other tags.</p>
-<p><div class="craftml"><!--
-<craft>
-    <craft name="sandwich">
-        <stack>
-            <cube></cube>
-            <content></content>
-            <cube></cube>
-        </stack>
-    </craft>
-
-    <sandwich>
-        <sphere></sphere>
-    </sandwich>
-</craft>
---></div></p>
+<p><iframe src="http://localhost:5000/v?content=%0A%3Ccraft%3E%0A%20%20%3Ccraft%20name%3D%22sandwich%22%3E%0A%20%20%20%20%3Cstack%3E%0A%20%20%20%20%20%20%3Ccube%3E%3C%2Fcube%3E%0A%20%20%20%20%20%20%3Ccontent%3E%3C%2Fcontent%3E%0A%20%20%20%20%20%20%3Ccube%3E%3C%2Fcube%3E%0A%20%20%20%20%3C%2Fstack%3E%0A%20%20%3C%2Fcraft%3E%0A%0A%20%20%3Csandwich%3E%0A%20%20%20%20%3Csphere%3E%3C%2Fsphere%3E%0A%20%20%3C%2Fsandwich%3E%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
 <h2 id="named-content-tags">Named content tags</h2>
 <p>Content tags can be individually named to take on distinct roles.</p>
-<p><div class="craftml"><!--
-<craft>
-    <craft name="sandwich">
-        <stack>
-            <content name="top"/>
-            <content></content>
-            <content name="bottom">
-        </stack>
-    </craft>
-    <sandwich>
-        <top>
-            <cube size="5 5 2"></cube>
-        </top>
-        <bottom>
-            <cube size="20 20 2"></cube>
-        </bottom>
-        <cylinder t="scale(1 1 0.5)"></cylinder>
-    </sandwich>
-</craft>
---></div></p>
+<p><iframe src="http://localhost:5000/v?content=%0A%3Ccraft%3E%0A%20%20%3Ccraft%20name%3D%22sandwich%22%3E%0A%20%20%20%20%3Cstack%3E%0A%20%20%20%20%20%20%3Ccontent%20name%3D%22top%22%2F%3E%0A%20%20%20%20%20%20%3Ccontent%3E%3C%2Fcontent%3E%0A%20%20%20%20%20%20%3Ccontent%20name%3D%22bottom%22%3E%0A%20%20%20%20%3C%2Fstack%3E%0A%20%20%3C%2Fcraft%3E%0A%20%20%3Csandwich%3E%0A%20%20%20%20%3Ctop%3E%0A%20%20%20%20%20%20%3Ccube%20size%3D%225%205%202%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3C%2Ftop%3E%0A%20%20%20%20%3Cbottom%3E%0A%20%20%20%20%20%20%3Ccube%20size%3D%2220%2020%202%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3C%2Fbottom%3E%0A%20%20%20%20%3Ccylinder%20t%3D%22scale(1%201%200.5)%22%3E%3C%2Fcylinder%3E%0A%20%20%3C%2Fsandwich%3E%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
 
                     
                     </section>
@@ -1031,11 +966,11 @@
 <script src="../../gitbook/app.js"></script>
 
     
-    <script src="../../gitbook/plugins/gitbook-plugin-craftml/craftml.js"></script>
+    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
     
 
     
-    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>
