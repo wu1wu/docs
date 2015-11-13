@@ -2,6 +2,6 @@
 
 {% craftml %}
 <craft>
-    <dome></dome>
+  <dome></dome>
 </craft>
 {% endcraftml %}

@@ -6,18 +6,18 @@ Change the size of a solid
 
 {% craftml %}
 <craft>
-    <craft name="cross">
-        <cube size="10 50 10"/>
-        <cube size="50 10 10"
-              t="translate(-20 10 0)"/>
-    </craft>
+  <craft name="cross">
+    <cube size="10 50 10"/>
+    <cube size="50 10 10"
+          t="translate(-20 10 0)"/>
+  </craft>
 
 
-    <row spacing="10">
-        <cross style="color:pink;"/>
-        <cross style="color:red;"
-               t="size(30 30 30)"/>
-    </row>
+  <row spacing="10">
+    <cross style="color:pink;"/>
+    <cross style="color:red;"
+           t="size(30 30 30)"/>
+  </row>
 </craft>
 {% endcraftml %}
 
@@ -25,18 +25,18 @@ Change the size of a solid
 
 {% craftml %}
 <craft>
-    <craft name="cross">
-        <cube size="10 50 10"/>
-        <cube size="50 10 10"
-              t="translate(-20 10 0)"/>
-    </craft>
+  <craft name="cross">
+    <cube size="10 50 10"/>
+    <cube size="50 10 10"
+          t="translate(-20 10 0)"/>
+  </craft>
 
 
-    <row spacing="10">
-        <cross style="color:pink;"/>
-        <cross style="color:red;"
-               t="sizeX(30)"/>
-    </row>
+  <row spacing="10">
+    <cross style="color:pink;"/>
+    <cross style="color:red;"
+           t="sizeX(30)"/>
+   </row>
 </craft>
 {% endcraftml %}
 
@@ -44,18 +44,18 @@ Change the size of a solid
 
 {% craftml %}
 <craft>
-    <craft name="cross">
-        <cube size="10 50 10"/>
-        <cube size="50 10 10"
-              t="translate(-20 10 0)"/>
-    </craft>
+  <craft name="cross">
+    <cube size="10 50 10"/>
+    <cube size="50 10 10"
+          t="translate(-20 10 0)"/>
+  </craft>
 
 
-    <row spacing="10">
-        <cross style="color:pink;"/>
-        <cross style="color:red;"
-               t="sizeY(30)"/>
-    </row>
+  <row spacing="10">
+    <cross style="color:pink;"/>
+    <cross style="color:red;"
+           t="sizeY(30)"/>
+  </row>
 </craft>
 {% endcraftml %}
 
@@ -63,17 +63,17 @@ Change the size of a solid
 
 {% craftml %}
 <craft>
-    <craft name="cross">
-        <cube size="10 50 10"/>
-        <cube size="50 10 10"
-              t="translate(-20 10 0)"/>
-    </craft>
+  <craft name="cross">
+    <cube size="10 50 10"/>
+    <cube size="50 10 10"
+          t="translate(-20 10 0)"/>
+  </craft>
 
 
-    <row spacing="10">
-        <cross style="color:pink;"/>
-        <cross style="color:red;"
-               t="sizeZ(30)"/>
-    </row>
+  <row spacing="10">
+    <cross style="color:pink;"/>
+    <cross style="color:red;"
+           t="sizeZ(30)"/>
+  </row>
 </craft>
 {% endcraftml %}

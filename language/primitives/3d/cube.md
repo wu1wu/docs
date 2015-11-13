@@ -2,7 +2,7 @@
 
 {% craftml %}
 <craft>
-    <cube></cube>
+  <cube></cube>
 </craft>
 {% endcraftml %}
 
@@ -11,6 +11,6 @@
 
 {% craftml %}
 <craft>
-    <cube size="40 20 10"></cube>
+  <cube size="40 20 10"></cube>
 </craft>
 {% endcraftml %}

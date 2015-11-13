@@ -2,12 +2,12 @@
 
 {% craftml %}
 <craft>
-    <stack>
-        <cube></cube>
-        <cube></cube>
-        <cube></cube>
-        <cube></cube>
-        <cube></cube>
-    </stack>
+  <stack>
+    <cube></cube>
+    <cube></cube>
+    <cube></cube>
+    <cube></cube>
+    <cube></cube>
+  </stack>
 </craft>
 {% endcraftml %}

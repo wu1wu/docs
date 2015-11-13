@@ -8,7 +8,7 @@
         <title>this | Introduction</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.2.0">
+        <meta name="generator" content="GitBook 2.4.3">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -25,11 +25,11 @@
         
     
         
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
         
-        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
         
     
     
@@ -44,25 +44,25 @@
         <!-- head:end -->
     </head>
     <body>
-        <script src="http://cdn.craftml.io/craftml-all-staging.js"></script>
-<!-- body:start -->
+        <!-- body:start -->
         
-    <div class="book" data-level="8.1" data-basepath="../.." data-revision="Thu Sep 24 2015 16:33:21 GMT-0600 (MDT)">
+    <div class="book" data-level="8.1" data-basepath="../.." data-revision="Thu Nov 12 2015 21:46:45 GMT-0700 (MST)">
     
 
 <div class="book-summary">
-    <div class="book-search">
+    <div class="book-search" role="search">
         <input type="text" placeholder="Type to search" class="form-control" />
     </div>
-    <ul class="summary">
-        
-        
-        
-        
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
 
-        
+            
 
-        
+            
     
         <li class="chapter " data-level="0" data-path="index.html">
             
@@ -829,20 +829,21 @@
     
 
 
-        
-        <li class="divider"></li>
-        <li>
-            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-                Published with GitBook
-            </a>
-        </li>
-        
-    </ul>
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
 </div>
 
     <div class="book-body">
         <div class="body-inner">
-            <div class="book-header">
+            <div class="book-header" role="navigation">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
     <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
@@ -926,7 +927,7 @@
     </h1>
 </div>
 
-            <div class="page-wrapper" tabindex="-1">
+            <div class="page-wrapper" tabindex="-1" role="main">
                 <div class="page-inner">
                 
                 
@@ -936,11 +937,11 @@
 <p><code>this</code> refers to the solid element that contains the script block.</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">g</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;foo&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">cube</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">cube</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
-        this<span class="hljs-class">.id</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
+        <span class="hljs-keyword">this</span>.id
         <span class="hljs-comment">// =&gt; foo</span>
 
-        this<span class="hljs-class">.children</span>
+        <span class="hljs-keyword">this</span>.children
         <span class="hljs-comment">// =&gt; [cube]</span>
     </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
@@ -948,11 +949,11 @@
 <p><code>this.children</code> only contains solid elements constructed right <em>before</em> the script block; it does not contain solid elements <em>after</em> the script block that have not yet been constructed.</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">g</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;foo&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">cube</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">cube</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
-        this<span class="hljs-class">.id</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
+        <span class="hljs-keyword">this</span>.id
         <span class="hljs-comment">// =&gt; foo</span>
 
-        this<span class="hljs-class">.children</span>
+        <span class="hljs-keyword">this</span>.children
         <span class="hljs-comment">// =&gt; [cube]</span>
     </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">sphere</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">sphere</span>&gt;</span>
@@ -963,11 +964,11 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">param</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;foo&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;int&quot;</span>/&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">craft</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;bar&quot;</span> <span class="hljs-attribute">module</span>=<span class="hljs-value">&quot;XYZ123&quot;</span>/&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">cube</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">cube</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
-        this<span class="hljs-class">.id</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
+        <span class="hljs-keyword">this</span>.id
         <span class="hljs-comment">// =&gt; foo</span>
 
-        this<span class="hljs-class">.children</span>
+        <span class="hljs-keyword">this</span>.children
         <span class="hljs-comment">// =&gt; [cube]</span>
     </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">sphere</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">sphere</span>&gt;</span>
@@ -977,8 +978,8 @@
 <pre><code class="lang-html">// source DOM
 <span class="hljs-tag">&lt;<span class="hljs-title">g</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">cube</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">cube</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
-        this.<span class="hljs-function"><span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-string">&apos;&lt;sphere&gt;&lt;/sphere&gt;&apos;</span>)</span></span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
+        <span class="hljs-keyword">this</span>.add(<span class="hljs-string">&apos;&lt;sphere&gt;&lt;/sphere&gt;&apos;</span>)
     </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
 
@@ -1001,9 +1002,9 @@
 <pre><code class="lang-html">// source DOM
 <span class="hljs-tag">&lt;<span class="hljs-title">g</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">sphere</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">sphere</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
-        this.<span class="hljs-function"><span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-string">&apos;&lt;cube&gt;&lt;/cube&gt;&apos;</span>)</span></span>
-        this.<span class="hljs-function"><span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-string">&apos;&lt;cube&gt;&lt;/cube&gt;&apos;</span>)</span></span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
+        <span class="hljs-keyword">this</span>.add(<span class="hljs-string">&apos;&lt;cube&gt;&lt;/cube&gt;&apos;</span>)
+        <span class="hljs-keyword">this</span>.add(<span class="hljs-string">&apos;&lt;cube&gt;&lt;/cube&gt;&apos;</span>)
     </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
 
@@ -1018,7 +1019,7 @@
 <pre><code class="lang-html">// source DOM
 <span class="hljs-tag">&lt;<span class="hljs-title">g</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">sphere</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">sphere</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="1c">
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
         <span class="hljs-comment">// does nothing</span>
     </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
@@ -1049,11 +1050,11 @@
 <p>Consider the example below. Suppose the construction of <code>&lt;remote-object&gt;</code> involves downloading an STL file, which takes 1 second. The call to <code>this.add</code> will return immediately instead of blocking for 1 second. If we try to access the size of <code>&lt;remote-object&gt;</code> in the next line, we will get <code>undefined</code> because the object is still being constructed.</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">g</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">cube</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">cube</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
-        this.<span class="hljs-function"><span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-string">&apos;&lt;remote-object&gt;&lt;/remote-object&gt;&apos;</span>)</span></span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
+        <span class="hljs-keyword">this</span>.add(<span class="hljs-string">&apos;&lt;remote-object&gt;&lt;/remote-object&gt;&apos;</span>)
         <span class="hljs-comment">// return immediately</span>
 
-        this<span class="hljs-class">.children</span>[<span class="hljs-number">1</span>]<span class="hljs-class">.size</span>
+        <span class="hljs-keyword">this</span>.children[<span class="hljs-number">1</span>].size
         <span class="hljs-comment">// =&gt; undefined</span>
     </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
@@ -1061,12 +1062,12 @@
 <p>What if we need to access the size or location of <code>&lt;remote-object&gt;</code>? We can do that in the next script block like this.</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">g</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">cube</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">cube</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
-        this.<span class="hljs-function"><span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-string">&apos;&lt;remote-object&gt;&lt;/remote-object&gt;&apos;</span>)</span></span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
+        <span class="hljs-keyword">this</span>.add(<span class="hljs-string">&apos;&lt;remote-object&gt;&lt;/remote-object&gt;&apos;</span>)
         <span class="hljs-comment">// return immediately</span>
     </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
-        this<span class="hljs-class">.children</span>[<span class="hljs-number">1</span>]<span class="hljs-class">.size</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
+        <span class="hljs-keyword">this</span>.children[<span class="hljs-number">1</span>].size
         <span class="hljs-comment">// =&gt; {x: 10, y:10, z:10}</span>
     </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
@@ -1076,16 +1077,16 @@
 <p>No. All transformation and layout methods are synchronous because they are compute-bound operations (matrix mulplitcations ... etc.) and do not involve I/O operations.</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">g</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">cube</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">cube</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
-        <span class="hljs-tag">var</span> c = this<span class="hljs-class">.children</span>[<span class="hljs-number">0</span>]
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
+        <span class="hljs-keyword">var</span> c = <span class="hljs-keyword">this</span>.children[<span class="hljs-number">0</span>]
         <span class="hljs-comment">// =&gt; c === &lt;cube&gt;</span>
 
-        c<span class="hljs-class">.size</span><span class="hljs-class">.x</span>
+        c.size.x
         <span class="hljs-comment">// =&gt; 10</span>
 
-        c.<span class="hljs-function"><span class="hljs-title">scale</span><span class="hljs-params">(<span class="hljs-number">2</span>)</span></span>
+        c.scale(<span class="hljs-number">2</span>)
 
-        c<span class="hljs-class">.size</span><span class="hljs-class">.x</span>
+        c.size.x
         <span class="hljs-comment">// =&gt; 20 (the effect is immediate)</span>
     </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
@@ -1110,11 +1111,11 @@
 <script src="../../gitbook/app.js"></script>
 
     
-    <script src="../../gitbook/plugins/gitbook-plugin-craftml/craftml.js"></script>
+    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
     
 
     
-    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>

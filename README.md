@@ -2,8 +2,8 @@
 
 {% craftml %}
 <craft>
-    <div>
-        Hello <cube></cube>
-    </div>
+  <div>
+    Hello <cube></cube>
+  </div>
 </craft>
 {% endcraftml %}

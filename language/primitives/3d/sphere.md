@@ -2,7 +2,7 @@
 
 {% craftml %}
 <craft>
-    <sphere></sphere>
+  <sphere></sphere>
 </craft>
 {% endcraftml %}
 
@@ -11,10 +11,10 @@
 
 {% craftml %}
 <craft>
-    <row spacing="10">
-        <sphere radius="5"></sphere>
-        <sphere radius="10"></sphere>
-        <sphere radius="15"></sphere>
-    </row>
+  <row spacing="10">
+    <sphere radius="5"></sphere>
+    <sphere radius="10"></sphere>
+    <sphere radius="15"></sphere>
+  </row>
 </craft>
 {% endcraftml %}

@@ -8,7 +8,7 @@
         <title>cut | Introduction</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.2.0">
+        <meta name="generator" content="GitBook 2.4.3">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -25,11 +25,11 @@
         
     
         
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
         
-        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
         
     
     
@@ -46,25 +46,25 @@
         <!-- head:end -->
     </head>
     <body>
-        <script src="http://cdn.craftml.io/craftml-all-staging.js"></script>
-<!-- body:start -->
+        <!-- body:start -->
         
-    <div class="book" data-level="4.4" data-basepath="../.." data-revision="Thu Sep 24 2015 16:33:21 GMT-0600 (MDT)">
+    <div class="book" data-level="4.4" data-basepath="../.." data-revision="Thu Nov 12 2015 21:46:45 GMT-0700 (MST)">
     
 
 <div class="book-summary">
-    <div class="book-search">
+    <div class="book-search" role="search">
         <input type="text" placeholder="Type to search" class="form-control" />
     </div>
-    <ul class="summary">
-        
-        
-        
-        
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
 
-        
+            
 
-        
+            
     
         <li class="chapter " data-level="0" data-path="index.html">
             
@@ -831,20 +831,21 @@
     
 
 
-        
-        <li class="divider"></li>
-        <li>
-            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-                Published with GitBook
-            </a>
-        </li>
-        
-    </ul>
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
 </div>
 
     <div class="book-body">
         <div class="body-inner">
-            <div class="book-header">
+            <div class="book-header" role="navigation">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
     <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
@@ -928,7 +929,7 @@
     </h1>
 </div>
 
-            <div class="page-wrapper" tabindex="-1">
+            <div class="page-wrapper" tabindex="-1" role="main">
                 <div class="page-inner">
                 
                 
@@ -937,71 +938,19 @@
                         <h1 id="cut">cut</h1>
 <h2 id="cut-by-name">cut by name</h2>
 <p>Before</p>
-<p><div class="craftml"><!--
-<craft>
-    <g l="centerXYZ()">
-        <sphere t="scale(2)" style="color:yellow"></sphere>
-        <cylinder t="sizeZ(30)"></cylinder>
-    </g>
-</craft>
---></div></p>
+<p><iframe src="http://localhost:5000/v?content=%0A%3Ccraft%3E%0A%20%20%3Cg%20l%3D%22centerXYZ()%22%3E%0A%20%20%20%20%3Csphere%20t%3D%22scale(2)%22%20style%3D%22color%3Ayellow%22%3E%3C%2Fsphere%3E%0A%20%20%20%20%3Ccylinder%20t%3D%22sizeZ(30)%22%3E%3C%2Fcylinder%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
 <p>After</p>
-<p><div class="craftml"><!--
-<craft>
-    <g l="centerXYZ() cut(cylinder)">
-        <sphere t="scale(2)" style="color:yellow"></sphere>
-        <cylinder t="sizeZ(30)"></cylinder>
-    </g>
-</craft>
---></div></p>
+<p><iframe src="http://localhost:5000/v?content=%0A%3Ccraft%3E%0A%20%20%3Cg%20l%3D%22centerXYZ()%20cut(cylinder)%22%3E%0A%20%20%20%20%3Csphere%20t%3D%22scale(2)%22%20style%3D%22color%3Ayellow%22%3E%3C%2Fsphere%3E%0A%20%20%20%20%3Ccylinder%20t%3D%22sizeZ(30)%22%3E%3C%2Fcylinder%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
 <h2 id="cut-by-class">cut by class</h2>
 <p>Before</p>
-<p><div class="craftml"><!--
-<craft>
-    <g l="centerXYZ()">
-        <cube t="scale(5 2 2)" style="color:yellow"></cube>
-        <row>
-            <cube t="sizeZ(60)" class="cutme"></cube>
-            <cube t="sizeZ(60)"></cube>
-            <cube t="sizeZ(60)" class="cutme"></cube>
-        </row>
-    </g>
-</craft>
---></div></p>
+<p><iframe src="http://localhost:5000/v?content=%0A%3Ccraft%3E%0A%20%20%3Cg%20l%3D%22centerXYZ()%22%3E%0A%20%20%20%20%3Ccube%20t%3D%22scale(5%202%202)%22%20style%3D%22color%3Ayellow%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3Crow%3E%0A%20%20%20%20%20%20%3Ccube%20t%3D%22sizeZ(60)%22%20class%3D%22cutme%22%3E%3C%2Fcube%3E%0A%20%20%20%20%20%20%3Ccube%20t%3D%22sizeZ(60)%22%3E%3C%2Fcube%3E%0A%20%20%20%20%20%20%3Ccube%20t%3D%22sizeZ(60)%22%20class%3D%22cutme%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3C%2Frow%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
 <p>After</p>
-<p><div class="craftml"><!--
-<craft>
-    <g l="centerXYZ() cut(.cutme)">
-        <cube t="scale(5 2 2)" style="color:yellow"></cube>
-        <row>
-            <cube t="sizeZ(60)" class="cutme"></cube>
-            <cube t="sizeZ(60)"></cube>
-            <cube t="sizeZ(60)" class="cutme"></cube>
-        </row>
-    </g>
-</craft>
---></div></p>
+<p><iframe src="http://localhost:5000/v?content=%0A%3Ccraft%3E%0A%20%20%3Cg%20l%3D%22centerXYZ()%20cut(.cutme)%22%3E%0A%20%20%20%20%3Ccube%20t%3D%22scale(5%202%202)%22%20style%3D%22color%3Ayellow%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3Crow%3E%0A%20%20%20%20%20%20%3Ccube%20t%3D%22sizeZ(60)%22%20class%3D%22cutme%22%3E%3C%2Fcube%3E%0A%20%20%20%20%20%20%3Ccube%20t%3D%22sizeZ(60)%22%3E%3C%2Fcube%3E%0A%20%20%20%20%20%20%3Ccube%20t%3D%22sizeZ(60)%22%20class%3D%22cutme%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3C%2Frow%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
 <h2 id="select-and-cut-by-id">select and cut by id</h2>
 <p>Before</p>
-<p><div class="craftml"><!--
-<craft>
-    <g l="centerXYZ()">
-        <cube t="scale(5 5 2)" id="outside"></cube>
-        <cube t="scale(3 3 3)" id="margin"></cube>
-        <cube t="scale(1 1 4)" id="inside"></cube>
-    </g>
-</craft>
---></div></p>
+<p><iframe src="http://localhost:5000/v?content=%0A%3Ccraft%3E%0A%20%20%3Cg%20l%3D%22centerXYZ()%22%3E%0A%20%20%20%20%3Ccube%20t%3D%22scale(5%205%202)%22%20id%3D%22outside%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3Ccube%20t%3D%22scale(3%203%203)%22%20id%3D%22margin%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3Ccube%20t%3D%22scale(1%201%204)%22%20id%3D%22inside%22%3E%3C%2Fcube%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
 <p>After</p>
-<p><div class="craftml"><!--
-<craft>
-    <g l="centerXYZ() select(#outside) cut(#margin)">
-        <cube t="scale(5 5 2)" id="outside"></cube>
-        <cube t="scale(3 3 3)" id="margin"></cube>
-        <cube t="scale(1 1 4)" id="inside"></cube>
-    </g>
-</craft>
---></div></p>
+<p><iframe src="http://localhost:5000/v?content=%0A%3Ccraft%3E%0A%20%20%3Cg%20l%3D%22centerXYZ()%20select(%23outside)%20cut(%23margin)%22%3E%0A%20%20%20%20%3Ccube%20t%3D%22scale(5%205%202)%22%20id%3D%22outside%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3Ccube%20t%3D%22scale(3%203%203)%22%20id%3D%22margin%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3Ccube%20t%3D%22scale(1%201%204)%22%20id%3D%22inside%22%3E%3C%2Fcube%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
 
                     
                     </section>
@@ -1024,11 +973,11 @@
 <script src="../../gitbook/app.js"></script>
 
     
-    <script src="../../gitbook/plugins/gitbook-plugin-craftml/craftml.js"></script>
+    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
     
 
     
-    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>

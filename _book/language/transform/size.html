@@ -8,7 +8,7 @@
         <title>size | Introduction</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.2.0">
+        <meta name="generator" content="GitBook 2.4.3">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -25,11 +25,11 @@
         
     
         
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
         
-        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
         
     
     
@@ -46,25 +46,25 @@
         <!-- head:end -->
     </head>
     <body>
-        <script src="http://cdn.craftml.io/craftml-all-staging.js"></script>
-<!-- body:start -->
+        <!-- body:start -->
         
-    <div class="book" data-level="3.5" data-basepath="../.." data-revision="Thu Sep 24 2015 16:33:21 GMT-0600 (MDT)">
+    <div class="book" data-level="3.5" data-basepath="../.." data-revision="Thu Nov 12 2015 21:46:45 GMT-0700 (MST)">
     
 
 <div class="book-summary">
-    <div class="book-search">
+    <div class="book-search" role="search">
         <input type="text" placeholder="Type to search" class="form-control" />
     </div>
-    <ul class="summary">
-        
-        
-        
-        
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
 
-        
+            
 
-        
+            
     
         <li class="chapter " data-level="0" data-path="index.html">
             
@@ -831,20 +831,21 @@
     
 
 
-        
-        <li class="divider"></li>
-        <li>
-            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-                Published with GitBook
-            </a>
-        </li>
-        
-    </ul>
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
 </div>
 
     <div class="book-body">
         <div class="body-inner">
-            <div class="book-header">
+            <div class="book-header" role="navigation">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
     <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
@@ -928,7 +929,7 @@
     </h1>
 </div>
 
-            <div class="page-wrapper" tabindex="-1">
+            <div class="page-wrapper" tabindex="-1" role="main">
                 <div class="page-inner">
                 
                 
@@ -937,73 +938,13 @@
                         <h1 id="size">size</h1>
 <p>Change the size of a solid</p>
 <p><code>size</code> differs from <code>scale</code> in that <code>scale</code> specifies a scaling ratio relative to the solid&apos;s current size, whereas <code>size</code> specifies the solid&apos;s new size that solid will be automatically scaled to.</p>
-<p><div class="craftml"><!--
-<craft>
-    <craft name="cross">
-        <cube size="10 50 10"/>
-        <cube size="50 10 10"
-              t="translate(-20 10 0)"/>
-    </craft>
-
-
-    <row spacing="10">
-        <cross style="color:pink;"/>
-        <cross style="color:red;"
-               t="size(30 30 30)"/>
-    </row>
-</craft>
---></div></p>
+<p><iframe src="http://localhost:5000/v?content=%0A%3Ccraft%3E%0A%20%20%3Ccraft%20name%3D%22cross%22%3E%0A%20%20%20%20%3Ccube%20size%3D%2210%2050%2010%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%2250%2010%2010%22%0A%20%20%20%20%20%20%20%20%20%20t%3D%22translate(-20%2010%200)%22%2F%3E%0A%20%20%3C%2Fcraft%3E%0A%0A%0A%20%20%3Crow%20spacing%3D%2210%22%3E%0A%20%20%20%20%3Ccross%20style%3D%22color%3Apink%3B%22%2F%3E%0A%20%20%20%20%3Ccross%20style%3D%22color%3Ared%3B%22%0A%20%20%20%20%20%20%20%20%20%20%20t%3D%22size(30%2030%2030)%22%2F%3E%0A%20%20%3C%2Frow%3E%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
 <h2 id="sizex">sizeX</h2>
-<p><div class="craftml"><!--
-<craft>
-    <craft name="cross">
-        <cube size="10 50 10"/>
-        <cube size="50 10 10"
-              t="translate(-20 10 0)"/>
-    </craft>
-
-
-    <row spacing="10">
-        <cross style="color:pink;"/>
-        <cross style="color:red;"
-               t="sizeX(30)"/>
-    </row>
-</craft>
---></div></p>
+<p><iframe src="http://localhost:5000/v?content=%0A%3Ccraft%3E%0A%20%20%3Ccraft%20name%3D%22cross%22%3E%0A%20%20%20%20%3Ccube%20size%3D%2210%2050%2010%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%2250%2010%2010%22%0A%20%20%20%20%20%20%20%20%20%20t%3D%22translate(-20%2010%200)%22%2F%3E%0A%20%20%3C%2Fcraft%3E%0A%0A%0A%20%20%3Crow%20spacing%3D%2210%22%3E%0A%20%20%20%20%3Ccross%20style%3D%22color%3Apink%3B%22%2F%3E%0A%20%20%20%20%3Ccross%20style%3D%22color%3Ared%3B%22%0A%20%20%20%20%20%20%20%20%20%20%20t%3D%22sizeX(30)%22%2F%3E%0A%20%20%20%3C%2Frow%3E%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
 <h2 id="sizey">sizeY</h2>
-<p><div class="craftml"><!--
-<craft>
-    <craft name="cross">
-        <cube size="10 50 10"/>
-        <cube size="50 10 10"
-              t="translate(-20 10 0)"/>
-    </craft>
-
-
-    <row spacing="10">
-        <cross style="color:pink;"/>
-        <cross style="color:red;"
-               t="sizeY(30)"/>
-    </row>
-</craft>
---></div></p>
+<p><iframe src="http://localhost:5000/v?content=%0A%3Ccraft%3E%0A%20%20%3Ccraft%20name%3D%22cross%22%3E%0A%20%20%20%20%3Ccube%20size%3D%2210%2050%2010%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%2250%2010%2010%22%0A%20%20%20%20%20%20%20%20%20%20t%3D%22translate(-20%2010%200)%22%2F%3E%0A%20%20%3C%2Fcraft%3E%0A%0A%0A%20%20%3Crow%20spacing%3D%2210%22%3E%0A%20%20%20%20%3Ccross%20style%3D%22color%3Apink%3B%22%2F%3E%0A%20%20%20%20%3Ccross%20style%3D%22color%3Ared%3B%22%0A%20%20%20%20%20%20%20%20%20%20%20t%3D%22sizeY(30)%22%2F%3E%0A%20%20%3C%2Frow%3E%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
 <h2 id="sizez">sizeZ</h2>
-<p><div class="craftml"><!--
-<craft>
-    <craft name="cross">
-        <cube size="10 50 10"/>
-        <cube size="50 10 10"
-              t="translate(-20 10 0)"/>
-    </craft>
-
-
-    <row spacing="10">
-        <cross style="color:pink;"/>
-        <cross style="color:red;"
-               t="sizeZ(30)"/>
-    </row>
-</craft>
---></div></p>
+<p><iframe src="http://localhost:5000/v?content=%0A%3Ccraft%3E%0A%20%20%3Ccraft%20name%3D%22cross%22%3E%0A%20%20%20%20%3Ccube%20size%3D%2210%2050%2010%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%2250%2010%2010%22%0A%20%20%20%20%20%20%20%20%20%20t%3D%22translate(-20%2010%200)%22%2F%3E%0A%20%20%3C%2Fcraft%3E%0A%0A%0A%20%20%3Crow%20spacing%3D%2210%22%3E%0A%20%20%20%20%3Ccross%20style%3D%22color%3Apink%3B%22%2F%3E%0A%20%20%20%20%3Ccross%20style%3D%22color%3Ared%3B%22%0A%20%20%20%20%20%20%20%20%20%20%20t%3D%22sizeZ(30)%22%2F%3E%0A%20%20%3C%2Frow%3E%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
 
                     
                     </section>
@@ -1026,11 +967,11 @@
 <script src="../../gitbook/app.js"></script>
 
     
-    <script src="../../gitbook/plugins/gitbook-plugin-craftml/craftml.js"></script>
+    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
     
 
     
-    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>

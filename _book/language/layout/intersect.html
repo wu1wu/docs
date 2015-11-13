@@ -8,7 +8,7 @@
         <title>intersect | Introduction</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.2.0">
+        <meta name="generator" content="GitBook 2.4.3">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -25,11 +25,11 @@
         
     
         
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
         
-        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
         
     
     
@@ -46,25 +46,25 @@
         <!-- head:end -->
     </head>
     <body>
-        <script src="http://cdn.craftml.io/craftml-all-staging.js"></script>
-<!-- body:start -->
+        <!-- body:start -->
         
-    <div class="book" data-level="4.5" data-basepath="../.." data-revision="Thu Sep 24 2015 16:33:21 GMT-0600 (MDT)">
+    <div class="book" data-level="4.5" data-basepath="../.." data-revision="Thu Nov 12 2015 21:46:45 GMT-0700 (MST)">
     
 
 <div class="book-summary">
-    <div class="book-search">
+    <div class="book-search" role="search">
         <input type="text" placeholder="Type to search" class="form-control" />
     </div>
-    <ul class="summary">
-        
-        
-        
-        
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
 
-        
+            
 
-        
+            
     
         <li class="chapter " data-level="0" data-path="index.html">
             
@@ -831,20 +831,21 @@
     
 
 
-        
-        <li class="divider"></li>
-        <li>
-            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-                Published with GitBook
-            </a>
-        </li>
-        
-    </ul>
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
 </div>
 
     <div class="book-body">
         <div class="body-inner">
-            <div class="book-header">
+            <div class="book-header" role="navigation">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
     <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
@@ -928,7 +929,7 @@
     </h1>
 </div>
 
-            <div class="page-wrapper" tabindex="-1">
+            <div class="page-wrapper" tabindex="-1" role="main">
                 <div class="page-inner">
                 
                 
@@ -936,41 +937,9 @@
                     
                         <h1 id="intersect">intersect</h1>
 <p>Before</p>
-<p><div class="craftml"><!--
-<craft>
-    <craft name="four-cubes">
-        <row spacing="5" t="sizeY(60)">
-            <cube/><cube/><cube/><cube/>
-        </row>
-    </craft>
-
-    <g l="centerXY()">
-        <four-cubes/>
-        <cylinder t="size(60 60 10)"
-            style="opacity:0.5;">
-        </cylinder>
-    </g>
-
-</craft>
---></div></p>
+<p><iframe src="http://localhost:5000/v?content=%0A%3Ccraft%3E%0A%20%20%3Ccraft%20name%3D%22four-cubes%22%3E%0A%20%20%20%20%3Crow%20spacing%3D%225%22%20t%3D%22sizeY(60)%22%3E%0A%20%20%20%20%20%20%3Ccube%2F%3E%3Ccube%2F%3E%3Ccube%2F%3E%3Ccube%2F%3E%0A%20%20%20%20%3C%2Frow%3E%0A%20%20%3C%2Fcraft%3E%0A%0A%20%20%3Cg%20l%3D%22centerXY()%22%3E%0A%20%20%20%20%3Cfour-cubes%2F%3E%0A%20%20%20%20%3Ccylinder%20t%3D%22size(60%2060%2010)%22%0A%20%20%20%20%20%20%20%20style%3D%22opacity%3A0.5%3B%22%3E%0A%20%20%20%20%3C%2Fcylinder%3E%0A%20%20%3C%2Fg%3E%0A%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
 <p><code>select(four-cubes) intersect(cylinder)</code></p>
-<p><div class="craftml"><!--
-<craft>
-    <craft name="four-cubes">
-        <row spacing="5" t="sizeY(60)">
-            <cube/><cube/><cube/><cube/>
-        </row>
-    </craft>
-
-    <g l="centerXY() select(four-cubes) intersect(cylinder)">
-        <four-cubes/>
-        <cylinder t="size(60 60 10)"
-            style="opacity:0.5;">
-        </cylinder>
-    </g>
-
-</craft>
---></div></p>
+<p><iframe src="http://localhost:5000/v?content=%0A%3Ccraft%3E%0A%20%20%3Ccraft%20name%3D%22four-cubes%22%3E%0A%20%20%20%20%3Crow%20spacing%3D%225%22%20t%3D%22sizeY(60)%22%3E%0A%20%20%20%20%20%20%20%20%3Ccube%2F%3E%3Ccube%2F%3E%3Ccube%2F%3E%3Ccube%2F%3E%0A%20%20%20%20%3C%2Frow%3E%0A%20%20%3C%2Fcraft%3E%0A%0A%20%20%3Cg%20l%3D%22centerXY()%20select(four-cubes)%20intersect(cylinder)%22%3E%0A%20%20%20%20%3Cfour-cubes%2F%3E%0A%20%20%20%20%3Ccylinder%20t%3D%22size(60%2060%2010)%22%0A%20%20%20%20%20%20%20%20style%3D%22opacity%3A0.5%3B%22%3E%0A%20%20%20%20%3C%2Fcylinder%3E%0A%20%20%3C%2Fg%3E%0A%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
 
                     
                     </section>
@@ -993,11 +962,11 @@
 <script src="../../gitbook/app.js"></script>
 
     
-    <script src="../../gitbook/plugins/gitbook-plugin-craftml/craftml.js"></script>
+    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
     
 
     
-    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>

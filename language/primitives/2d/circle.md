@@ -2,6 +2,6 @@
 
 {% craftml %}
 <craft>
-    <circle></circle>
+  <circle></circle>
 </craft>
 {% endcraftml %}
