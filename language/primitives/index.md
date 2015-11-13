@@ -22,8 +22,3 @@
   </row>
 </craft>
 {% endcraftml %}
-
-
-## 2d
-
-<iframe src="http://localhost:5000/mini/L_v4J" width="770" height="315" frameborder="0" ></iframe>
