@@ -1,13 +1,11 @@
 # row
 
 {% craftml %}
-<craft>
-  <row>
-    <cube></cube>
-    <cube></cube>
-    <cube></cube>
-    <cube></cube>
-    <cube></cube>
-  </row>
-</craft>
+<row>
+  <cube></cube>
+  <cube></cube>
+  <cube></cube>
+  <cube></cube>
+  <cube></cube>
+</row>
 {% endcraftml %}

@@ -1,9 +1,7 @@
 # Introduction
 
 {% craftml %}
-<craft>
-  <div>
-    Hello <cube></cube>
-  </div>
-</craft>
+<div>
+  Hello <cube></cube>
+</div>
 {% endcraftml %}

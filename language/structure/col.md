@@ -1,13 +1,11 @@
 # col
 
 {% craftml %}
-<craft>
-  <col>
-    <cube></cube>
-    <cube></cube>
-    <cube></cube>
-    <cube></cube>
-    <cube></cube>
-  </col>
-</craft>
+<col>
+  <cube></cube>
+  <cube></cube>
+  <cube></cube>
+  <cube></cube>
+  <cube></cube>
+</col>
 {% endcraftml %}

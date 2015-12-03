@@ -1,8 +1,6 @@
 # css
 
-A subset of css selectors and attributes are supported
-
-Usage:
+CraftML provides a subset of CSS selectors and attributes to make it easy to
 
 * make a model look prettier
 * visualize the composition of a model

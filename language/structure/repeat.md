@@ -1,24 +1,20 @@
 # repeat
 
+A row of five cubes
+
 {% craftml %}
-<craft>
-  <row>
-    <repeat n="5">
-      <cube></cube>
-    </repeat>
-  </row>
-</craft>
+<row>
+  <cube repeat="5"></cube>
+</row>
 {% endcraftml %}
 
 
 {% craftml %}
-<craft>
-  <row>
-    <repeat each="i" in="{: [1,2,3] :}">
-      <cube t="scale({:i:})"></cube>
-    </repeat>
-  </row>
-</craft>
+<row>
+  <cube repeat="i in [1,2,3]"
+        t="scale({:i:})">
+  </cube>
+</row>
 {% endcraftml %}
 
 
@@ -28,9 +24,9 @@
     $params.is = [1,2,3]
   </script>
   <row>
-    <repeat each="i" in="{: is :}">
-      <cube t="scale({:i:})"></cube>
-    </repeat>
+    <cube repeat="i in is"
+          t="scale({:i:})">
+    </cube>
   </row>
 </craft>
 {% endcraftml %}

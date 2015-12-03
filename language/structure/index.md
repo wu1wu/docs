@@ -1,17 +1,9 @@
 {% craftml %}
-<craft>
-  <stack spacing="5">
-    <repeat n="5">
-      <col spacing="5">
-        <repeat n="5">
-          <row spacing="5">
-            <repeat n="5">
-              <cube></cube>
-            </repeat>
-          </row>
-        </repeat>
-      </col>
-    </repeat>
-  </stack>
-</craft>
+<stack spacing="2">
+  <col repeat="5" spacing="2">
+    <row repeat="5" spacing="2">
+      <cube repeat="5"></cube>          
+    </row>
+  </col>
+</stack>
 {% endcraftml %}

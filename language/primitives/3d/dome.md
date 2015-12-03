@@ -1,7 +1,5 @@
 # dome
 
 {% craftml %}
-<craft>
-  <dome></dome>
-</craft>
+<dome></dome>
 {% endcraftml %}

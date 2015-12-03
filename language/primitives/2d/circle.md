@@ -1,7 +1,5 @@
 # circle
 
 {% craftml %}
-<craft>
-  <circle></circle>
-</craft>
+<circle></circle>
 {% endcraftml %}

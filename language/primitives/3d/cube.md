@@ -1,16 +1,12 @@
 # cube
 
 {% craftml %}
-<craft>
-  <cube></cube>
-</craft>
+<cube></cube>
 {% endcraftml %}
 
 
 ## `size="integer integer integer"`
 
 {% craftml %}
-<craft>
-  <cube size="40 20 10"></cube>
-</craft>
+<cube size="40 20 10"></cube>
 {% endcraftml %}
