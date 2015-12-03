@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="4.4" data-basepath="../.." data-revision="Thu Nov 12 2015 21:51:46 GMT-0700 (MST)">
+    <div class="book" data-level="4.4" data-basepath="../.." data-revision="Thu Dec 03 2015 05:56:43 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -938,19 +938,19 @@
                         <h1 id="cut">cut</h1>
 <h2 id="cut-by-name">cut by name</h2>
 <p>Before</p>
-<p><iframe src="https://craftml.io/v?content=%0A%3Ccraft%3E%0A%20%20%3Cg%20l%3D%22centerXYZ()%22%3E%0A%20%20%20%20%3Csphere%20t%3D%22scale(2)%22%20style%3D%22color%3Ayellow%22%3E%3C%2Fsphere%3E%0A%20%20%20%20%3Ccylinder%20t%3D%22sizeZ(30)%22%3E%3C%2Fcylinder%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Cg%20l%3D%22centerXYZ()%22%3E%0A%20%20%3Csphere%20t%3D%22scale(2)%22%20style%3D%22color%3Ayellow%22%3E%3C%2Fsphere%3E%0A%20%20%3Ccylinder%20t%3D%22sizeZ(30)%22%3E%3C%2Fcylinder%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
 <p>After</p>
-<p><iframe src="https://craftml.io/v?content=%0A%3Ccraft%3E%0A%20%20%3Cg%20l%3D%22centerXYZ()%20cut(cylinder)%22%3E%0A%20%20%20%20%3Csphere%20t%3D%22scale(2)%22%20style%3D%22color%3Ayellow%22%3E%3C%2Fsphere%3E%0A%20%20%20%20%3Ccylinder%20t%3D%22sizeZ(30)%22%3E%3C%2Fcylinder%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Cg%20l%3D%22centerXYZ()%20cut(cylinder)%22%3E%0A%20%20%3Csphere%20t%3D%22scale(2)%22%20style%3D%22color%3Ayellow%22%3E%3C%2Fsphere%3E%0A%20%20%3Ccylinder%20t%3D%22sizeZ(30)%22%3E%3C%2Fcylinder%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
 <h2 id="cut-by-class">cut by class</h2>
 <p>Before</p>
-<p><iframe src="https://craftml.io/v?content=%0A%3Ccraft%3E%0A%20%20%3Cg%20l%3D%22centerXYZ()%22%3E%0A%20%20%20%20%3Ccube%20t%3D%22scale(5%202%202)%22%20style%3D%22color%3Ayellow%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3Crow%3E%0A%20%20%20%20%20%20%3Ccube%20t%3D%22sizeZ(60)%22%20class%3D%22cutme%22%3E%3C%2Fcube%3E%0A%20%20%20%20%20%20%3Ccube%20t%3D%22sizeZ(60)%22%3E%3C%2Fcube%3E%0A%20%20%20%20%20%20%3Ccube%20t%3D%22sizeZ(60)%22%20class%3D%22cutme%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3C%2Frow%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Cg%20l%3D%22centerXYZ()%22%3E%0A%20%20%3Ccube%20t%3D%22scale(5%202%202)%22%20style%3D%22color%3Ayellow%22%3E%3C%2Fcube%3E%0A%20%20%3Crow%3E%0A%20%20%20%20%3Ccube%20t%3D%22sizeZ(60)%22%20class%3D%22cutme%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3Ccube%20t%3D%22sizeZ(60)%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3Ccube%20t%3D%22sizeZ(60)%22%20class%3D%22cutme%22%3E%3C%2Fcube%3E%0A%20%20%3C%2Frow%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
 <p>After</p>
-<p><iframe src="https://craftml.io/v?content=%0A%3Ccraft%3E%0A%20%20%3Cg%20l%3D%22centerXYZ()%20cut(.cutme)%22%3E%0A%20%20%20%20%3Ccube%20t%3D%22scale(5%202%202)%22%20style%3D%22color%3Ayellow%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3Crow%3E%0A%20%20%20%20%20%20%3Ccube%20t%3D%22sizeZ(60)%22%20class%3D%22cutme%22%3E%3C%2Fcube%3E%0A%20%20%20%20%20%20%3Ccube%20t%3D%22sizeZ(60)%22%3E%3C%2Fcube%3E%0A%20%20%20%20%20%20%3Ccube%20t%3D%22sizeZ(60)%22%20class%3D%22cutme%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3C%2Frow%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Cg%20l%3D%22centerXYZ()%20cut(.cutme)%22%3E%0A%20%20%3Ccube%20t%3D%22scale(5%202%202)%22%20style%3D%22color%3Ayellow%22%3E%3C%2Fcube%3E%0A%20%20%3Crow%3E%0A%20%20%20%20%3Ccube%20t%3D%22sizeZ(60)%22%20class%3D%22cutme%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3Ccube%20t%3D%22sizeZ(60)%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3Ccube%20t%3D%22sizeZ(60)%22%20class%3D%22cutme%22%3E%3C%2Fcube%3E%0A%20%20%3C%2Frow%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
 <h2 id="select-and-cut-by-id">select and cut by id</h2>
 <p>Before</p>
-<p><iframe src="https://craftml.io/v?content=%0A%3Ccraft%3E%0A%20%20%3Cg%20l%3D%22centerXYZ()%22%3E%0A%20%20%20%20%3Ccube%20t%3D%22scale(5%205%202)%22%20id%3D%22outside%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3Ccube%20t%3D%22scale(3%203%203)%22%20id%3D%22margin%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3Ccube%20t%3D%22scale(1%201%204)%22%20id%3D%22inside%22%3E%3C%2Fcube%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Cg%20l%3D%22centerXYZ()%22%3E%0A%20%20%3Ccube%20t%3D%22scale(5%205%202)%22%20id%3D%22outside%22%3E%3C%2Fcube%3E%0A%20%20%3Ccube%20t%3D%22scale(3%203%203)%22%20id%3D%22margin%22%3E%3C%2Fcube%3E%0A%20%20%3Ccube%20t%3D%22scale(1%201%204)%22%20id%3D%22inside%22%3E%3C%2Fcube%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
 <p>After</p>
-<p><iframe src="https://craftml.io/v?content=%0A%3Ccraft%3E%0A%20%20%3Cg%20l%3D%22centerXYZ()%20select(%23outside)%20cut(%23margin)%22%3E%0A%20%20%20%20%3Ccube%20t%3D%22scale(5%205%202)%22%20id%3D%22outside%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3Ccube%20t%3D%22scale(3%203%203)%22%20id%3D%22margin%22%3E%3C%2Fcube%3E%0A%20%20%20%20%3Ccube%20t%3D%22scale(1%201%204)%22%20id%3D%22inside%22%3E%3C%2Fcube%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fcraft%3E%0A" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="https://craftml.io/v?content=%3Cg%20l%3D%22centerXYZ()%20select(%23outside)%20cut(%23margin)%22%3E%0A%20%20%3Ccube%20t%3D%22scale(5%205%202)%22%20id%3D%22outside%22%3E%3C%2Fcube%3E%0A%20%20%3Ccube%20t%3D%22scale(3%203%203)%22%20id%3D%22margin%22%3E%3C%2Fcube%3E%0A%20%20%3Ccube%20t%3D%22scale(1%201%204)%22%20id%3D%22inside%22%3E%3C%2Fcube%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
 
                     
                     </section>
