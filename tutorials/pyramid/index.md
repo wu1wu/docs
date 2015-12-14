@@ -3,7 +3,7 @@
 The objective of this tutorial is to build a pyramid made of a stack of
 square-shaped bricks of decreasing size from bottom to up.
 
-![pyramid](objective.png)
+![objective](objective.png)
 
 First, create a square-shaped brick using the `<cube/>` primitive.
 We set the size of the cube to `10 10 5`. It is the smallest piece

@@ -3,6 +3,7 @@
 * [Tutorials](tutorials/index.md)
   * [Pyramid](tutorials/pyramid/index.md)
   * [Washer](tutorials/washer/index.md)
+  * [Fence](tutorials/fence/index.md)
 * [Primitives](language/primitives/index.md)
     * [3D](language/primitives/3d/index.md)
         * [cube](language/primitives/3d/cube.md)

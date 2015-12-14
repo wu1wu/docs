@@ -12,3 +12,7 @@ a number of exercises for you to practice what you've just learned.
 ## [How to craft a washer?](washer/)
 
 ![objective](washer/objective.png)
+
+## [How to craft a fence?](fence/)
+
+![objective](fence/objective.png)
