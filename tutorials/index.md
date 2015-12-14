@@ -16,3 +16,7 @@ a number of exercises for you to practice what you've just learned.
 ## [How to craft a fence?](fence/)
 
 ![objective](fence/objective.png)
+
+## [How to craft a button?](button/)
+
+![objective](button/objective.png)
