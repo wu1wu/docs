@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>craft | Introduction</title>
+        <title>Washer | Introduction</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../language/module/parameter.html" />
+    <link rel="next" href="../../language/primitives/index.html" />
     
     
-    <link rel="prev" href="../../language/module/index.html" />
+    <link rel="prev" href="../../tutorials/pyramid/index.html" />
     
 
         <!-- head:end -->
@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="6.1" data-basepath="../.." data-revision="Mon Dec 14 2015 10:59:50 GMT-0700 (MST)">
+    <div class="book" data-level="1.2" data-basepath="../.." data-revision="Mon Dec 14 2015 10:59:50 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -110,7 +110,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="tutorials/washer/index.html">
+        <li class="chapter active" data-level="1.2" data-path="tutorials/washer/index.html">
             
                 
                     <a href="../../tutorials/washer/index.html">
@@ -692,7 +692,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="6.1" data-path="language/module/craft.html">
+        <li class="chapter " data-level="6.1" data-path="language/module/craft.html">
             
                 
                     <a href="../../language/module/craft.html">
@@ -986,16 +986,43 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="craft">craft</h1>
-<p><iframe src="https://craftml.io/v?content=%3Ccraft%20name%3D%22three-by-three-cubes%22%3E%0A%20%20%3Ccol%20spacing%3D%222%22%3E%0A%20%20%20%20%3Crepeat%20n%3D%223%22%3E%0A%20%20%20%20%20%20%3Crow%20spacing%3D%222%22%3E%0A%20%20%20%20%20%20%20%20%3Crepeat%20n%3D%223%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ccube%3E%3C%2Fcube%3E%0A%20%20%20%20%20%20%20%20%3C%2Frepeat%3E%0A%20%20%20%20%20%20%3C%2Frow%3E%0A%20%20%20%20%3C%2Frepeat%3E%0A%20%20%3C%2Fcol%3E%0A%3C%2Fcraft%3E%0A%0A%3Cthree-by-three-cubes%3E%3C%2Fthree-by-three-cubes%3E" width="770" height="315" frameborder="0"></iframe></p>
-<h2 id="importing-from-craftml-io">Importing from craftml.io</h2>
-<p><a href="https://craftml.io/" target="_blank">craftml.io</a> is an online platform for the community to
-easily create, edit, and share their CraftML models. Each model on
-<a href="https://craftml.io/" target="_blank">craftml.io</a> has a unique identifier you can use to import
-into your own model.</p>
-<p>For example, craft <a href="http://craftml.io/4yS59" target="_blank">4yS59</a> is a heart, created by <a href="http://craftml.io/~calebhsu" target="_blank">calebhsu</a>.
-You can import this craft and give it any name, say <em>heart</em>.</p>
-<p><iframe src="https://craftml.io/v?content=%3Ccraft%20name%3D%22heart%22%20module%3D%224yS59%22%2F%3E%0A%3Cheart%3E%3C%2Fheart%3E" width="770" height="315" frameborder="0"></iframe></p>
+                        <h1 id="how-to-craft-a-washer">How to Craft a Washer?</h1>
+<p>The objective of this tutorial is to build a flat washer like below, which
+looks like a flat disk with a circular hole inside.</p>
+<p><img src="objective.png" alt="objective"></p>
+<p>First, create a flat disk using the <code>&lt;cylinder/&gt;</code> pyramid. Set the height
+of this cylinder to <code>2</code>. We can set the height to an even smaller value to
+make the disk thinner.</p>
+<p><iframe src="https://craftml.io/v?content=%3Ccylinder%20height%3D%222%22%2F%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p>Next, create a smaller flat disk with the height. By default, a cylinder has a
+radius of <code>5</code>. So we set this second cylinder&apos;s radius to <code>3</code> so that it is smaller
+than the previous cylinder. The purpose of this smaller disk is to mark the region
+we want to cut out of the bigger disk later.</p>
+<p><iframe src="https://craftml.io/v?content=%3Ccylinder%20height%3D%222%22%2F%3E%0A%3Ccylinder%20radius%3D%223%22%2F%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p>We want to center the two disks. We can accomplish this by grouping the two by
+a <code>&lt;g&gt;</code> tag and then using the layout command <code>centerXY</code> to center them
+along the x and y axes.</p>
+<p><iframe src="https://craftml.io/v?content=%3Cg%20l%3D%22centerXY()%22%3E%0A%20%20%3Ccylinder%20height%3D%222%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%223%22%2F%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p>Now that the two disks are positioned in the way we want, we can cut the second,
+smaller disk from the bigger one using the layout command <code>cut</code>. To indicate
+it&apos;s the second cylinder we really want to cut, we assign an <code>id</code> to that cylinder
+by <code>id=&quot;hole&quot;</code>. Then, we can give <code>#hole</code> as an argument to the cut command
+like <code>cut(#hole)</code>. Note that <code>#something</code> is just a standard css selector for selecting
+elements whose id is <code>something</code>.</p>
+<p><iframe src="https://craftml.io/v?content=%3Cg%20l%3D%22centerXY()%20cut(%23hole)%22%3E%0A%20%20%3Ccylinder%20height%3D%222%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%223%22%20id%3D%22hole%22%2F%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
+<h2 id="exercises">Exercises</h2>
+<p>Can you apply what you&apos;ve learned to craft the following objects?</p>
+<ol>
+<li><p>A round washer with a rectangular hole</p>
+<p><img src="exercise1.png" alt="exercise"></p>
+</li>
+<li><p>A rectangular washer with a round hole</p>
+<p><img src="exercise2.png" alt="exercise"></p>
+</li>
+<li><p>A rectangular washer with a rectangular hole</p>
+<p><img src="exercise3.png" alt="exercise"></p>
+</li>
+</ol>
 
                     
                     </section>
@@ -1006,10 +1033,10 @@ You can import this craft and give it any name, say <em>heart</em>.</p>
         </div>
 
         
-        <a href="../../language/module/index.html" class="navigation navigation-prev " aria-label="Previous page: Module"><i class="fa fa-angle-left"></i></a>
+        <a href="../../tutorials/pyramid/index.html" class="navigation navigation-prev " aria-label="Previous page: Pyramid"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../language/module/parameter.html" class="navigation navigation-next " aria-label="Next page: parameter"><i class="fa fa-angle-right"></i></a>
+        <a href="../../language/primitives/index.html" class="navigation navigation-next " aria-label="Next page: Primitives"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

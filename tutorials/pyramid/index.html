@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>craft | Introduction</title>
+        <title>Pyramid | Introduction</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../language/module/parameter.html" />
+    <link rel="next" href="../../tutorials/washer/index.html" />
     
     
-    <link rel="prev" href="../../language/module/index.html" />
+    <link rel="prev" href="../../tutorials/index.html" />
     
 
         <!-- head:end -->
@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="6.1" data-basepath="../.." data-revision="Mon Dec 14 2015 10:59:50 GMT-0700 (MST)">
+    <div class="book" data-level="1.1" data-basepath="../.." data-revision="Mon Dec 14 2015 10:59:50 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -95,7 +95,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.1" data-path="tutorials/pyramid/index.html">
+        <li class="chapter active" data-level="1.1" data-path="tutorials/pyramid/index.html">
             
                 
                     <a href="../../tutorials/pyramid/index.html">
@@ -692,7 +692,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="6.1" data-path="language/module/craft.html">
+        <li class="chapter " data-level="6.1" data-path="language/module/craft.html">
             
                 
                     <a href="../../language/module/craft.html">
@@ -986,16 +986,23 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="craft">craft</h1>
-<p><iframe src="https://craftml.io/v?content=%3Ccraft%20name%3D%22three-by-three-cubes%22%3E%0A%20%20%3Ccol%20spacing%3D%222%22%3E%0A%20%20%20%20%3Crepeat%20n%3D%223%22%3E%0A%20%20%20%20%20%20%3Crow%20spacing%3D%222%22%3E%0A%20%20%20%20%20%20%20%20%3Crepeat%20n%3D%223%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ccube%3E%3C%2Fcube%3E%0A%20%20%20%20%20%20%20%20%3C%2Frepeat%3E%0A%20%20%20%20%20%20%3C%2Frow%3E%0A%20%20%20%20%3C%2Frepeat%3E%0A%20%20%3C%2Fcol%3E%0A%3C%2Fcraft%3E%0A%0A%3Cthree-by-three-cubes%3E%3C%2Fthree-by-three-cubes%3E" width="770" height="315" frameborder="0"></iframe></p>
-<h2 id="importing-from-craftml-io">Importing from craftml.io</h2>
-<p><a href="https://craftml.io/" target="_blank">craftml.io</a> is an online platform for the community to
-easily create, edit, and share their CraftML models. Each model on
-<a href="https://craftml.io/" target="_blank">craftml.io</a> has a unique identifier you can use to import
-into your own model.</p>
-<p>For example, craft <a href="http://craftml.io/4yS59" target="_blank">4yS59</a> is a heart, created by <a href="http://craftml.io/~calebhsu" target="_blank">calebhsu</a>.
-You can import this craft and give it any name, say <em>heart</em>.</p>
-<p><iframe src="https://craftml.io/v?content=%3Ccraft%20name%3D%22heart%22%20module%3D%224yS59%22%2F%3E%0A%3Cheart%3E%3C%2Fheart%3E" width="770" height="315" frameborder="0"></iframe></p>
+                        <h1 id="how-to-craft-a-pyramid">How to Craft a Pyramid?</h1>
+<p>The objective of this tutorial is to build a pyramid made of a stack of
+square-shaped bricks of decreasing size from bottom to up.</p>
+<p><img src="objective.png" alt="pyramid"></p>
+<p>First, create a square-shaped brick using the <code>&lt;cube/&gt;</code> primitive.
+We set the size of the cube to <code>10 10 5</code>. It is the smallest piece
+that will be the tip of the pyramid.</p>
+<p><iframe src="https://craftml.io/v?content=%3Ccube%20size%3D%2210%2010%205%22%2F%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p>Next, create the next piece to go underneath this top piece. This piece
+should be larger than the top piece. Let&apos;s set the size to <code>15 15 5</code>.</p>
+<p><iframe src="https://craftml.io/v?content=%3Ccube%20size%3D%2210%2010%205%22%2F%3E%0A%3Ccube%20size%3D%2215%2015%205%22%2F%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p>The two pieces are overlapping because they are both positioned at (0,0,0).
+We can use the <code>&lt;stack&gt;</code> tag to put one on top of the other.</p>
+<p><iframe src="https://craftml.io/v?content=%3Cstack%3E%0A%20%20%3Ccube%20size%3D%2210%2010%205%22%2F%3E%0A%20%20%3Ccube%20size%3D%2215%2015%205%22%2F%3E%0A%3C%2Fstack%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p>To make the pyramid taller, continue to add more <code>&lt;cube/&gt;</code> with increasing
+sizes to the bottom of the stack.</p>
+<p><iframe src="https://craftml.io/v?content=%3Cstack%3E%0A%20%20%3Ccube%20size%3D%2210%2010%205%22%2F%3E%0A%20%20%3Ccube%20size%3D%2215%2015%205%22%2F%3E%0A%20%20%3Ccube%20size%3D%2220%2020%205%22%2F%3E%0A%20%20%3Ccube%20size%3D%2225%2025%205%22%2F%3E%0A%20%20%3Ccube%20size%3D%2230%2030%205%22%2F%3E%0A%20%20%3Ccube%20size%3D%2235%2035%205%22%2F%3E%0A%20%20%3Ccube%20size%3D%2240%2040%205%22%2F%3E%0A%3C%2Fstack%3E" width="770" height="315" frameborder="0"></iframe></p>
 
                     
                     </section>
@@ -1006,10 +1013,10 @@ You can import this craft and give it any name, say <em>heart</em>.</p>
         </div>
 
         
-        <a href="../../language/module/index.html" class="navigation navigation-prev " aria-label="Previous page: Module"><i class="fa fa-angle-left"></i></a>
+        <a href="../../tutorials/index.html" class="navigation navigation-prev " aria-label="Previous page: Tutorials"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../language/module/parameter.html" class="navigation navigation-next " aria-label="Next page: parameter"><i class="fa fa-angle-right"></i></a>
+        <a href="../../tutorials/washer/index.html" class="navigation navigation-next " aria-label="Next page: Washer"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
