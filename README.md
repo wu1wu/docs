@@ -22,4 +22,4 @@ and you will see that the 3D cube is now replaced by a 3D sphere.
 
 ## Next
 
-Check out the [Tutorials](Tutorials) to learn more about CraftML.
+Check out the [tutorials](tutorials/) to learn more about CraftML.
