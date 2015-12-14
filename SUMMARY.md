@@ -1,7 +1,8 @@
 # Summary
 
-This is the summary of my book.
-
+* [Tutorials](tutorials/index.md)
+  * [Pyramid](tutorials/pyramid/index.md)
+  * [Washer](tutorials/washer/index.md)
 * [Primitives](language/primitives/index.md)
     * [3D](language/primitives/3d/index.md)
         * [cube](language/primitives/3d/cube.md)
