@@ -1,18 +1,18 @@
 # prism
 
 {% craftml %}
-<prism></prism>
+<prism/>
 {% endcraftml %}
 
 ## `sides="integer"`
 
 {% craftml %}
 <row spacing="10">
-  <prism sides="3"></prism>
-  <prism sides="4"></prism>
-  <prism sides="5"></prism>
-  <prism sides="6"></prism>
-  <prism sides="7"></prism>
+  <prism sides="3"/>
+  <prism sides="4"/>
+  <prism sides="5"/>
+  <prism sides="6"/>
+  <prism sides="7"/>
 </row>
 {% endcraftml %}
 
@@ -20,8 +20,8 @@
 
 {% craftml %}
 <col>
-  <prism sideLength="10" sides="5"></prism>
-  <rectangle width="10" height="10"></rectangle>
+  <prism sideLength="10" sides="5"/>
+  <rectangle width="10" height="10"/>
 </col>
 {% endcraftml %}
 
@@ -29,8 +29,8 @@
 
 {% craftml %}
 <stack>
-  <prism radius="10" sides="5"></prism>
-  <circle radius="10"></circle>
+  <prism radius="10" sides="5"/>
+  <circle radius="10"/>
 </stack>
 {% endcraftml %}
 
@@ -40,8 +40,8 @@
 <row spacing="10" l="alignY(100%)">
   <repeat each="n" in="{:[3,5,7,9]:}">
     <col>
-      <prism sideLength="10" sides="{:n:}"></prism>
-      <cube size="10 50 10"></cube>
+      <prism sideLength="10" sides="{:n:}"/>
+      <cube size="10 50 10"/>
     </col>
   </repeat>
 </row>

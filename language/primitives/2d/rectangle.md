@@ -1,7 +1,5 @@
 # rectangle
 
 {% craftml %}
-<craft>
-  <rectangle></rectangle>
-</craft>
+<rectangle/>
 {% endcraftml %}

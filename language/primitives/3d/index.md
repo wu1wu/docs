@@ -2,10 +2,10 @@
 
 {% craftml %}
 <row spacing="10">
-  <cube></cube>
-  <cylinder></cylinder>
-  <sphere></sphere>
-  <dome></dome>
-  <prism></prism>
+  <cube/>
+  <cylinder/>
+  <sphere/>
+  <dome/>
+  <prism/>
 </row>
 {% endcraftml %}

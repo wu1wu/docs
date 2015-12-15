@@ -1,7 +1,7 @@
 # cylinder
 
 {% craftml %}
-<cylinder></cylinder>
+<cylinder/>
 {% endcraftml %}
 
 
@@ -9,8 +9,8 @@
 
 {% craftml %}
 <row spacing="10">
-  <cylinder radius="5"></cylinder>
-  <cylinder radius="10"></cylinder>
-  <cylinder radius="15"></cylinder>
+  <cylinder radius="5"/>
+  <cylinder radius="10"/>
+  <cylinder radius="15"/>
 </row>
 {% endcraftml %}
