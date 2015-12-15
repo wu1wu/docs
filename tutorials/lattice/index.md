@@ -114,4 +114,4 @@ column along the y-axis. We are done!
 
 4. A lattice where each tile has four lines.
 
-  ![exercise](exercise3.png)
+  ![exercise](exercise4.png)
