@@ -108,3 +108,19 @@ a number of exercises for you to practice what you've just learned.
   <div class="section-title">Level</div>
   Beginner
 </div>
+<div class="tutorial">
+  <div class="title">
+    <a href="snowman/">Snowman</a>
+  </div>
+  <a href="snowman/">
+    <img class="objective" src="snowman/objective.png" height="200px" style="border: solid 1px #ddd; border-radius: 5px;"/>
+  </a>  <div class="section-title">Concepts</div>
+    <span class="concept-item">style</span>
+    <span class="concept-item">part</span>   
+    <span class="concept-item">stack</span>   
+    <span class="concept-item">row</span>    
+    <span class="concept-item">position</span>
+    <span class="concept-item">scale</span>
+  <div class="section-title">Level</div>
+  Beginner
+</div>
