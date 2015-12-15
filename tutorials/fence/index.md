@@ -50,7 +50,7 @@ items are lined up along the y-axis.
 </col>
 {% endcraftml %}
 
-# Step 3
+## Step 3
 
 Finally, we can bring the two parts together. We also want to align the
 two parts correctly. To do so, we group them using `<g>` and use the

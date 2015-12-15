@@ -5,7 +5,16 @@ looks like a flat disk with a circular hole inside.
 
 ![objective](objective.png)
 
-First, create a flat disk using the `<cylinder/>` pyramid. Set the height
+We will use
+* `<cylinder>`
+* `<g>`
+* `cut()`
+* `centerXY()`
+* `id="hole"`
+
+## Steps
+
+First, create a flat disk using the `<cylinder/>` primitive. Set the height
 of this cylinder to `2`. We can set the height to an even smaller value to
 make the disk thinner.
 

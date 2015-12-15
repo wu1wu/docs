@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.2" data-basepath="../.." data-revision="Mon Dec 14 2015 14:18:56 GMT-0700 (MST)">
+    <div class="book" data-level="1.2" data-basepath="../.." data-revision="Mon Dec 14 2015 17:26:01 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -150,6 +150,21 @@
                             <b>1.4.</b>
                         
                         Button
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="tutorials/lattice/index.html">
+            
+                
+                    <a href="../../tutorials/lattice/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        Lattice
                     </a>
             
             
@@ -1020,7 +1035,16 @@
 <p>The objective of this tutorial is to build a flat washer like below, which
 looks like a flat disk with a circular hole inside.</p>
 <p><img src="objective.png" alt="objective"></p>
-<p>First, create a flat disk using the <code>&lt;cylinder/&gt;</code> pyramid. Set the height
+<p>We will use</p>
+<ul>
+<li><code>&lt;cylinder&gt;</code></li>
+<li><code>&lt;g&gt;</code></li>
+<li><code>cut()</code></li>
+<li><code>centerXY()</code></li>
+<li><code>id=&quot;hole&quot;</code></li>
+</ul>
+<h2 id="steps">Steps</h2>
+<p>First, create a flat disk using the <code>&lt;cylinder/&gt;</code> primitive. Set the height
 of this cylinder to <code>2</code>. We can set the height to an even smaller value to
 make the disk thinner.</p>
 <p><iframe src="https://craftml.io/v?content=%3Ccylinder%20height%3D%222%22%2F%3E" width="770" height="315" frameborder="0"></iframe></p>

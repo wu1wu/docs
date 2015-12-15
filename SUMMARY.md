@@ -5,6 +5,7 @@
   * [Washer](tutorials/washer/index.md)
   * [Fence](tutorials/fence/index.md)
   * [Button](tutorials/button/index.md)
+  * [Lattice](tutorials/lattice/index.md)
 * [Primitives](language/primitives/index.md)
     * [3D](language/primitives/3d/index.md)
         * [cube](language/primitives/3d/cube.md)
