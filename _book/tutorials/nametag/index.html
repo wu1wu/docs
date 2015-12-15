@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>crop | Introduction</title>
+        <title>Name Tag | Introduction</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../language/transform/fit.html" />
+    <link rel="next" href="../../language/primitives/index.html" />
     
     
-    <link rel="prev" href="../../language/transform/land.html" />
+    <link rel="prev" href="../../tutorials/snowman/index.html" />
     
 
         <!-- head:end -->
@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="4.8" data-basepath="../.." data-revision="Tue Dec 15 2015 06:57:30 GMT-0700 (MST)">
+    <div class="book" data-level="1.7" data-basepath="../.." data-revision="Tue Dec 15 2015 06:57:30 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -185,7 +185,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="tutorials/nametag/index.html">
+        <li class="chapter active" data-level="1.7" data-path="tutorials/nametag/index.html">
             
                 
                     <a href="../../tutorials/nametag/index.html">
@@ -605,7 +605,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="4.8" data-path="language/transform/crop.html">
+        <li class="chapter " data-level="4.8" data-path="language/transform/crop.html">
             
                 
                     <a href="../../language/transform/crop.html">
@@ -1061,9 +1061,29 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="cropx-cropy-cropz">cropX, cropY, cropZ</h1>
-<p><iframe src="https://craftml.io/v?content=%3Crow%20spacing%3D%225%22%3E%0A%20%20%3Ccylinder%20t%3D%22cropX(30%25)%22%3E%3C%2Fcylinder%3E%0A%20%20%3Ccylinder%20t%3D%22cropX(0%2030%25)%22%3E%3C%2Fcylinder%3E%0A%20%20%3Ccylinder%20t%3D%22cropY(30%25)%22%3E%3C%2Fcylinder%3E%0A%20%20%3Ccylinder%20t%3D%22cropY(0%2030%25)%22%3E%3C%2Fcylinder%3E%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
-<p><iframe src="https://craftml.io/v?content=%3Crow%20spacing%3D%222%22%3E%0A%20%20%3C!--%20crop%20the%20top%2050%25%20--%3E%0A%20%20%3Csphere%20t%3D%22cropZ(0%2050%25)%22%3E%3C%2Fsphere%3E%0A%20%20%3C!--%20crop%20the%20top%205%20units%20--%3E%0A%20%20%3Csphere%20t%3D%22cropZ(0%205)%22%3E%3C%2Fsphere%3E%0A%0A%20%20%3C!--%20crop%20the%20bottom%2050%25%20--%3E%0A%20%20%3Csphere%20t%3D%22cropZ(50%25%200)%22%3E%3C%2Fsphere%3E%0A%20%20%3C!--%20crop%20the%20bottom%205%20units%20--%3E%0A%20%20%3Csphere%20t%3D%22cropZ(5%200)%22%3E%3C%2Fsphere%3E%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
+                        <h1 id="how-to-craft-a-name-tag">How to Craft a Name Tag?</h1>
+<p>Name tags are by far the most frequently printed 3D objects. It is very easy
+to design a name tag using CraftML. Let&apos;s see how to build one like below.</p>
+<p><img src="objective.png" alt="objective"></p>
+<p>This name tag can be broken down into two parts: the <em>tag</em> part and the <em>name</em>
+part. The <em>tag</em> part has a shape that looks like a rectangle and a
+semi-circle joined together. After decomposing the model into individual parts
+like this, we can proceed to model them individually and assemble them later.</p>
+<p>First, lets model the <em>tag</em> part. We need a rectangle and a semi-circle.
+For the rectangle, we use <code>&lt;cube&gt;</code> and give it a size sufficiently large to hold
+the text later. For the semi-circle, we use <code>&lt;cylinder&gt;</code> and specify
+a radius of 10 to match the rectangle&apos;s dimension in y. Then, we use
+the transform command <code>cropX(50%)</code> to crop the first 50% of the cylinder
+along the x-axis, which gives us the semi-circle we want.</p>
+<p><iframe src="https://craftml.io/v?content=%3Crow%3E%0A%20%20%3Ccube%20size%3D%2250%2020%2010%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%2210%22%20t%3D%22cropX(50%25)%22%2F%3E%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p>Next, the <em>name</em> part. CraftML lets you write text-oriented contents simply
+by writing HTMl tags, as if you are developing a web page. Here, we use a
+<code>&lt;div&gt;</code> tag and put a name in it.</p>
+<p><iframe src="https://craftml.io/v?content=%3Cdiv%3EMy%20Name%3C%2Fdiv%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p>After the two parts are ready, we arrange them in a stack.</p>
+<p><iframe src="https://craftml.io/v?content=%3Cpart%20name%3D%22tag%22%3E%0A%20%20%3Crow%3E%0A%20%20%20%20%3Ccube%20size%3D%2250%2020%2010%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%2210%22%20t%3D%22cropX(50%25)%22%2F%3E%0A%20%20%3C%2Frow%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22name%22%3E%0A%20%20%3Cdiv%3EMy%20Name%3C%2Fdiv%3E%0A%3C%2Fpart%3E%0A%3Cstack%3E%0A%20%20%3Cname%2F%3E%0A%20%20%3Ctag%2F%3E%0A%3C%2Fstack%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p>Finally, we can style the name tag so that it looks pretty!
+<iframe src="https://craftml.io/v?content=%3Cstyle%3E%0A%20%20tag%20%7B%0A%20%20%20%20color%3A%20brown%3B%0A%20%20%7D%0A%20%20name%20%7B%0A%20%20%20%20color%3A%20white%3B%0A%20%20%7D%0A%3C%2Fstyle%3E%0A%3Cpart%20name%3D%22tag%22%3E%0A%20%20%3Crow%3E%0A%20%20%20%20%3Ccube%20size%3D%2250%2020%2010%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%2210%22%20t%3D%22cropX(50%25)%22%2F%3E%0A%20%20%3C%2Frow%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22name%22%3E%0A%20%20%3Cdiv%3EMy%20Name%3C%2Fdiv%3E%0A%3C%2Fpart%3E%0A%3Cstack%3E%0A%20%20%3Cname%2F%3E%0A%20%20%3Ctag%2F%3E%0A%3C%2Fstack%3E" width="770" height="315" frameborder="0"></iframe></p>
 
                     
                     </section>
@@ -1074,10 +1094,10 @@
         </div>
 
         
-        <a href="../../language/transform/land.html" class="navigation navigation-prev " aria-label="Previous page: land"><i class="fa fa-angle-left"></i></a>
+        <a href="../../tutorials/snowman/index.html" class="navigation navigation-prev " aria-label="Previous page: Snowman"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../language/transform/fit.html" class="navigation navigation-next " aria-label="Next page: fit"><i class="fa fa-angle-right"></i></a>
+        <a href="../../language/primitives/index.html" class="navigation navigation-next " aria-label="Next page: Primitives"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

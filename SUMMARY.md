@@ -7,6 +7,7 @@
   * [Button](tutorials/button/index.md)
   * [Lattice](tutorials/lattice/index.md)
   * [Snowman](tutorials/snowman/index.md)
+  * [Name Tag](tutorials/nametag/index.md)
 * [Primitives](language/primitives/index.md)
     * [3D](language/primitives/3d/index.md)
         * [cube](language/primitives/3d/cube.md)
