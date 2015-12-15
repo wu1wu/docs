@@ -138,3 +138,14 @@ a number of exercises for you to practice what you've just learned.
   <div class="section-title">Level</div>
   Beginner
 </div>
+<div class="tutorial">
+  <div class="title">
+    <a href="bracelet/">Bracelet</a>
+  </div>
+  <a href="bracelet/">
+    <img class="objective" src="bracelet/objective.png" height="200px" style="border: solid 1px #ddd; border-radius: 5px;"/>
+  </a>  <div class="section-title">Concepts</div>
+    <span class="concept-item">module</span>    
+  <div class="section-title">Level</div>
+  Beginner
+</div>
