@@ -7,6 +7,28 @@
   position: relative
 }
 
+.doc-link {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.transform code{
+  color: green;
+}
+
+.layout code{
+  color: green;
+}
+
+.attr code{
+  color: green;
+}
+
+.tag code{
+  color: #F44336;
+}
+
+
 .ide .editor-container .craft-ace {
     width: 620px;
 }

@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.3" data-basepath="../.." data-revision="Tue Jan 05 2016 18:26:38 GMT-0700 (MST)">
+    <div class="book" data-level="1.3" data-basepath="../.." data-revision="Wed Jan 06 2016 08:00:40 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -665,6 +665,36 @@
             
         </li>
     
+        <li class="chapter " data-level="4.11" data-path="language/transform/cut.html">
+            
+                
+                    <a href="../../language/transform/cut.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.11.</b>
+                        
+                        cut
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.12" data-path="language/transform/clip.html">
+            
+                
+                    <a href="../../language/transform/clip.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.12.</b>
+                        
+                        clip
+                    </a>
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -1086,28 +1116,28 @@
 <li>position (1) and (2) in the way we want</li>
 </ol>
 <h2 id="step-1">Step 1</h2>
-<p>To create a vertical stick, we can use the <code>&lt;cube/&gt;</code> primitive. Set the size
-attribute of this cube to <code>5 50 5</code>, which will create a cube that is <code>5</code> units
+<p>To create a vertical stick, we can use a <span class="doc-link tag"><a href="../../language/primitives/3d/cube.html" target="_doc"><code>&lt;cube&gt;</code></a></span> and set its size
+to <code>5 50 5</code>, which is <code>5</code> units
 along the x-axis, <code>50</code> units along the y-axis, and <code>5</code> units along the z-axis.
 By default, one unit is equal to one <em>mm</em>.</p>
 <p><iframe src="http://localhost:5000/v?content=%3Ccube%20size%3D%225%2050%205%22%2F%3E" width="770" height="315" frameborder="0"></iframe></p>
-<p>Add the <code>repeat</code> attribute to the cube tag and set its value to <code>10</code>, which will give
+<p>Add the <span class="doc-link tag"><a href="../../language/structure/repeat.html" target="_doc"><code>&lt;repeat&gt;</code></a></span> attribute to the cube tag and set its value to <code>10</code>, which will give
 us 10 copies of this vertical stick.</p>
 <p><iframe src="http://localhost:5000/v?content=%3Ccube%20repeat%3D%2210%22%20size%3D%225%2050%205%22%2F%3E" width="770" height="315" frameborder="0"></iframe></p>
 <p>However, all these 20 sticks are overlapping. To put them in a row with even
-spacing, we can use the <code>&lt;row&gt;&lt;/row&gt;</code> tag and set the <code>spacing</code> attribute
+spacing, we can wrap them inside a  <span class="doc-link tag"><a href="../../language/structure/row.html" target="_doc"><code>&lt;row&gt;</code></a></span> tag and set the <code>spacing</code> attribute
 to <code>5</code> to add a spacing of 5 units between every two sticks.</p>
 <p><iframe src="http://localhost:5000/v?content=%3Crow%20spacing%3D%225%22%3E%0A%20%20%3Ccube%20repeat%3D%2210%22%20size%3D%225%2050%205%22%2F%3E%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
 <h2 id="step-2">Step 2</h2>
-<p>The next step is to build two long sticks. Similarly, we can use <code>&lt;cube/&gt;</code> and
-set its <code>size</code> and <code>repeat</code> attributes to what we want. Then, to position
-the two sticks, we can use the <code>&lt;col&gt;&lt;/col&gt;</code> tag, which is like <code>&lt;row&gt;</code> except
+<p>The next step is to build two long sticks. Similarly, we can create a <span class="doc-link tag"><a href="../../language/primitives/3d/cube.html" target="_doc"><code>&lt;cube&gt;</code></a></span> and
+set its `size` and `repeat` attributes to what we want. Then, to position
+the two sticks, we can use a <span class="doc-link tag"><a href="../../language/css/color.html" target="_doc"><code>&lt;col&gt;</code></a></span> tag, which is like a <span class="doc-link tag"><a href="../../language/structure/row.html" target="_doc"><code>&lt;row&gt;</code></a></span> except
 items are lined up along the y-axis.</p>
 <p><iframe src="http://localhost:5000/v?content=%3Ccol%20spacing%3D%2230%22%3E%0A%20%20%3Ccube%20repeat%3D%222%22%20size%3D%2290%205%205%22%2F%3E%0A%3C%2Fcol%3E" width="770" height="315" frameborder="0"></iframe></p>
 <h2 id="step-3">Step 3</h2>
 <p>Finally, we can bring the two parts together. We also want to align the
-two parts correctly. To do so, we group them using <code>&lt;g&gt;</code> and use the
-layout command <code>center y</code>.</p>
+two parts correctly. To do so, we group them using <span class="doc-link tag"><a href="../../language" target="_doc"><code>&lt;g&gt;</code></a></span> and use the
+layout command <span class="doc-link layout"><a href="../../language/layout/center.html" target="_doc"><code>center</code></a></span>.</p>
 <p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22center%20y%22%3E%0A%0A%20%20%3C!--%20a%20row%20of%2010%20sticks%20--%3E%0A%20%20%3Crow%20spacing%3D%225%22%3E%0A%20%20%20%20%3Ccube%20repeat%3D%2210%22%20size%3D%225%2050%205%22%2F%3E%0A%20%20%3C%2Frow%3E%0A%0A%20%20%3C!--%20a%20column%20of%202%20sticks%20--%3E%0A%20%20%3Ccol%20spacing%3D%2230%22%3E%0A%20%20%20%20%3Ccube%20repeat%3D%222%22%20size%3D%2295%205%205%22%2F%3E%0A%20%20%3C%2Fcol%3E%0A%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
 <h2 id="exercises">Exercises</h2>
 <p>Can you build these other kinds of fences?</p>

@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="4" data-basepath="../.." data-revision="Tue Jan 05 2016 18:26:38 GMT-0700 (MST)">
+    <div class="book" data-level="4" data-basepath="../.." data-revision="Wed Jan 06 2016 08:00:40 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -665,6 +665,36 @@
             
         </li>
     
+        <li class="chapter " data-level="4.11" data-path="language/transform/cut.html">
+            
+                
+                    <a href="../../language/transform/cut.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.11.</b>
+                        
+                        cut
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.12" data-path="language/transform/clip.html">
+            
+                
+                    <a href="../../language/transform/clip.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.12.</b>
+                        
+                        clip
+                    </a>
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -1077,32 +1107,54 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="transform">transform</h1>
-<p>CraftML provides a versatile set of transformation commands listed below:</p>
+<p>CraftML provides a versatile set of transformation commands to change the
+position, size, and shape of an object. Most
+transformation commands expect three arguments that correspond to the x, y, z
+dimensions.</p>
+<pre><code>command:string  x:number  y:number  z:number
+</code></pre><p>For example,</p>
+<ul>
+<li><code>translate 4 5 3</code> translates a solid by 4, 5, and 3 along the x, y, and z dimension.</li>
+<li><code>scale 1 1.5 2</code> scales a solid by a factor of 1, 1.5, and 2 along the x, y, and z dimensions.</li>
+</ul>
+<p>An alternative form is to specify each axe or set of axes followed by a value,
+which has the following form:</p>
+<pre><code>command:string  axes1:string v2:number  axes2:string  v2:number ... axesN:string vN:number
+</code></pre><p>For example,</p>
+<ul>
+<li><code>translate x 4 y 5</code> translates a solid by 4 and 5 along the x and y axis; nothing
+is done along the z axis.</li>
+<li><code>scale x 1 z 2</code> scales a solid by 2 and 3 along the x and y axis; nothing
+is done along the y axis.</li>
+<li><code>position xy 5 z 3</code> positions a solid at (5, 5, 3).</li>
+<li><code>scale xyz 5</code> scales a solid by a factor of 5 along all dimensions. This is
+equivalent to <code>scale 5</code>.</li>
+</ul>
 <h3 id="positioning">Positioning</h3>
 <ul>
-<li>translate</li>
-<li>position</li>
-<li>center</li>
-<li>land</li>
+<li><span class="doc-link transform"><a href="translate.html" target="_doc"><code>translate</code></a></span></li>
+<li><span class="doc-link transform"><a href="position.html" target="_doc"><code>position</code></a></span></li>
+<li><span class="doc-link transform"><a href="center.html" target="_doc"><code>center</code></a></span></li>
+<li><span class="doc-link transform"><a href="land.html" target="_doc"><code>land</code></a></span></li>
 </ul>
 <h3 id="sizing">Sizing</h3>
 <ul>
-<li>scale</li>
-<li>size</li>
-<li>fit</li>
+<li><span class="doc-link transform"><a href="scale.html" target="_doc"><code>scale</code></a></span></li>
+<li><span class="doc-link transform"><a href="size.html" target="_doc"><code>size</code></a></span></li>
+<li><span class="doc-link transform"><a href="fit.html" target="_doc"><code>fit</code></a></span></li>
 </ul>
 <h3 id="orienting">Orienting</h3>
 <ul>
-<li>rotate</li>
-<li>flip</li>
+<li><span class="doc-link transform"><a href="rotate.html" target="_doc"><code>rotate</code></a></span></li>
+<li><span class="doc-link transform"><a href="flip.html" target="_doc"><code>flip</code></a></span></li>
 </ul>
 <h3 id="changing-shapes">Changing Shapes</h3>
 <ul>
-<li>crop</li>
-<li>cut</li>
-<li>clip</li>
-<li>hull</li>
-<li>wall</li>
+<li><span class="doc-link transform"><a href="crop.html" target="_doc"><code>crop</code></a></span></li>
+<li><span class="doc-link transform"><a href="cut.html" target="_doc"><code>cut</code></a></span></li>
+<li><span class="doc-link transform"><a href="clip.html" target="_doc"><code>clip</code></a></span></li>
+<li><span class="doc-link transform"><a href="hull.html" target="_doc"><code>hull</code></a></span></li>
+<li><span class="doc-link transform"><a href="wall.html" target="_doc"><code>wall</code></a></span></li>
 </ul>
 
                     
