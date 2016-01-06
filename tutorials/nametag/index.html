@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.7" data-basepath="../.." data-revision="Tue Dec 15 2015 13:37:06 GMT-0700 (MST)">
+    <div class="book" data-level="1.7" data-basepath="../.." data-revision="Tue Jan 05 2016 18:26:38 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -650,16 +650,16 @@
             
         </li>
     
-        <li class="chapter " data-level="4.10" data-path="language/transform/mirror.html">
+        <li class="chapter " data-level="4.10" data-path="language/transform/flip.html">
             
                 
-                    <a href="../../language/transform/mirror.html">
+                    <a href="../../language/transform/flip.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>4.10.</b>
                         
-                        mirror
+                        flip
                     </a>
             
             
@@ -1088,17 +1088,17 @@ like this, we can proceed to model them individually and assemble them later.</p
 For the rectangle, we use <code>&lt;cube&gt;</code> and give it a size sufficiently large to hold
 the text later. For the semi-circle, we use <code>&lt;cylinder&gt;</code> and specify
 a radius of 10 to match the rectangle&apos;s dimension in y. Then, we use
-the transform command <code>cropX(50%)</code> to crop the first 50% of the cylinder
+the transform command <code>crop x min 50%</code> to crop the first 50% of the cylinder
 along the x-axis, which gives us the semi-circle we want.</p>
-<p><iframe src="https://craftml.io/v?content=%3Crow%3E%0A%20%20%3Ccube%20size%3D%2250%2020%2010%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%2210%22%20t%3D%22cropX(50%25)%22%2F%3E%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
-<p>Next, the <em>name</em> part. CraftML lets you write text-oriented contents simply
-by writing HTMl tags, as if you are developing a web page. Here, we use a
+<p><iframe src="http://localhost:5000/v?content=%3Crow%3E%0A%20%20%3Ccube%20size%3D%2250%2020%2010%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%2210%22%20t%3D%22crop%20x%20min%2050%25%22%2F%3E%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p>Next, the <em>name</em> part. CraftML lets us write text-oriented contents simply
+by writing HTML tags, as if we are developing a web page. Here, we use a
 <code>&lt;div&gt;</code> tag and put a name in it.</p>
-<p><iframe src="https://craftml.io/v?content=%3Cdiv%3EMy%20Name%3C%2Fdiv%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="http://localhost:5000/v?content=%3Cdiv%3EMy%20Name%3C%2Fdiv%3E" width="770" height="315" frameborder="0"></iframe></p>
 <p>After the two parts are ready, we arrange them in a stack.</p>
-<p><iframe src="https://craftml.io/v?content=%3Cpart%20name%3D%22tag%22%3E%0A%20%20%3Crow%3E%0A%20%20%20%20%3Ccube%20size%3D%2250%2020%2010%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%2210%22%20t%3D%22cropX(50%25)%22%2F%3E%0A%20%20%3C%2Frow%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22name%22%3E%0A%20%20%3Cdiv%3EMy%20Name%3C%2Fdiv%3E%0A%3C%2Fpart%3E%0A%3Cstack%3E%0A%20%20%3Cname%2F%3E%0A%20%20%3Ctag%2F%3E%0A%3C%2Fstack%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="http://localhost:5000/v?content=%3Cpart%20name%3D%22tag%22%3E%0A%20%20%3Crow%3E%0A%20%20%20%20%3Ccube%20size%3D%2250%2020%2010%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%2210%22%20t%3D%22crop%20x%20min%2050%25%22%2F%3E%0A%20%20%3C%2Frow%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22name%22%3E%0A%20%20%3Cdiv%3EMy%20Name%3C%2Fdiv%3E%0A%3C%2Fpart%3E%0A%3Cstack%3E%0A%20%20%3Cname%2F%3E%0A%20%20%3Ctag%2F%3E%0A%3C%2Fstack%3E" width="770" height="315" frameborder="0"></iframe></p>
 <p>Finally, we can style the name tag so that it looks pretty!
-<iframe src="https://craftml.io/v?content=%3Cstyle%3E%0A%20%20tag%20%7B%0A%20%20%20%20color%3A%20brown%3B%0A%20%20%7D%0A%20%20name%20%7B%0A%20%20%20%20color%3A%20white%3B%0A%20%20%7D%0A%3C%2Fstyle%3E%0A%3Cpart%20name%3D%22tag%22%3E%0A%20%20%3Crow%3E%0A%20%20%20%20%3Ccube%20size%3D%2250%2020%2010%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%2210%22%20t%3D%22cropX(50%25)%22%2F%3E%0A%20%20%3C%2Frow%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22name%22%3E%0A%20%20%3Cdiv%3EMy%20Name%3C%2Fdiv%3E%0A%3C%2Fpart%3E%0A%3Cstack%3E%0A%20%20%3Cname%2F%3E%0A%20%20%3Ctag%2F%3E%0A%3C%2Fstack%3E" width="770" height="315" frameborder="0"></iframe></p>
+<iframe src="http://localhost:5000/v?content=%3Cstyle%3E%0A%20%20tag%20%7B%0A%20%20%20%20color%3A%20brown%3B%0A%20%20%7D%0A%20%20name%20%7B%0A%20%20%20%20color%3A%20white%3B%0A%20%20%7D%0A%3C%2Fstyle%3E%0A%3Cpart%20name%3D%22tag%22%3E%0A%20%20%3Crow%3E%0A%20%20%20%20%3Ccube%20size%3D%2250%2020%2010%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%2210%22%20t%3D%22crop%20x%20min%2050%25%22%2F%3E%0A%20%20%3C%2Frow%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22name%22%3E%0A%20%20%3Cdiv%3EMy%20Name%3C%2Fdiv%3E%0A%3C%2Fpart%3E%0A%3Cstack%3E%0A%20%20%3Cname%2F%3E%0A%20%20%3Ctag%2F%3E%0A%3C%2Fstack%3E" width="770" height="315" frameborder="0"></iframe></p>
 
                     
                     </section>
@@ -1122,6 +1122,10 @@ by writing HTMl tags, as if you are developing a web page. Here, we use a
 
     
     <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>

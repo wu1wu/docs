@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.5" data-basepath="../.." data-revision="Tue Dec 15 2015 13:37:06 GMT-0700 (MST)">
+    <div class="book" data-level="1.5" data-basepath="../.." data-revision="Tue Jan 05 2016 18:26:38 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -650,16 +650,16 @@
             
         </li>
     
-        <li class="chapter " data-level="4.10" data-path="language/transform/mirror.html">
+        <li class="chapter " data-level="4.10" data-path="language/transform/flip.html">
             
                 
-                    <a href="../../language/transform/mirror.html">
+                    <a href="../../language/transform/flip.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>4.10.</b>
                         
-                        mirror
+                        flip
                     </a>
             
             
@@ -1081,39 +1081,40 @@
 <p><img src="objective.png" alt="objective"></p>
 <p>The concepts covered in this tutorial include:</p>
 <ul>
-<li><code>rotateZ()</code></li>
-<li><code>centerXY()</code></li>
-<li><code>inside()</code></li>
+<li><code>rotate</code></li>
+<li><code>center</code></li>
+<li><code>clip</code></li>
 <li><code>&lt;part&gt;</code></li>
 </ul>
 <p>This lattice is a 3 by 5 grid of tiles, where each tile is an X.</p>
 <p>First, create an X pattern using two elongated cubes crossing each other.
 Each cube&apos;s size is set to <code>100 10 10</code> and is rotated using the transform
-command <code>rotateZ()</code>. The letter <code>Z</code> indicates that rotation is
+command <code>rotate z</code>. The letter <code>z</code> indicates that rotation is
 performed around the z-axis. The amount of rotation is 45 degrees and -45 degrees
 for the two cubes respectively.</p>
-<p><iframe src="https://craftml.io/v?content=%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotateZ(45)%22%2F%3E%0A%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotateZ(-45)%22%2F%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="http://localhost:5000/v?content=%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%2045%22%2F%3E%0A%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%20-45%22%2F%3E" width="770" height="315" frameborder="0"></iframe></p>
 <p>Ideally, we want each tile to be shaped like a square with right-angle corners.
 But it is not the case right now. One easy way to force the tile to take on
 a square shape is to simply add another cube to say how this square should
-look like. We use <code>centerXY()</code> to align this square to the center of the cross.</p>
-<p><iframe src="https://craftml.io/v?content=%3Cg%20l%3D%22centerXY()%22%3E%0A%20%20%3Ccube%20size%3D%2250%2050%2010%22%20id%3D%22square%22%2F%3E%0A%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotateZ(45)%22%2F%3E%0A%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotateZ(-45)%22%2F%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
-<p>The layout command <code>inside</code> is useful for keeping only a portion of a model inside
-the space occupied by selected objects. We assign an id to the first cube <code>id=&quot;square&quot;</code>,
-which allows us to write <code>inside(#square)</code> to select this square cube and remove
-everything except for the portion inside the square.</p>
-<p><iframe src="https://craftml.io/v?content=%3Cg%20l%3D%22centerXY()%20inside(%23square)%22%3E%0A%20%20%3Ccube%20size%3D%2250%2050%2010%22%20id%3D%22square%22%2F%3E%0A%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotateZ(45)%22%2F%3E%0A%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotateZ(-45)%22%2F%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
+look like. We use <code>center xy</code> to align this square to the center of the cross.</p>
+<p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22center%20xy%22%3E%0A%20%20%3Ccube%20size%3D%2250%2050%2010%22%20id%3D%22square%22%2F%3E%0A%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%2045%22%2F%3E%0A%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%20-45%22%2F%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p>The layout command <code>clip</code> is useful for clipping a solid to the spaces inside
+selected objects. Here, we wish to clip it to inside the first square cube.
+We assign an id to the square cube <code>id=&quot;square&quot;</code>.
+Then, we can write <code>clip #square</code> to select this square cube and remove
+everything except for the portions inside the square.</p>
+<p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22center%20xy%22%20t%3D%22clip%20%23square%22%3E%0A%20%20%3Ccube%20size%3D%2250%2050%2010%22%20id%3D%22square%22%2F%3E%0A%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%2045%22%2F%3E%0A%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%20-45%22%2F%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
 <p>We wrap the code above with a <code>&lt;part&gt;</code> tag and set its name to <code>tile</code>. This
 allows us to use <code>&lt;tile&gt;</code> later each time we wish to generate a tile model,
 instead of writing the same code again. This greatly improves reusability.
 Another benefit of using a <code>&lt;part&gt;</code> tag is to improve readability. In the code
 below, it is not hard to understand the code is meant to create a row of
 five tiles.</p>
-<p><iframe src="https://craftml.io/v?content=%3Cpart%20name%3D%22tile%22%3E%0A%20%20%3Cg%20l%3D%22centerXY()%20inside(%23square)%22%3E%0A%20%20%20%20%3Ccube%20size%3D%2250%2050%2010%22%20id%3D%22square%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotateZ(45)%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotateZ(-45)%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fpart%3E%0A%0A%3Crow%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="http://localhost:5000/v?content=%3Cpart%20name%3D%22tile%22%3E%0A%20%20%3Cg%20l%3D%22center%20xy%22%20t%3D%22clip%20%23square%22%3E%0A%20%20%20%20%3Ccube%20size%3D%2250%2050%2010%22%20id%3D%22square%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%2045%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%20-45%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fpart%3E%0A%0A%3Crow%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
 <p>Finally, we add <code>repeat=&quot;3&quot;</code> to <code>&lt;row&gt;</code> to repeat this row three times.
 We further wrap it with a <code>&lt;col&gt;</code> to arrange the resulting three rows in a
 column along the y-axis. We are done!</p>
-<p><iframe src="https://craftml.io/v?content=%3Cpart%20name%3D%22tile%22%3E%0A%20%20%3Cg%20l%3D%22centerXY()%20inside(%23square)%22%3E%0A%20%20%20%20%3Ccube%20size%3D%2250%2050%2010%22%20id%3D%22square%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotateZ(45)%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotateZ(-45)%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fpart%3E%0A%0A%3Ccol%3E%0A%20%20%3Crow%20repeat%3D%223%22%3E%0A%20%20%20%20%3Ctile%2F%3E%0A%20%20%20%20%3Ctile%2F%3E%0A%20%20%20%20%3Ctile%2F%3E%0A%20%20%20%20%3Ctile%2F%3E%0A%20%20%20%20%3Ctile%2F%3E%20%20%20%20%0A%20%20%3C%2Frow%3E%0A%3C%2Fcol%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="http://localhost:5000/v?content=%3Cpart%20name%3D%22tile%22%3E%0A%20%20%3Cg%20l%3D%22center%20xy%22%20t%3D%22clip%20%23square%22%3E%0A%20%20%20%20%3Ccube%20size%3D%2250%2050%2010%22%20id%3D%22square%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%2045%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%20-45%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fpart%3E%0A%0A%3Ccol%3E%0A%20%20%3Crow%20repeat%3D%223%22%3E%0A%20%20%20%20%3Ctile%2F%3E%0A%20%20%20%20%3Ctile%2F%3E%0A%20%20%20%20%3Ctile%2F%3E%0A%20%20%20%20%3Ctile%2F%3E%0A%20%20%20%20%3Ctile%2F%3E%20%20%20%20%0A%20%20%3C%2Frow%3E%0A%3C%2Fcol%3E" width="770" height="315" frameborder="0"></iframe></p>
 <h2 id="exercises">Exercises</h2>
 <ol>
 <li><p>A lattice of 5 by 5 tiles</p>
@@ -1152,6 +1153,10 @@ column along the y-axis. We are done!</p>
 
     
     <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>
