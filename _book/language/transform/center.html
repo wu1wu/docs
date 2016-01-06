@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="4.6" data-basepath="../.." data-revision="Tue Dec 15 2015 13:37:06 GMT-0700 (MST)">
+    <div class="book" data-level="4.6" data-basepath="../.." data-revision="Tue Jan 05 2016 18:26:38 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -650,16 +650,16 @@
             
         </li>
     
-        <li class="chapter " data-level="4.10" data-path="language/transform/mirror.html">
+        <li class="chapter " data-level="4.10" data-path="language/transform/flip.html">
             
                 
-                    <a href="../../language/transform/mirror.html">
+                    <a href="../../language/transform/flip.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>4.10.</b>
                         
-                        mirror
+                        flip
                     </a>
             
             
@@ -1077,7 +1077,8 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="center">center</h1>
-<p><iframe src="https://craftml.io/v?content=%3Ccraft%20name%3D%22ball%22%3E%0A%20%20%3Csphere%20t%3D%22translate(30%20-10%2010)%22%3E%3C%2Fsphere%3E%0A%3C%2Fcraft%3E%0A%0A%3Cball%20style%3D%22color%3A%20pink%3B%22%2F%3E%0A%0A%3C!--%20center%20with%20respect%20to%20the%20origin%20--%3E%0A%3Cball%20t%3D%22center()%22%0A%20%20%20%20style%3D%22color%3Ared%3B%22%2F%3E%0A%0A%3C!--%20center%20with%20respect%20to%20(10%2010%200)%20--%3E%0A%3Cball%20t%3D%22center(10%2010%200)%22%0A%20%20%20%20style%3D%22color%3Agreen%3B%22%2F%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><code>center</code> centers an object at a specific location along all or selective dimensions</p>
+<p><iframe src="http://localhost:5000/v?content=%3C!--%20centers%20at%20(0%2C0%2C0)%20--%3E%0A%3Ccube%20color%3D%22yellow%22%2F%3E%0A%0A%3C!--%20centers%20at%20(20%2C20%2C0)%20--%3E%0A%3Ccube%20t%3D%22center%2020%2020%200%22%20color%3D%22red%22%2F%3E%0A%0A%3C!--%20centers%20at%20(20%2C20%2C10)%20--%3E%0A%3Ccube%20t%3D%22center%20xy%2040%2010%22%20clor%3D%22green%22%2F%3E%0A%0A%3C!--%20centers%20at%20x%3D40%2C%20y%3D40%2C%20ignoring%20z%20--%3E%0A%3Ccube%20t%3D%22center%20xy%2040%22%2F%3E" width="770" height="315" frameborder="0"></iframe></p>
 
                     
                     </section>
@@ -1101,6 +1102,10 @@
 
     
     <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>

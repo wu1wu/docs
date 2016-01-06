@@ -36,7 +36,7 @@
     * [land](language/transform/land.md)
     * [crop](language/transform/crop.md)
     * [fit](language/transform/fit.md)
-    * [mirror](language/transform/mirror.md)
+    * [flip](language/transform/flip.md)
 * [Layout](language/layout/index.md)
     * [lineup](language/layout/lineup.md)
     * [align](language/layout/align.md)

@@ -1,71 +1,22 @@
 # size
 
-Change the size of a solid
-
-`size` differs from `scale` in that `scale` specifies a scaling ratio relative to the solid's current size, whereas `size` specifies the solid's new size that solid will be automatically scaled to.
-
-{% craftml %}
-<craft name="cross">
-  <cube size="10 50 10"/>
-  <cube size="50 10 10"
-        t="translate(-20 10 0)"/>
-</craft>
-
-
-<row spacing="10">
-  <cross style="color:pink;"/>
-  <cross style="color:red;"
-         t="size(30 30 30)"/>
-</row>
-{% endcraftml %}
-
-## sizeX
+`size` scales up or down a solid such that its new size will become `x` by `y`
+by `z`. If an axis is unspecified, the size along that axis will not change.
 
 {% craftml %}
-<craft name="cross">
-  <cube size="10 50 10"/>
-  <cube size="50 10 10"
-        t="translate(-20 10 0)"/>
-</craft>
+<row>
 
+<!-- the default cube is 10x10x10 -->
+<cube color="yellow"/>
 
-<row spacing="10">
-  <cross style="color:pink;"/>
-  <cross style="color:red;"
-         t="sizeX(30)"/>
-</row>
-{% endcraftml %}
+<!-- size is changed to y = 50 -->
+<cube t="size y 50" color="green"/>
 
-## sizeY
+<!-- size is changed to xy = 50 -->
+<cube t="size xy 50" color="red"/>
 
-{% craftml %}
-<craft name="cross">
-  <cube size="10 50 10"/>
-  <cube size="50 10 10"
-        t="translate(-20 10 0)"/>
-</craft>
+<!-- size is changed to 50 by 50 by 50 -->
+<cube t="size 50 50 50" color="blue"/>
 
-
-<row spacing="10">
-  <cross style="color:pink;"/>
-  <cross style="color:red;"
-         t="sizeY(30)"/>
-</row>
-{% endcraftml %}
-
-## sizeZ
-
-{% craftml %}
-<craft name="cross">
-  <cube size="10 50 10"/>
-  <cube size="50 10 10"
-        t="translate(-20 10 0)"/>
-</craft>
-
-
-<row spacing="10">
-  <cross style="color:pink;"/>
-  <cross style="color:red;"
-         t="sizeZ(30)"/>
 </row>
 {% endcraftml %}

@@ -54,11 +54,11 @@ items are lined up along the y-axis.
 
 Finally, we can bring the two parts together. We also want to align the
 two parts correctly. To do so, we group them using `<g>` and use the
-layout command `centerY()`.
+layout command `center y`.
 
 {% craftml %}
 
-<g l="centerY()">
+<g l="center y">
 
   <!-- a row of 10 sticks -->
   <row spacing="5">

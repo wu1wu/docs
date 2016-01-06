@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="4.2" data-basepath="../.." data-revision="Tue Dec 15 2015 13:37:06 GMT-0700 (MST)">
+    <div class="book" data-level="4.2" data-basepath="../.." data-revision="Tue Jan 05 2016 18:26:38 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -650,16 +650,16 @@
             
         </li>
     
-        <li class="chapter " data-level="4.10" data-path="language/transform/mirror.html">
+        <li class="chapter " data-level="4.10" data-path="language/transform/flip.html">
             
                 
-                    <a href="../../language/transform/mirror.html">
+                    <a href="../../language/transform/flip.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>4.10.</b>
                         
-                        mirror
+                        flip
                     </a>
             
             
@@ -1077,8 +1077,8 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="scale">scale</h1>
-<p><iframe src="https://craftml.io/v?content=%3Crow%3E%0A%20%20%3Ccube%3E%3C%2Fcube%3E%0A%20%20%3Ccube%20t%3D%22scale(1%201%203)%22%3E%3C%2Fcube%3E%0A%20%20%3Ccube%20t%3D%22scale(1%203%201)%22%3E%3C%2Fcube%3E%0A%20%20%3Ccube%20t%3D%22scale(3%201%201)%22%3E%3C%2Fcube%3E%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
-<p><iframe src="https://craftml.io/v?content=%3Crow%3E%0A%20%20%3Ccube%20t%3D%22scale(2%202%202)%22%3E%3C%2Fcube%3E%0A%20%20%3Ccube%20t%3D%22scale(2)%22%3E%3C%2Fcube%3E%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><code>scale</code> scales a solid by given scaling factors</p>
+<p><iframe src="http://localhost:5000/v?content=%3Crow%3E%0A%0A%3C!--%20by%20default%2C%20a%20cube%20is%2010x10x10%20--%3E%0A%3Ccube%20color%3D%22yellow%22%2F%3E%0A%0A%3C!--%20scale%20it%20by%203%20along%20all%20dimensions%20--%3E%0A%3Ccube%20t%3D%22scale%203%22%20color%3D%22blue%22%2F%3E%0A%0A%3C!--%20scale%20it%20by%203%20in%20only%20y%20dimension--%3E%0A%3Ccube%20t%3D%22scale%20y%203%22%20color%3D%22green%22%2F%3E%0A%0A%3C!--%20scale%20it%20by%203%20in%20x%20and%20y%20dimensions%20--%3E%0A%3Ccube%20t%3D%22scale%20xy%203%22%20color%3D%22red%22%2F%3E%0A%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
 
                     
                     </section>
@@ -1102,6 +1102,10 @@
 
     
     <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>

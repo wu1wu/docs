@@ -8,8 +8,8 @@ looks like a flat disk with a circular hole inside.
 We will use
 * `<cylinder>`
 * `<g>`
-* `cut()`
-* `centerXY()`
+* `cut`
+* `center`
 * `id="hole"`
 
 ## Steps
@@ -33,25 +33,25 @@ we want to cut out of the bigger disk later.
 {% endcraftml %}
 
 We want to center the two disks. We can accomplish this by grouping the two by
-a `<g>` tag and then using the layout command `centerXY` to center them
+a `<g>` tag and then using the layout command `center xy` to center them
 along the x and y axes.
 
 {% craftml %}
-<g l="centerXY()">
+<g l="center xy">
   <cylinder height="2"/>
   <cylinder radius="3"/>
 </g>
 {% endcraftml %}
 
 Now that the two disks are positioned in the way we want, we can cut the second,
-smaller disk from the bigger one using the layout command `cut`. To indicate
+smaller disk from the bigger one using the transform command `cut`. To indicate
 it's the second cylinder we really want to cut, we assign an `id` to that cylinder
 by `id="hole"`. Then, we can give `#hole` as an argument to the cut command
-like `cut(#hole)`. Note that `#something` is just a standard css selector for selecting
+like `cut #hole`. Note that `#something` is just a standard css selector for selecting
 elements whose id is `something`.
 
 {% craftml %}
-<g l="centerXY() cut(#hole)">
+<g l="center xy" t="cut #hole">
   <cylinder height="2"/>
   <cylinder radius="3" id="hole"/>
 </g>

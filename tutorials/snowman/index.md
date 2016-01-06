@@ -48,8 +48,8 @@ Here, we add `scale(1.5)` to `<body>` to make the body 1.5 times large. We add
 
 <stack spacing="-4">
   <head/>
-  <body t="scale(1.5)"/>
-  <legs t="scale(2)"/>
+  <body t="scale 1.5"/>
+  <legs t="scale 2"/>
 </stack>
 {% endcraftml %}
 
@@ -62,7 +62,7 @@ at the right place on the sphere.
 {% craftml %}
 <part name="head">
   <sphere/>
-  <row spacing="2" t="position(2.5 8 5)">
+  <row spacing="2" t="position 2.5 8 5">
     <cube size="2 2 2"/>
     <cube size="2 2 2"/>
   </row>
@@ -76,8 +76,8 @@ at the right place on the sphere.
 
 <stack spacing="-4">
   <head/>
-  <body t="scale(1.5)"/>
-  <legs t="scale(2)"/>
+  <body t="scale 1.5"/>
+  <legs t="scale 2"/>
 </stack>
 {% endcraftml %}
 
@@ -98,7 +98,7 @@ we can refer to the eyes in a styling rule by `#eyes`.
 
 <part name="head">
   <sphere/>
-  <row spacing="2" t="position(2.5 8 5)" id="eyes">
+  <row spacing="2" t="position 2.5 8 5" id="eyes">
     <cube size="2 2 2"/>
     <cube size="2 2 2"/>
   </row>
@@ -112,8 +112,8 @@ we can refer to the eyes in a styling rule by `#eyes`.
 
 <stack spacing="-4">
   <head/>
-  <body t="scale(1.5)"/>
-  <legs t="scale(2)"/>
+  <body t="scale 1.5"/>
+  <legs t="scale 2"/>
 </stack>
 {% endcraftml %}
 

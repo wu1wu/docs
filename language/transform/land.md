@@ -1,16 +1,19 @@
 # land
 
-Move the object so that its bottom sits on the `z=0` plane (i.e., x-y plane).
+`land` moves the object so that its bottom sits on the `z=0` plane (i.e., x-y plane).
+
+Consider the following cubes that have been positioned off the ground plane.
 
 {% craftml %}
-<!-- the first cube is 20 units above the plane -->
-<cube t="translate(0 0 20)"></cube>
-<!-- the second cube is 20 units below the plane -->
-<cube t="translate(20 0 -20)"></cube>
+<cube t="position 0 0 20" color="red"/>
+<cube t="position 20 0 -5" color="green"/>
+<cube t="position 40 0 -20" color="blue"/>
 {% endcraftml %}
 
+By adding `land`, both are now sitting on the ground plane.
+
 {% craftml %}
-<!-- both cubes now sit nicely on the `z=0` plane -->
-<cube t="translate(0 0 20) land()"></cube>
-<cube t="translate(20 0 -20) land()"></cube>
+<cube t="position 0 0 20; land" color="red"/>
+<cube t="position 20 0 -5; land" color="green"/>
+<cube t="position 40 0 -20; land" color="blue"/>
 {% endcraftml %}

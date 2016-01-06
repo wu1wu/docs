@@ -14,18 +14,18 @@ First, lets model the _tag_ part. We need a rectangle and a semi-circle.
 For the rectangle, we use `<cube>` and give it a size sufficiently large to hold
 the text later. For the semi-circle, we use `<cylinder>` and specify
 a radius of 10 to match the rectangle's dimension in y. Then, we use
-the transform command `cropX(50%)` to crop the first 50% of the cylinder
+the transform command `crop x min 50%` to crop the first 50% of the cylinder
 along the x-axis, which gives us the semi-circle we want.
 
 {% craftml %}
 <row>
   <cube size="50 20 10"/>
-  <cylinder radius="10" t="cropX(50%)"/>
+  <cylinder radius="10" t="crop x min 50%"/>
 </row>
 {% endcraftml %}
 
-Next, the _name_ part. CraftML lets you write text-oriented contents simply
-by writing HTMl tags, as if you are developing a web page. Here, we use a
+Next, the _name_ part. CraftML lets us write text-oriented contents simply
+by writing HTML tags, as if we are developing a web page. Here, we use a
 `<div>` tag and put a name in it.
 
 {% craftml %}
@@ -38,7 +38,7 @@ After the two parts are ready, we arrange them in a stack.
 <part name="tag">
   <row>
     <cube size="50 20 10"/>
-    <cylinder radius="10" t="cropX(50%)"/>
+    <cylinder radius="10" t="crop x min 50%"/>
   </row>
 </part>
 <part name="name">
@@ -63,7 +63,7 @@ Finally, we can style the name tag so that it looks pretty!
 <part name="tag">
   <row>
     <cube size="50 20 10"/>
-    <cylinder radius="10" t="cropX(50%)"/>
+    <cylinder radius="10" t="crop x min 50%"/>
   </row>
 </part>
 <part name="name">

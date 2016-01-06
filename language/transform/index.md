@@ -1,5 +1,25 @@
 # transform
 
-{% craftml %}
-<cube t="translate(5 10 20) scale(2 1 3) rotateZ(45)"></cube>
-{% endcraftml %}
+CraftML provides a versatile set of transformation commands listed below:
+
+### Positioning
+* translate
+* position
+* center
+* land
+
+### Sizing
+* scale
+* size
+* fit
+
+### Orienting
+* rotate
+* flip
+
+### Changing Shapes
+* crop
+* cut
+* clip
+* hull
+* wall

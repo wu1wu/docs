@@ -1,23 +1,29 @@
 # fit
 
-{% craftml %}
-<craft name="huge">
-  <cube size="50 20 20" style="opacity: 0.7;"></cube>
-</craft>
-
-<cylinder></cylinder>
-<huge t="translate(10 0 0)"></huge>
-<cylinder t="translate(20 0 0)"></cylinder>
-{% endcraftml %}
-
-Fit the huge object within the space between the two cylinders, while keeping the aspect ratio.
+`fit` scales an object proportionally (perserving aspect ratios) in order
+to fit it tightly inside a 3D space of given dimensions. If an object already
+fits within the 3D space, no scaling is performed.
 
 {% craftml %}
-<craft name="huge">
-  <cube size="50 50 20" style="opacity: 0.7;"></cube>
-</craft>
+<part name="box">
+  <cube size="30 20 10"/>
+</part>
 
-<cylinder></cylinder>
-<huge t="translate(10 0 0) fit(10 10 10)"></huge>
-<cylinder t="translate(20 0 0)"></cylinder>
+<row>
+
+<!-- a 30x20x10 box -->
+<box color="yellow"/>
+
+<!-- fit in a 20x20x20 space -->
+<box color="blue" t="fit 20 20 20"/>
+
+
+<!-- fit in yz within a 5x5 space -->
+<box color="red" t="fit yz 5"/>
+
+
+<!-- fit in a larger space (no effect)-->
+<box color="green" t="fit 40 40 40"/>
+
+</row>
 {% endcraftml %}

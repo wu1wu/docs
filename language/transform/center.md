@@ -1,17 +1,19 @@
 # center
 
+`center` centers an object at a specific location along all or selective dimensions
+
 {% craftml %}
-<craft name="ball">
-  <sphere t="translate(30 -10 10)"></sphere>
-</craft>
 
-<ball style="color: pink;"/>
+<!-- centers at (0,0,0) -->
+<cube color="yellow"/>
 
-<!-- center with respect to the origin -->
-<ball t="center()"
-    style="color:red;"/>
+<!-- centers at (20,20,0) -->
+<cube t="center 20 20 0" color="red"/>
 
-<!-- center with respect to (10 10 0) -->
-<ball t="center(10 10 0)"
-    style="color:green;"/>
+<!-- centers at (20,20,10) -->
+<cube t="center xy 40 10" clor="green"/>
+
+<!-- centers at x=40, y=40, ignoring z -->
+<cube t="center xy 40"/>
+
 {% endcraftml %}

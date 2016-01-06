@@ -1,34 +1,20 @@
-# rotateX, rotateY, rotateZ
+# rotate
 
-Rotate the object
-
-{% craftml %}
-<row>
-  <cube></cube>
-  <cube t="rotateZ(30)"></cube>
-  <cube t="rotateZ(60)"></cube>
-  <cube t="rotateZ(90)"></cube>
-  <cube t="rotateZ(120)"></cube>
-</row>
-{% endcraftml %}
+`rotate` rotates an object along a given dimension by certain degrees. The
+rotated object remains centered at the same location.
 
 {% craftml %}
-<row>
-  <dome></dome>
-  <dome t="rotateX(45)"></dome>
-  <dome t="rotateX(90)"></dome>
-  <dome t="rotateX(135)"></dome>
-  <dome t="rotateX(180)"></dome>
-</row>
-{% endcraftml %}
+<row spacing="5">
 
+  <dome color="yellow"/>
 
-{% craftml %}
-<row>
-  <dome></dome>
-  <dome t="rotateY(45)"></dome>
-  <dome t="rotateY(90)"></dome>
-  <dome t="rotateY(135)"></dome>
-  <dome t="rotateY(180)"></dome>
+  <!-- rotate 45 degrees in x -->
+  <dome t="rotate x 45" color="red"/>
+
+  <!-- rotate 90 degrees in x -->
+  <dome t="rotate x 90" color="blue"/>  
+
+  <!-- rotate 90 degrees in y -->
+  <dome t="rotate y 90" color="green"/>  
 </row>
 {% endcraftml %}

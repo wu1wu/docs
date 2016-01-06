@@ -1,19 +1,21 @@
 # scale
 
-{% craftml %}
-<row>
-  <cube></cube>
-  <cube t="scale(1 1 3)"></cube>
-  <cube t="scale(1 3 1)"></cube>
-  <cube t="scale(3 1 1)"></cube>
-</row>
-{% endcraftml %}
-
-
+`scale` scales a solid by given scaling factors
 
 {% craftml %}
 <row>
-  <cube t="scale(2 2 2)"></cube>
-  <cube t="scale(2)"></cube>
+
+<!-- by default, a cube is 10x10x10 -->
+<cube color="yellow"/>
+
+<!-- scale it by 3 along all dimensions -->
+<cube t="scale 3" color="blue"/>
+
+<!-- scale it by 3 in only y dimension-->
+<cube t="scale y 3" color="green"/>
+
+<!-- scale it by 3 in x and y dimensions -->
+<cube t="scale xy 3" color="red"/>
+
 </row>
 {% endcraftml %}

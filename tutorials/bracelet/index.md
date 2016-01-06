@@ -77,7 +77,7 @@ We need to rotate them to the right orientation, using a combination of
 {% craftml %}
 <sun-layout module="uHUIw" radius="40">
   <heart module="4yS59" repeat="12"
-    t="rotateX(90) rotateZ(90)"/>
+    t="rotate x 90; rotate z 90"/>
 </sun-layout>
 <ring module="awtSY" diameter="80"/>
 {% endcraftml %}
@@ -96,7 +96,7 @@ ring {
 <g l="centerZ()">
   <sun-layout module="uHUIw" radius="40">
     <heart module="4yS59" repeat="12"
-      t="rotateX(90) rotateZ(90)"/>
+      t="rotate x 90; rotate z 90"/>
   </sun-layout>
   <ring module="awtSY" diameter="80"/>
 </g>

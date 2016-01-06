@@ -1,34 +1,14 @@
 # position
 
-Change the position of a solid
+`position` changes the origin of a solid
 
 {% craftml %}
-<cube style="color:pink;"/>
-<cube t="position(30 30 -5)"
-      style="color:red;"/>
-{% endcraftml %}
+<!-- by default, a cube's origin is at (0,0,0) -->
+<cube color="yellow"/>
 
+<!-- position at (15,5,0) -->
+<cube t="position 15 5 0" color="blue"/>
 
-## positionX
-
-{% craftml %}
-<cube style="color:pink;"/>
-<cube t="positionX(30)"
-      style="color:red;"/>
-{% endcraftml %}
-
-## positionY
-
-{% craftml %}
-<cube style="color:pink;"/>
-<cube t="positionY(30)"
-      style="color:red;"/>
-{% endcraftml %}
-
-## positionZ
-
-{% craftml %}
-<cube style="color:pink;"/>
-<cube t="positionZ(30)"
-      style="color:red;"/>
+<!-- position at y = 30, keeping y and z the same -->
+<cube t="position y 30" color="green"/>
 {% endcraftml %}
