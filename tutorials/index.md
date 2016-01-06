@@ -14,6 +14,7 @@ a number of exercises for you to practice what you've just learned.
   border-radius:5px;
   display: inline-block;
   margin-top: 5px;
+  vertical-align: top;  
 }
 .tutorial .section-title{
   font-weight: bold;
@@ -38,114 +39,68 @@ a number of exercises for you to practice what you've just learned.
 }
 </style>
 
-<div class="tutorial">
-  <div class="title">
-    <a href="pyramid/">Pyramid</a>
-  </div>
-  <a href="pyramid/">
-    <img class="objective" src="pyramid/objective.png" height="200px%" style="border: solid 1px #ddd; border-radius: 5px;"/>
-  </a>
-  <div class="section-title">Concepts</div>
-    <span class="concept-item">cube</span>
-    <span class="concept-item">stack</span>    
-  <div class="section-title">Level</div>
-  Beginner
-</div>
-<div class="tutorial">
-  <div class="title">
-    <a href="washer/">Washer</a>
-  </div>
-  <a href="washer/">
-    <img class="objective" src="washer/objective.png" height="200px" style="border: solid 1px #ddd; border-radius: 5px;"/>
-  </a>  <div class="section-title">Concepts</div>
-    <span class="concept-item">cylinder</span>
-    <span class="concept-item">centerXY()</span>    
-    <span class="concept-item">cut</span>    
-  <div class="section-title">Level</div>
-  Beginner
-</div>
-<div class="tutorial">
-  <div class="title">
-    <a href="fence/">Fence</a>
-  </div>
-  <a href="fence/">
-    <img class="objective" src="fence/objective.png" height="200px" style="border: solid 1px #ddd; border-radius: 5px;"/>
-  </a>  <div class="section-title">Concepts</div>
-    <span class="concept-item">row</span>
-    <span class="concept-item">col</span>
-    <span class="concept-item">repeat</span>
-    <span class="concept-item">centerXY</span>    
-  <div class="section-title">Level</div>
-  Beginner
-</div>
-<div class="tutorial">
-  <div class="title">
-    <a href="button/">Button</a>
-  </div>
-  <a href="button/">
-    <img class="objective" src="button/objective.png" height="200px" style="border: solid 1px #ddd; border-radius: 5px;"/>
-  </a>  <div class="section-title">Concepts</div>
-    <span class="concept-item">sizeZ</span>
-    <span class="concept-item">cut</span>
-    <span class="concept-item">position</span>
-    <span class="concept-item">centerXY</span>    
-  <div class="section-title">Level</div>
-  Beginner
-</div>
-<div class="tutorial">
-  <div class="title">
-    <a href="lattice/">Lattice</a>
-  </div>
-  <a href="lattice/">
-    <img class="objective" src="lattice/objective.png" height="200px" style="border: solid 1px #ddd; border-radius: 5px;"/>
-  </a>  <div class="section-title">Concepts</div>
-    <span class="concept-item">part</span>
-    <span class="concept-item">rotateZ</span>    
-    <span class="concept-item">inside</span>    
-    <span class="concept-item">repeat</span>    
-    <span class="concept-item">row</span>    
-    <span class="concept-item">col</span>    
-  <div class="section-title">Level</div>
-  Beginner
-</div>
-<div class="tutorial">
-  <div class="title">
-    <a href="snowman/">Snowman</a>
-  </div>
-  <a href="snowman/">
-    <img class="objective" src="snowman/objective.png" height="200px" style="border: solid 1px #ddd; border-radius: 5px;"/>
-  </a>  <div class="section-title">Concepts</div>
-    <span class="concept-item">style</span>
-    <span class="concept-item">part</span>   
-    <span class="concept-item">stack</span>   
-    <span class="concept-item">row</span>    
-    <span class="concept-item">position</span>
-    <span class="concept-item">scale</span>
-  <div class="section-title">Level</div>
-  Beginner
-</div>
-<div class="tutorial">
-  <div class="title">
-    <a href="nametag/">Name Tag</a>
-  </div>
-  <a href="nametag/">
-    <img class="objective" src="nametag/objective.png" height="200px" style="border: solid 1px #ddd; border-radius: 5px;"/>
-  </a>  <div class="section-title">Concepts</div>
-    <span class="concept-item">div</span>
-    <span class="concept-item">part</span>   
-    <span class="concept-item">style</span>   
-    <span class="concept-item">stack</span>    
-  <div class="section-title">Level</div>
-  Beginner
-</div>
-<div class="tutorial">
-  <div class="title">
-    <a href="bracelet/">Bracelet</a>
-  </div>
-  <a href="bracelet/">
-    <img class="objective" src="bracelet/objective.png" height="200px" style="border: solid 1px #ddd; border-radius: 5px;"/>
-  </a>  <div class="section-title">Concepts</div>
-    <span class="concept-item">module</span>    
-  <div class="section-title">Level</div>
-  Beginner
-</div>
+## Beginner
+{% tutorial %}
+{% title %}
+Pyramid
+{% path %}
+pyramid
+{% concepts %}
+cube:tag stack:tag
+{% endtutorial %}
+{% tutorial %}
+{% title %}
+Washer
+{% path %}
+washer
+{% concepts %}
+cylinder:tag center:l cut:t
+{% endtutorial %}
+{% tutorial %}
+{% title %}
+Fence
+{% path %}
+fence
+{% concepts %}
+row:tag col:tag repeat:attr
+{% endtutorial %}
+{% tutorial %}
+{% title %}
+Button
+{% path %}
+button
+{% concepts %}
+size:t cut:t position:t center:l
+{% endtutorial %}
+{% tutorial %}
+{% title %}
+Lattice
+{% path %}
+lattice
+{% concepts %}
+part:tag rotate:t clip:t repeat:attr
+{% endtutorial %}
+{% tutorial %}
+{% title %}
+Snowman
+{% path %}
+snowman
+{% concepts %}
+style:tag part:tag position:t scale:t
+{% endtutorial %}
+{% tutorial %}
+{% title %}
+Name Tag
+{% path %}
+nametag
+{% concepts %}
+div:tag part:tag style:tag stack:tag
+{% endtutorial %}
+{% tutorial %}
+{% title %}
+Bracelet
+{% path %}
+bracelet
+{% concepts %}
+module:attr
+{% endtutorial %}

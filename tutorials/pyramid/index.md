@@ -5,7 +5,7 @@ square-shaped bricks of decreasing size from bottom to up.
 
 ![objective](objective.png)
 
-First, create a square-shaped brick using the `<cube/>` primitive.
+First, create a square-shaped brick using the {{'cube' | tag}} primitive.
 We set the size of the cube to `10 10 5`. It is the smallest piece
 that will be the tip of the pyramid.
 
@@ -21,8 +21,8 @@ should be larger than the top piece. Let's set the size to `15 15 5`.
 <cube size="15 15 5"/>
 {% endcraftml %}
 
-The two pieces are overlapping because they are both positioned at (0,0,0).
-We can use the `<stack>` tag to put one on top of the other.
+The two pieces are overlapping because they are both positioned at `(0,0,0)`.
+We can wrap the two with a {{'stack' | tag}} tag to put one on top of the other.
 
 {% craftml %}
 <stack>
@@ -31,7 +31,7 @@ We can use the `<stack>` tag to put one on top of the other.
 </stack>
 {% endcraftml %}
 
-To make the pyramid taller, continue to add more `<cube/>` with increasing
+To make the pyramid taller, continue to add more cubes with increasing
 sizes to the bottom of the stack.
 
 {% craftml %}

@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.4" data-basepath="../.." data-revision="Tue Jan 05 2016 18:26:38 GMT-0700 (MST)">
+    <div class="book" data-level="1.4" data-basepath="../.." data-revision="Wed Jan 06 2016 08:00:40 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -665,6 +665,36 @@
             
         </li>
     
+        <li class="chapter " data-level="4.11" data-path="language/transform/cut.html">
+            
+                
+                    <a href="../../language/transform/cut.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.11.</b>
+                        
+                        cut
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.12" data-path="language/transform/clip.html">
+            
+                
+                    <a href="../../language/transform/clip.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.12.</b>
+                        
+                        clip
+                    </a>
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -1080,27 +1110,28 @@
 <p>The objective of this tutorial is to craft a button with four holes like below.</p>
 <p><img src="objective.png" alt="objective"></p>
 <p>First, notice that the body of button looks like a flatten pizza dough. We
-use a <code>&lt;sphere/&gt;</code> to create a ball, like a ball of pizza dough before it was flatten.
+use a <span class="doc-link tag"><a href="../../language/primitives/3d/sphere.html" target="_doc"><code>&lt;sphere&gt;</code></a></span> tag to create a ball, like a ball of pizza dough before it was flatten.
 By default, a sphere as a size of 10 by 10 by 10. To flatten this sphere, one
 approach is to reduce the size of this sphere along the z-axis. To do so, we
-use the transform command <code>size z 2</code>, which transforms its size so that the
+use the transform command <span class="doc-link transform"><a href="../../language/transform/size.html" target="_doc"><code>size</code></a></span>, which transforms its size so that the
 z dimension has the size of 2, while scaling the other two dimensions
 proportionally to keep its aspect ratio.</p>
 <p><iframe src="http://localhost:5000/v?content=%3Csphere%20t%3D%22size%20z%202%22%2F%3E" width="770" height="315" frameborder="0"></iframe></p>
 <p>Next we need to do is to drill holes. To achieve this, we create four cylinders
-that will be used to cut through the body of the button. These cylinders
+(<span class="doc-link tag"><a href="../../language/primitives/3d/cylinder.html" target="_doc"><code>&lt;cylinder&gt;</code></a></span>) that will be used to cut through the body of the button. These cylinders
 need to be positioned at the four corners of the squares. To do so, we use
-the transform command <code>position x y z</code> to change to position of the cylinder to
+the transform command <span class="doc-link transform"><a href="../../language/transform/position.html" target="_doc"><code>position</code></a></span> to change to position of the cylinder to
 the desired locations. Because later we will want to move these cylinders as a group,
-we use a <code>&lt;g&gt;</code> tag to group them.</p>
+we use a <span class="doc-link transform"><a href="../../language/transform/g.html" target="_doc"><code>g</code></a></span> tag to group them.</p>
 <p><iframe src="http://localhost:5000/v?content=%3Cg%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%200%200%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%203%200%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%200%200%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%203%200%22%2F%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
 <p>We bring all the parts together, but they are not aligned correctly.
 <iframe src="http://localhost:5000/v?content=%3Csphere%20t%3D%22size%20z%202%22%2F%3E%0A%3Cg%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%200%200%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%203%200%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%200%200%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%203%200%22%2F%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
 <p>What we want is to center the cylinders with respect to the center of the button.
-To do so, we use the layout command <code>center xy</code>.</p>
+To do so, we use the layout command <span class="doc-link layout"><a href="../../language/layout/center.html" target="_doc"><code>center</code></a></span>.</p>
 <p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22center%20xy%22%3E%0A%20%20%3Csphere%20t%3D%22size%20z%202%22%2F%3E%0A%20%20%3Cg%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%200%200%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%203%200%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%200%200%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%203%200%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
 <p>Now that we are satisfied with where the cylinders are, we cut them. We use
-the layout command <code>cut</code> and use the tag name directly as the argument (i.e., <code>cut cylinder</code>).</p>
+the transform command <span class="doc-link transform"><a href="../../language/transform/cut.html" target="_doc"><code>cut</code></a></span> and use the tag name
+directly as the argument (i.e., <code>cut cylinder</code>).</p>
 <p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22center%20xy%3B%20cut%20cylinder%22%3E%0A%20%20%3Csphere%20t%3D%22size%20z%202%22%2F%3E%0A%20%20%3Cg%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%200%200%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%200%203%200%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%200%200%22%2F%3E%0A%20%20%20%20%3Ccylinder%20radius%3D%221%22%20t%3D%22position%203%203%200%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
 <p>Congraulations! You&apos;ve crafted a button.</p>
 <h2 id="exercises">Exercises</h2>

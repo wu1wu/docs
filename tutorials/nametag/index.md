@@ -11,10 +11,10 @@ semi-circle joined together. After decomposing the model into individual parts
 like this, we can proceed to model them individually and assemble them later.
 
 First, lets model the _tag_ part. We need a rectangle and a semi-circle.
-For the rectangle, we use `<cube>` and give it a size sufficiently large to hold
-the text later. For the semi-circle, we use `<cylinder>` and specify
+For the rectangle, we use {{ 'cube' | tag}}  and give it a size sufficiently large to hold
+the text later. For the semi-circle, we use {{ 'cylinder' | tag}}  and specify
 a radius of 10 to match the rectangle's dimension in y. Then, we use
-the transform command `crop x min 50%` to crop the first 50% of the cylinder
+the transform command {{ 'crop' | t}}  to crop the first 50% of the cylinder
 along the x-axis, which gives us the semi-circle we want.
 
 {% craftml %}
@@ -26,7 +26,7 @@ along the x-axis, which gives us the semi-circle we want.
 
 Next, the _name_ part. CraftML lets us write text-oriented contents simply
 by writing HTML tags, as if we are developing a web page. Here, we use a
-`<div>` tag and put a name in it.
+{{ 'div' | tag}}  tag and put a name in it.
 
 {% craftml %}
 <div>My Name</div>

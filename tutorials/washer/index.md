@@ -6,15 +6,15 @@ looks like a flat disk with a circular hole inside.
 ![objective](objective.png)
 
 We will use
-* `<cylinder>`
-* `<g>`
-* `cut`
-* `center`
+* {{ 'cylinder' | tag }}
+* {{ 'g' | tag }}
+* {{ 'cut' | t }}
+* {{ 'center' | l }}
 * `id="hole"`
 
 ## Steps
 
-First, create a flat disk using the `<cylinder/>` primitive. Set the height
+First, create a flat disk using the {{ 'cylinder' | tag}} primitive. Set the height
 of this cylinder to `2`. We can set the height to an even smaller value to
 make the disk thinner.
 
@@ -33,7 +33,7 @@ we want to cut out of the bigger disk later.
 {% endcraftml %}
 
 We want to center the two disks. We can accomplish this by grouping the two by
-a `<g>` tag and then using the layout command `center xy` to center them
+a `<g>` tag with a layout command {{ 'center' | l}} to center them
 along the x and y axes.
 
 {% craftml %}
@@ -44,7 +44,7 @@ along the x and y axes.
 {% endcraftml %}
 
 Now that the two disks are positioned in the way we want, we can cut the second,
-smaller disk from the bigger one using the transform command `cut`. To indicate
+smaller disk from the bigger one using the transform command {{ 'cut' | t}}. To indicate
 it's the second cylinder we really want to cut, we assign an `id` to that cylinder
 by `id="hole"`. Then, we can give `#hole` as an argument to the cut command
 like `cut #hole`. Note that `#something` is just a standard css selector for selecting

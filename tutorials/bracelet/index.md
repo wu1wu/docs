@@ -71,8 +71,7 @@ the `radius` to 40 in order to match the ring's diameter, which is 80.
 {% endcraftml %}
 
 Still not quite right because the hearts are lying down on the ground plane.
-We need to rotate them to the right orientation, using a combination of
-`rotateX` and `rotateZ`.
+We need to rotate them to the right orientation ({{ 'rotate' | t}} ).
 
 {% craftml %}
 <sun-layout module="uHUIw" radius="40">

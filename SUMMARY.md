@@ -37,6 +37,8 @@
     * [crop](language/transform/crop.md)
     * [fit](language/transform/fit.md)
     * [flip](language/transform/flip.md)
+    * [cut](language/transform/cut.md)
+    * [clip](language/transform/clip.md)
 * [Layout](language/layout/index.md)
     * [lineup](language/layout/lineup.md)
     * [align](language/layout/align.md)

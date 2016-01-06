@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.2" data-basepath="../.." data-revision="Tue Jan 05 2016 18:26:38 GMT-0700 (MST)">
+    <div class="book" data-level="1.2" data-basepath="../.." data-revision="Wed Jan 06 2016 08:00:40 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -665,6 +665,36 @@
             
         </li>
     
+        <li class="chapter " data-level="4.11" data-path="language/transform/cut.html">
+            
+                
+                    <a href="../../language/transform/cut.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.11.</b>
+                        
+                        cut
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.12" data-path="language/transform/clip.html">
+            
+                
+                    <a href="../../language/transform/clip.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.12.</b>
+                        
+                        clip
+                    </a>
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -1082,14 +1112,14 @@ looks like a flat disk with a circular hole inside.</p>
 <p><img src="objective.png" alt="objective"></p>
 <p>We will use</p>
 <ul>
-<li><code>&lt;cylinder&gt;</code></li>
-<li><code>&lt;g&gt;</code></li>
-<li><code>cut</code></li>
-<li><code>center</code></li>
+<li><span class="doc-link tag"><a href="../../language/primitives/3d/cylinder.html" target="_doc"><code>&lt;cylinder&gt;</code></a></span></li>
+<li><span class="doc-link tag"><a href="../../language" target="_doc"><code>&lt;g&gt;</code></a></span></li>
+<li><span class="doc-link transform"><a href="../../language/transform/cut.html" target="_doc"><code>cut</code></a></span></li>
+<li><span class="doc-link layout"><a href="../../language/layout/center.html" target="_doc"><code>center</code></a></span></li>
 <li><code>id=&quot;hole&quot;</code></li>
 </ul>
 <h2 id="steps">Steps</h2>
-<p>First, create a flat disk using the <code>&lt;cylinder/&gt;</code> primitive. Set the height
+<p>First, create a flat disk using the <span class="doc-link tag"><a href="../../language/primitives/3d/cylinder.html" target="_doc"><code>&lt;cylinder&gt;</code></a></span> primitive. Set the height
 of this cylinder to <code>2</code>. We can set the height to an even smaller value to
 make the disk thinner.</p>
 <p><iframe src="http://localhost:5000/v?content=%3Ccylinder%20height%3D%222%22%2F%3E" width="770" height="315" frameborder="0"></iframe></p>
@@ -1099,11 +1129,11 @@ than the previous cylinder. The purpose of this smaller disk is to mark the regi
 we want to cut out of the bigger disk later.</p>
 <p><iframe src="http://localhost:5000/v?content=%3Ccylinder%20height%3D%222%22%2F%3E%0A%3Ccylinder%20radius%3D%223%22%2F%3E" width="770" height="315" frameborder="0"></iframe></p>
 <p>We want to center the two disks. We can accomplish this by grouping the two by
-a <code>&lt;g&gt;</code> tag and then using the layout command <code>center xy</code> to center them
+a <code>&lt;g&gt;</code> tag with a layout command <span class="doc-link layout"><a href="../../language/layout/center.html" target="_doc"><code>center</code></a></span> to center them
 along the x and y axes.</p>
 <p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22center%20xy%22%3E%0A%20%20%3Ccylinder%20height%3D%222%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%223%22%2F%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
 <p>Now that the two disks are positioned in the way we want, we can cut the second,
-smaller disk from the bigger one using the transform command <code>cut</code>. To indicate
+smaller disk from the bigger one using the transform command <span class="doc-link transform"><a href="../../language/transform/cut.html" target="_doc"><code>cut</code></a></span>. To indicate
 it&apos;s the second cylinder we really want to cut, we assign an <code>id</code> to that cylinder
 by <code>id=&quot;hole&quot;</code>. Then, we can give <code>#hole</code> as an argument to the cut command
 like <code>cut #hole</code>. Note that <code>#something</code> is just a standard css selector for selecting
