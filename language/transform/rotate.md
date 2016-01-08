@@ -1,6 +1,6 @@
 # rotate
 
-`rotate` rotates an object along a given dimension by certain degrees. The
+{{'rotate' | t}} rotates an object along a given dimension by certain degrees. The
 rotated object remains centered at the same location.
 
 {% craftml %}

@@ -1,6 +1,6 @@
 # position
 
-`position` changes the origin of a solid
+{{'position' | t}} changes the origin of a solid
 
 {% craftml %}
 <!-- by default, a cube's origin is at (0,0,0) -->

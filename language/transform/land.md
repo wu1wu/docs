@@ -1,6 +1,6 @@
 # land
 
-`land` moves the object so that its bottom sits on the `z=0` plane (i.e., x-y plane).
+{{'land' | t}} moves the object so that its bottom sits on the `z=0` plane (i.e., x-y plane).
 
 Consider the following cubes that have been positioned off the ground plane.
 

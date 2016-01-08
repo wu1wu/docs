@@ -1,4 +1,4 @@
-# Introduction
+# CraftML
 
 _What is CraftML?_
 

@@ -1,6 +1,6 @@
 # scale
 
-`scale` scales a solid by given scaling factors
+{{'scale' | t}} scales a solid by given scaling factors
 
 {% craftml %}
 <row>

@@ -22,6 +22,7 @@
         * [polygon](language/primitives/2d/polygon.md)
         * [path](language/primitives/2d/path.md)
 * [Structure](language/structure/index.md)
+    * [g](language/structure/g.md)
     * [row](language/structure/row.md)
     * [col](language/structure/col.md)
     * [stack](language/structure/stack.md)

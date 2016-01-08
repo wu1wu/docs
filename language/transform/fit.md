@@ -1,6 +1,6 @@
 # fit
 
-`fit` scales an object proportionally (perserving aspect ratios) in order
+{{'fit' | t}} scales an object proportionally (perserving aspect ratios) in order
 to fit it tightly inside a 3D space of given dimensions. If an object already
 fits within the 3D space, no scaling is performed.
 

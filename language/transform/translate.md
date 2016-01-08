@@ -1,6 +1,6 @@
 # translate
 
-`translate` a solid along certain axes by specified amounts.
+{{'translate' | t}} a solid along certain axes by specified amounts.
 
 {% craftml %}
 <cube/>

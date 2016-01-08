@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
 <html lang="en" >
-    <!-- Start book Introduction -->
+    <!-- Start book CraftML -->
     <head>
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>row | Introduction</title>
+        <title>row | CraftML</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -40,7 +40,7 @@
     <link rel="next" href="../../language/structure/col.html" />
     
     
-    <link rel="prev" href="../../language/structure/index.html" />
+    <link rel="prev" href="../../language/structure/g.html" />
     
 
         <!-- head:end -->
@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="3.1" data-basepath="../.." data-revision="Wed Jan 06 2016 08:00:40 GMT-0700 (MST)">
+    <div class="book" data-level="3.2" data-basepath="../.." data-revision="Thu Jan 07 2016 21:27:23 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -434,14 +434,29 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="3.1" data-path="language/structure/row.html">
+        <li class="chapter " data-level="3.1" data-path="language/structure/g.html">
+            
+                
+                    <a href="../../language/structure/g.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        g
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2" data-path="language/structure/row.html">
             
                 
                     <a href="../../language/structure/row.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.1.</b>
+                            <b>3.2.</b>
                         
                         row
                     </a>
@@ -449,14 +464,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="language/structure/col.html">
+        <li class="chapter " data-level="3.3" data-path="language/structure/col.html">
             
                 
                     <a href="../../language/structure/col.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.2.</b>
+                            <b>3.3.</b>
                         
                         col
                     </a>
@@ -464,14 +479,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3" data-path="language/structure/stack.html">
+        <li class="chapter " data-level="3.4" data-path="language/structure/stack.html">
             
                 
                     <a href="../../language/structure/stack.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.3.</b>
+                            <b>3.4.</b>
                         
                         stack
                     </a>
@@ -479,14 +494,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="language/structure/repeat.html">
+        <li class="chapter " data-level="3.5" data-path="language/structure/repeat.html">
             
                 
                     <a href="../../language/structure/repeat.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.4.</b>
+                            <b>3.5.</b>
                         
                         repeat
                     </a>
@@ -1096,7 +1111,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../" >Introduction</a>
+        <a href="../../" >CraftML</a>
     </h1>
 </div>
 
@@ -1107,7 +1122,19 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="row">row</h1>
-<p><iframe src="http://localhost:5000/v?content=%3Crow%3E%0A%20%20%3Ccube%3E%3C%2Fcube%3E%0A%20%20%3Ccube%3E%3C%2Fcube%3E%0A%20%20%3Ccube%3E%3C%2Fcube%3E%0A%20%20%3Ccube%3E%3C%2Fcube%3E%0A%20%20%3Ccube%3E%3C%2Fcube%3E%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><span class="doc-link tag"><a href="row.html" target="_doc"><code>&lt;row&gt;</code></a></span> creates a row structure by arranging all the children objects
+into a &quot;row&quot; along the <em>x</em> axis.</p>
+<p>The first child remains at the same position. The
+rest of the children are re-positioned in such a way that each child is
+next to the previous child along the <em>x</em> axis.</p>
+<p><iframe src="http://localhost:5000/v?content=%3Crow%3E%0A%20%20%3Ccube%20color%3D%22black%22%2F%3E%0A%20%20%3Ccube%2F%3E%0A%20%20%3Ccube%2F%3E%0A%20%20%3Ccube%2F%3E%0A%20%20%3Ccube%2F%3E%20%20%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p>In terms of alignment, all objects are aligned to the middle along the <em>y</em> axis
+and aligned to the min along the <em>z</em> axis. A <code>spacing</code> attribute can be optionally
+provided to specify how much space to add between every two objects.</p>
+<p>In the example below, three cubes of varying sizes are grouped into a row
+along the <em>x</em> axis, automatically aligned along the other two axes, and have
+a spacing of 5 between every two cubes.</p>
+<p><iframe src="http://localhost:5000/v?content=%3Crow%20spacing%3D%225%22%3E%0A%20%20%3Ccube%20color%3D%22black%22%2F%3E%0A%20%20%3Ccube%20size%3D%2210%2020%2020%22%2F%3E%0A%20%20%3Ccube%20size%3D%2210%2030%2030%22%2F%3E%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
 
                     
                     </section>
@@ -1118,7 +1145,7 @@
         </div>
 
         
-        <a href="../../language/structure/index.html" class="navigation navigation-prev " aria-label="Previous page: Structure"><i class="fa fa-angle-left"></i></a>
+        <a href="../../language/structure/g.html" class="navigation navigation-prev " aria-label="Previous page: g"><i class="fa fa-angle-left"></i></a>
         
         
         <a href="../../language/structure/col.html" class="navigation navigation-next " aria-label="Next page: col"><i class="fa fa-angle-right"></i></a>
@@ -1146,5 +1173,5 @@ require(["gitbook"], function(gitbook) {
 
         <!-- body:end -->
     </body>
-    <!-- End of book Introduction -->
+    <!-- End of book CraftML -->
 </html>

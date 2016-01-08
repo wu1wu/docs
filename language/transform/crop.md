@@ -1,7 +1,7 @@
 # crop
 
-`crop` removes a portion of a solid along the specified dimension from the min
-or max side.
+{{'crop' | t}} removes a portion of a solid along the specified dimension from the `min`
+or `max` side.
 
 {% craftml %}
 <row spacing="5">

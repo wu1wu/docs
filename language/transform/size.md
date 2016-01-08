@@ -1,12 +1,12 @@
 # size
 
-`size` scales up or down a solid such that its new size will become `x` by `y`
+{{'size' | t}} scales up or down a solid such that its new size will become `x` by `y`
 by `z`. If an axis is unspecified, the size along that axis will not change.
 
 {% craftml %}
 <row>
 
-<!-- the default cube is 10x10x10 -->
+<!-- by default, a cube is 10x10x10 -->
 <cube color="yellow"/>
 
 <!-- size is changed to y = 50 -->

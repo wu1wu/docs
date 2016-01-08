@@ -1,6 +1,6 @@
 # flip
 
-`flip` flips an object along given axes. After an object is flipped, its center
+{{'flip' | t}} flips an object along given axes. After an object is flipped, its center
 remains at the same position.
 
 {% craftml %}

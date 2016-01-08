@@ -4,16 +4,16 @@
 
 {% craftml %}
 
-<!-- centers at (0,0,0) -->
+<!-- default -->
 <cube color="yellow"/>
 
-<!-- centers at (20,20,0) -->
-<cube t="center 20 20 0" color="red"/>
+<!-- centers at (20,30,5) -->
+<cube t="center 20 30 5" color="green"/>
 
-<!-- centers at (20,20,10) -->
-<cube t="center xy 40 10" clor="green"/>
+<!-- centers at x=20, ignoring y, z -->
+<cube t="center x 20" color="blue"/>
 
-<!-- centers at x=40, y=40, ignoring z -->
-<cube t="center xy 40"/>
+<!-- centers at y=30, ignoring x, z -->
+<cube t="center y 30" color="red"/>
 
 {% endcraftml %}
