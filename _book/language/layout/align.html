@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="5.1" data-basepath="../.." data-revision="Thu Jan 07 2016 22:27:03 GMT-0700 (MST)">
+    <div class="book" data-level="5.1" data-basepath="../.." data-revision="Thu Jan 07 2016 23:04:50 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -1092,8 +1092,13 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="align">align</h1>
-<p><iframe src="http://localhost:5000/v?content=%3Ccraft%20name%3D%22three%22%3E%0A%20%20%3Ccylinder%20t%3D%22scale(4%202%203)%20translate(-20%200%200)%22%3E%3C%2Fcylinder%3E%0A%20%20%3Ccylinder%20t%3D%22translate(20%2020%200)%22%3E%3C%2Fcylinder%3E%0A%20%20%3Ccylinder%20t%3D%22translate(0%2040%200)%22%3E%3C%2Fcylinder%3E%0A%3C%2Fcraft%3E%0A%3Cthree%3E%3C%2Fthree%3E" width="770" height="315" frameborder="0"></iframe></p>
-<p><iframe src="http://localhost:5000/v?content=%3Ccraft%20name%3D%22three%22%3E%0A%20%20%3Ccylinder%20t%3D%22scale(4%202%203)%20translate(-20%200%200)%22%3E%3C%2Fcylinder%3E%0A%20%20%3Ccylinder%20t%3D%22translate(20%2020%200)%22%3E%3C%2Fcylinder%3E%0A%20%20%3Ccylinder%20t%3D%22translate(0%2040%200)%22%3E%3C%2Fcylinder%3E%0A%3C%2Fcraft%3E%0A%0A%3Crow%20spacing%3D%225%22%3E%0A%20%20%3Cthree%20l%3D%22alignX(0%25)%22%3E%3C%2Fthree%3E%0A%20%20%3Cthree%20l%3D%22alignX(50%25)%22%3E%3C%2Fthree%3E%0A%20%20%3Cthree%20l%3D%22alignX(100%25)%22%3E%3C%2Fthree%3E%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><span class="doc-link layout"><a href="align.html" target="_doc"><code>align</code></a></span> takes the children of an object and align them to meet
+at the <em>min</em> or <em>max</em> side of the first child along selected axes.</p>
+<p>In example below, there are three groups of cubes. Each group has three cubes
+with varying sizes in <em>y</em>; they are aligned along the <em>y</em> axis to
+the <em>min</em>, <em>center</em>, and <em>max</em> respectively. In all cases, the first child
+(yellow) did not move.</p>
+<p><iframe src="http://localhost:5000/v?content=%3Ccol%20spacing%3D%2210%22%3E%0A%0A%3C!--%20aligned%20to%20min%20side%20in%20y%20--%3E%0A%3Cg%20l%3D%22align%20y%20min%22%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2020%3B%20position%20x%200%22%20color%3D%22yellow%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2015%3B%20position%20x%2020%22%20color%3D%22pink%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2010%3B%20position%20x%2040%22%20color%3D%22red%22%2F%3E%0A%3C%2Fg%3E%0A%0A%3C!--%20aligned%20to%20the%20center%20in%20y%20--%3E%0A%3Cg%20l%3D%22align%20y%20center%22%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2020%3B%20position%20x%200%22%20color%3D%22yellow%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2015%3B%20position%20x%2020%22%20color%3D%22lightgreen%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2010%3B%20position%20x%2040%22%20color%3D%22green%22%2F%3E%0A%3C%2Fg%3E%0A%0A%3C!--%20aligned%20to%20max%20in%20y%20--%3E%0A%3Cg%20l%3D%22align%20y%20max%22%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2020%3B%20position%20x%200%22%20color%3D%22yellow%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2015%3B%20position%20x%2020%22%20color%3D%22skyblue%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2010%3B%20position%20x%2040%22%20color%3D%22blue%22%2F%3E%0A%3C%2Fg%3E%0A%0A%3C%2Fcol%3E" width="770" height="315" frameborder="0"></iframe></p>
 
                     
                     </section>
