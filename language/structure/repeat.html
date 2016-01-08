@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
 <html lang="en" >
-    <!-- Start book Introduction -->
+    <!-- Start book CraftML -->
     <head>
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>repeat | Introduction</title>
+        <title>repeat | CraftML</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="3.4" data-basepath="../.." data-revision="Wed Jan 06 2016 08:00:40 GMT-0700 (MST)">
+    <div class="book" data-level="3.5" data-basepath="../.." data-revision="Thu Jan 07 2016 21:27:23 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -434,14 +434,29 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.1" data-path="language/structure/row.html">
+        <li class="chapter " data-level="3.1" data-path="language/structure/g.html">
+            
+                
+                    <a href="../../language/structure/g.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        g
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="language/structure/row.html">
             
                 
                     <a href="../../language/structure/row.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.1.</b>
+                            <b>3.2.</b>
                         
                         row
                     </a>
@@ -449,14 +464,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="language/structure/col.html">
+        <li class="chapter " data-level="3.3" data-path="language/structure/col.html">
             
                 
                     <a href="../../language/structure/col.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.2.</b>
+                            <b>3.3.</b>
                         
                         col
                     </a>
@@ -464,14 +479,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3" data-path="language/structure/stack.html">
+        <li class="chapter " data-level="3.4" data-path="language/structure/stack.html">
             
                 
                     <a href="../../language/structure/stack.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.3.</b>
+                            <b>3.4.</b>
                         
                         stack
                     </a>
@@ -479,14 +494,14 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.4" data-path="language/structure/repeat.html">
+        <li class="chapter active" data-level="3.5" data-path="language/structure/repeat.html">
             
                 
                     <a href="../../language/structure/repeat.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.4.</b>
+                            <b>3.5.</b>
                         
                         repeat
                     </a>
@@ -1096,7 +1111,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../" >Introduction</a>
+        <a href="../../" >CraftML</a>
     </h1>
 </div>
 
@@ -1107,10 +1122,24 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="repeat">repeat</h1>
-<p>A row of five cubes</p>
-<p><iframe src="http://localhost:5000/v?content=%3Crow%3E%0A%20%20%3Ccube%20repeat%3D%225%22%3E%3C%2Fcube%3E%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
-<p><iframe src="http://localhost:5000/v?content=%3Crow%3E%0A%20%20%3Ccube%20repeat%3D%22i%20in%20%5B1%2C2%2C3%5D%22%0A%20%20%20%20%20%20%20%20t%3D%22scale(%7B%7Bi%7D%7D)%22%3E%0A%20%20%3C%2Fcube%3E%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
-<p><iframe src="http://localhost:5000/v?content=%3Ccraft%3E%0A%20%20%3Cscript%3E%0A%20%20%20%20%24params.is%20%3D%20%5B1%2C2%2C3%5D%0A%20%20%3C%2Fscript%3E%0A%20%20%3Crow%3E%0A%20%20%20%20%3Ccube%20repeat%3D%22i%20in%20is%22%0A%20%20%20%20%20%20%20%20%20%20t%3D%22scale(%7B%7Bi%7D%7D)%22%3E%0A%20%20%20%20%3C%2Fcube%3E%0A%20%20%3C%2Frow%3E%0A%3C%2Fcraft%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><span class="doc-link tag"><a href="repeat.html" target="_doc"><code>&lt;repeat&gt;</code></a></span> is a directive that can be added to any tag to repeat
+the object represented by that tag multiple times.</p>
+<p>For example, to create a row of five cubes, instead of writing <code>&lt;cube/&gt;</code> five
+times, we write only one <code>&lt;cube/&gt;</code> and add <code>repeat=&quot;5&quot;</code> to the tag.</p>
+<p><iframe src="http://localhost:5000/v?content=%3Crow%3E%0A%20%20%3Ccube%20repeat%3D%225%22%2F%3E%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><span class="doc-link tag"><a href="repeat.html" target="_doc"><code>&lt;repeat&gt;</code></a></span> also allows us to iterate through an array using
+the expression:</p>
+<p><strong>repeat</strong>=&quot;<em>variable_name</em> <strong>in</strong> <em>array</em>&quot;</p>
+<p>For example, we add <code>i in [1,2,3]</code> to the cube tag and <code>i</code> becomes a variable
+we will have access to in the rest of the tag. Here, we give <code>i</code> as an
+argument to the transform command <span class="doc-link transform"><a href="../transform/scale.html" target="_doc"><code>scale</code></a></span> to scale each repeated instance
+of the cube by 1, 2, and 3 respectively.
+<iframe src="http://localhost:5000/v?content=%3Crow%3E%0A%20%20%3Ccube%20repeat%3D%22i%20in%20%5B1%2C2%2C3%5D%22%20t%3D%22scale%20%7B%7Bi%7D%7D%22%2F%3E%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p>For advanced users, it is possible to create an array in a <span class="doc-link tag"><a href="../script" target="_doc"><code>&lt;script&gt;</code></a></span>
+tag and make it available as a parameter in the repeat directive, rather
+than squeezing everything into the tag. Also, one can write custom
+Javascript code to generate the array.</p>
+<p><iframe src="http://localhost:5000/v?content=%3Cscript%3E%0A%20%20%24params.is%20%3D%20%5B1%2C2%2C3%5D%0A%3C%2Fscript%3E%0A%3Crow%3E%0A%20%20%3Ccube%20repeat%3D%22i%20in%20is%22%20t%3D%22scale%20%7B%7Bi%7D%7D%22%2F%3E%20%20%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
 
                     
                     </section>
@@ -1149,5 +1178,5 @@ require(["gitbook"], function(gitbook) {
 
         <!-- body:end -->
     </body>
-    <!-- End of book Introduction -->
+    <!-- End of book CraftML -->
 </html>
