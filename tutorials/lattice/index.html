@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.5" data-basepath="../.." data-revision="Thu Jan 07 2016 23:04:50 GMT-0700 (MST)">
+    <div class="book" data-level="1.5" data-basepath="../.." data-revision="Sat Jan 09 2016 07:29:34 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -494,21 +494,6 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5" data-path="language/structure/repeat.html">
-            
-                
-                    <a href="../../language/structure/repeat.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.5.</b>
-                        
-                        repeat
-                    </a>
-            
-            
-        </li>
-    
 
             </ul>
             
@@ -781,60 +766,75 @@
             
         </li>
     
-        <li class="chapter " data-level="6" data-path="language/module/index.html">
+        <li class="chapter " data-level="6" data-path="language/template/index.html">
             
                 
-                    <a href="../../language/module/index.html">
+                    <a href="../../language/template/index.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>6.</b>
                         
-                        Module
+                        Template
                     </a>
             
             
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="6.1" data-path="language/module/craft.html">
+        <li class="chapter " data-level="6.1" data-path="language/template/part.html">
             
                 
-                    <a href="../../language/module/craft.html">
+                    <a href="../../language/template/part.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>6.1.</b>
                         
-                        craft
+                        part
                     </a>
             
             
         </li>
     
-        <li class="chapter " data-level="6.2" data-path="language/module/parameter.html">
+        <li class="chapter " data-level="6.2" data-path="language/template/param.html">
             
                 
-                    <a href="../../language/module/parameter.html">
+                    <a href="../../language/template/param.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>6.2.</b>
                         
-                        parameter
+                        param
                     </a>
             
             
         </li>
     
-        <li class="chapter " data-level="6.3" data-path="language/module/content.html">
+        <li class="chapter " data-level="6.3" data-path="language/template/repeat.html">
             
                 
-                    <a href="../../language/module/content.html">
+                    <a href="../../language/template/repeat.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>6.3.</b>
+                        
+                        repeat
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="language/template/content.html">
+            
+                
+                    <a href="../../language/template/content.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
                         
                         content
                     </a>
@@ -1098,7 +1098,7 @@
 <ul>
 <li><span class="doc-link transform"><a href="../../language/transform/rotate.html" target="_doc"><code>rotate</code></a></span></li>
 <li><span class="doc-link transform"><a href="../../language/transform/clip.html" target="_doc"><code>clip</code></a></span></li>
-<li><span class="doc-link tag"><a href="../../language/module/part.md" target="_doc"><code>&lt;part&gt;</code></a></span></li>
+<li><span class="doc-link tag"><a href="../../language/template/part.html" target="_doc"><code>&lt;part&gt;</code></a></span></li>
 </ul>
 <p>This lattice is a 3 by 5 grid of tiles, where each tile is an X.</p>
 <p>First, create an X pattern using two elongated cubes crossing each other.
@@ -1119,10 +1119,10 @@ We assign an id to the square cube <code>id=&quot;square&quot;</code>.
 Then, we can write <code>clip #square</code> to select this square cube and remove
 everything except for the portions inside the square.</p>
 <p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22center%20xy%22%20t%3D%22clip%20%23square%22%3E%0A%20%20%3Ccube%20size%3D%2250%2050%2010%22%20id%3D%22square%22%2F%3E%0A%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%2045%22%2F%3E%0A%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%20-45%22%2F%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
-<p>We wrap the code above with a <span class="doc-link tag"><a href="../../language/module/part.md" target="_doc"><code>&lt;part&gt;</code></a></span> tag and set its name to `tile`. This
+<p>We wrap the code above with a <span class="doc-link tag"><a href="../../language/template/part.html" target="_doc"><code>&lt;part&gt;</code></a></span> tag and set its name to `tile`. This
 allows us to use `<tile>` later each time we wish to generate a tile model,
 instead of writing the same code again. This greatly improves reusability.
-Another benefit of using a <span class="doc-link tag"><a href="../../language/module/part.md" target="_doc"><code>&lt;part&gt;</code></a></span> tag is to improve readability. In the code
+Another benefit of using a <span class="doc-link tag"><a href="../../language/template/part.html" target="_doc"><code>&lt;part&gt;</code></a></span> tag is to improve readability. In the code
 below, it is not hard to understand the code is meant to create a row of
 five tiles.</tile></p>
 <p><iframe src="http://localhost:5000/v?content=%3Cpart%20name%3D%22tile%22%3E%0A%20%20%3Cg%20l%3D%22center%20xy%22%20t%3D%22clip%20%23square%22%3E%0A%20%20%20%20%3Ccube%20size%3D%2250%2050%2010%22%20id%3D%22square%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%2045%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%20-45%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fpart%3E%0A%0A%3Crow%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
