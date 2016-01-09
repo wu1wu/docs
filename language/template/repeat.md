@@ -1,6 +1,6 @@
 # repeat
 
-{{ 'repeat' | tag }} is a directive that can be added to any tag to repeat
+{{ 'repeat' | attr }} is a directive that can be added to any tag to repeat
 the object represented by that tag multiple times.
 
 For example, to create a row of five cubes, instead of writing `<cube/>` five
@@ -12,7 +12,7 @@ times, we write only one `<cube/>` and add `repeat="5"` to the tag.
 </row>
 {% endcraftml %}
 
-{{ 'repeat' | tag }} also allows us to iterate through an array using
+{{ 'repeat' | attr }} also allows us to iterate through an array using
 the expression:
 
 __repeat__="_variable_name_ __in__ _array_"

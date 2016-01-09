@@ -16,7 +16,7 @@ and radiuses. Initially, they all meet at the origin (0,0,0).
 {% endcraftml %}
 
 When no axis was given (i.e., `t="center"`), centering is done in all dimensions.
-When some axes are specified (i.e., `t="center xy"`), centering is done in thoese axes.
+When some axes are specified (i.e., `t="center xy"`), centering is done in those axes.
 For instance, `center xy` centers the three
 cylinders in _x_ and _y_ axes with respect to the first child, which
 is the pink disk.
