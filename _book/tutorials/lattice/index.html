@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.5" data-basepath="../.." data-revision="Sat Jan 09 2016 07:29:34 GMT-0700 (MST)">
+    <div class="book" data-level="1.5" data-basepath="../.." data-revision="Sat Jan 09 2016 22:49:44 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -893,6 +893,81 @@
             
         </li>
     
+        <li class="chapter " data-level="7.3" data-path="language/css/visibility.html">
+            
+                
+                    <a href="../../language/css/visibility.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        visibility
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="language/css/font-family.html">
+            
+                
+                    <a href="../../language/css/font-family.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        font-family
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="language/css/font-size.html">
+            
+                
+                    <a href="../../language/css/font-size.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        font-size
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="language/css/font-weight.html">
+            
+                
+                    <a href="../../language/css/font-weight.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        font-weight
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="language/css/font-style.html">
+            
+                
+                    <a href="../../language/css/font-style.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        font-style
+                    </a>
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -1119,16 +1194,22 @@ We assign an id to the square cube <code>id=&quot;square&quot;</code>.
 Then, we can write <code>clip #square</code> to select this square cube and remove
 everything except for the portions inside the square.</p>
 <p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22center%20xy%22%20t%3D%22clip%20%23square%22%3E%0A%20%20%3Ccube%20size%3D%2250%2050%2010%22%20id%3D%22square%22%2F%3E%0A%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%2045%22%2F%3E%0A%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%20-45%22%2F%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
-<p>We wrap the code above with a <span class="doc-link tag"><a href="../../language/template/part.html" target="_doc"><code>&lt;part&gt;</code></a></span> tag and set its name to `tile`. This
+<p>We wrap the code above with a 
+  <span class="doc-link tag"><a href="../../language/template/part.html" target="_doc"><code>&lt;part&gt;</code></a></span>
+ tag and set its name to `tile`. This
 allows us to use `<tile>` later each time we wish to generate a tile model,
 instead of writing the same code again. This greatly improves reusability.
-Another benefit of using a <span class="doc-link tag"><a href="../../language/template/part.html" target="_doc"><code>&lt;part&gt;</code></a></span> tag is to improve readability. In the code
+Another benefit of using a 
+  <span class="doc-link tag"><a href="../../language/template/part.html" target="_doc"><code>&lt;part&gt;</code></a></span>
+ tag is to improve readability. In the code
 below, it is not hard to understand the code is meant to create a row of
 five tiles.</tile></p>
 <p><iframe src="http://localhost:5000/v?content=%3Cpart%20name%3D%22tile%22%3E%0A%20%20%3Cg%20l%3D%22center%20xy%22%20t%3D%22clip%20%23square%22%3E%0A%20%20%20%20%3Ccube%20size%3D%2250%2050%2010%22%20id%3D%22square%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%2045%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%20-45%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fpart%3E%0A%0A%3Crow%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%20%20%3Ctile%2F%3E%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
 <p>Finally, we add <code>repeat=&quot;3&quot;</code> to <span class="doc-link transform"><a href="../../language/transform/rotate.html" target="_doc"><code>rotate</code></a></span> to repeat this row three times.
 See <span class="doc-link attr"><a href="../../language/directive/repeat.html" target="_doc"><code>repeat</code></a></span> for more details how it works.Finally, we
-wrap the repeated rows with a <span class="doc-link tag"><a href="../../language/css/color.html" target="_doc"><code>&lt;col&gt;</code></a></span> to arrange the resulting three rows in a
+wrap the repeated rows with a 
+  <span class="doc-link tag"><a href="../../language/css/color.html" target="_doc"><code>&lt;col&gt;</code></a></span>
+ to arrange the resulting three rows in a
 column along the y-axis. We are done!</p>
 <p><iframe src="http://localhost:5000/v?content=%3Cpart%20name%3D%22tile%22%3E%0A%20%20%3Cg%20l%3D%22center%20xy%22%20t%3D%22clip%20%23square%22%3E%0A%20%20%20%20%3Ccube%20size%3D%2250%2050%2010%22%20id%3D%22square%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%2045%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%22100%2010%2010%22%20t%3D%22rotate%20z%20-45%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fpart%3E%0A%0A%3Ccol%3E%0A%20%20%3Crow%20repeat%3D%223%22%3E%0A%20%20%20%20%3Ctile%2F%3E%0A%20%20%20%20%3Ctile%2F%3E%0A%20%20%20%20%3Ctile%2F%3E%0A%20%20%20%20%3Ctile%2F%3E%0A%20%20%20%20%3Ctile%2F%3E%20%20%20%20%0A%20%20%3C%2Frow%3E%0A%3C%2Fcol%3E" width="770" height="315" frameborder="0"></iframe></p>
 <h2 id="exercises">Exercises</h2>

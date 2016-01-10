@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.4" data-basepath="../.." data-revision="Sat Jan 09 2016 07:29:34 GMT-0700 (MST)">
+    <div class="book" data-level="1.4" data-basepath="../.." data-revision="Sat Jan 09 2016 22:49:44 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -893,6 +893,81 @@
             
         </li>
     
+        <li class="chapter " data-level="7.3" data-path="language/css/visibility.html">
+            
+                
+                    <a href="../../language/css/visibility.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        visibility
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="language/css/font-family.html">
+            
+                
+                    <a href="../../language/css/font-family.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        font-family
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="language/css/font-size.html">
+            
+                
+                    <a href="../../language/css/font-size.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        font-size
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="language/css/font-weight.html">
+            
+                
+                    <a href="../../language/css/font-weight.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        font-weight
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="language/css/font-style.html">
+            
+                
+                    <a href="../../language/css/font-style.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        font-style
+                    </a>
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -1095,7 +1170,9 @@
 <p>The objective of this tutorial is to craft a button with four holes like below.</p>
 <p><img src="objective.png" alt="objective"></p>
 <p>First, notice that the body of button looks like a flatten pizza dough. We
-use a <span class="doc-link tag"><a href="../../language/primitives/3d/sphere.html" target="_doc"><code>&lt;sphere&gt;</code></a></span> tag to create a ball, like a ball of pizza dough before it was flatten.
+use a 
+  <span class="doc-link tag"><a href="../../language/primitives/3d/sphere.html" target="_doc"><code>&lt;sphere&gt;</code></a></span>
+ tag to create a ball, like a ball of pizza dough before it was flatten.
 By default, a sphere as a size of 10 by 10 by 10. To flatten this sphere, one
 approach is to reduce the size of this sphere along the z-axis. To do so, we
 use the transform command <span class="doc-link transform"><a href="../../language/transform/size.html" target="_doc"><code>size</code></a></span>, which transforms its size so that the
@@ -1103,7 +1180,9 @@ z dimension has the size of 2, while scaling the other two dimensions
 proportionally to keep its aspect ratio.</p>
 <p><iframe src="http://localhost:5000/v?content=%3Csphere%20t%3D%22size%20z%202%22%2F%3E" width="770" height="315" frameborder="0"></iframe></p>
 <p>Next we need to do is to drill holes. To achieve this, we create four cylinders
-(<span class="doc-link tag"><a href="../../language/primitives/3d/cylinder.html" target="_doc"><code>&lt;cylinder&gt;</code></a></span>) that will be used to cut through the body of the button. These cylinders
+(
+  <span class="doc-link tag"><a href="../../language/primitives/3d/cylinder.html" target="_doc"><code>&lt;cylinder&gt;</code></a></span>
+) that will be used to cut through the body of the button. These cylinders
 need to be positioned at the four corners of the squares. To do so, we use
 the transform command <span class="doc-link transform"><a href="../../language/transform/position.html" target="_doc"><code>position</code></a></span> to change to position of the cylinder to
 the desired locations. Because later we will want to move these cylinders as a group,

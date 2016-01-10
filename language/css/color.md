@@ -1,6 +1,6 @@
 # color
 
-Color elements selected by element names
+{{ 'color' | tag }} specifies the color of an element.
 
 {% craftml %}
 <style>
@@ -12,11 +12,11 @@ Color elements selected by element names
   }
 </style>
 <row>
-  <cube></cube>
-  <cylinder></cylinder>
-  <cube></cube>
-  <cylinder></cylinder>
-  <cube></cube>
+  <cube/>
+  <cylinder/>
+  <cube/>
+  <cylinder/>
+  <cube/>
 </row>
 {% endcraftml %}
 
@@ -32,11 +32,11 @@ Color elements selected by class labels
   }
 </style>
 <row>
-  <cube class="odd"></cube>
-  <cube class="even"></cube>
-  <cube class="odd"></cube>
-  <cube class="even"></cube>
-  <cube class="odd"></cube>
+  <cube class="odd"/>
+  <cube class="even"/>
+  <cube class="odd"/>
+  <cube class="even"/>
+  <cube class="odd"/>
 </row>
 {% endcraftml %}
 
@@ -55,8 +55,8 @@ Color elements selected by Id
   }
 </style>
 <row>
-  <cube id="one"></cube>
-  <cube id="two"></cube>
-  <cube id="three"></cube>
+  <cube id="one"/>
+  <cube id="two"/>
+  <cube id="three"/>
 </row>
 {% endcraftml %}
