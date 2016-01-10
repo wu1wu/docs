@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.6" data-basepath="../.." data-revision="Sat Jan 09 2016 07:29:34 GMT-0700 (MST)">
+    <div class="book" data-level="1.6" data-basepath="../.." data-revision="Sat Jan 09 2016 22:49:44 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -893,6 +893,81 @@
             
         </li>
     
+        <li class="chapter " data-level="7.3" data-path="language/css/visibility.html">
+            
+                
+                    <a href="../../language/css/visibility.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        visibility
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="language/css/font-family.html">
+            
+                
+                    <a href="../../language/css/font-family.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        font-family
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="language/css/font-size.html">
+            
+                
+                    <a href="../../language/css/font-size.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        font-size
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="language/css/font-weight.html">
+            
+                
+                    <a href="../../language/css/font-weight.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        font-weight
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="language/css/font-style.html">
+            
+                
+                    <a href="../../language/css/font-style.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        font-style
+                    </a>
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -1095,9 +1170,13 @@
 <p>Let&apos;s build a snowman!</p>
 <p><img src="objective.png" alt="objective"></p>
 <p>The snowman has three parts: head, body, and legs, and they are stacked vertically.
-For each part, we can use a <span class="doc-link tag"><a href="../../language/template/part.html" target="_doc"><code>&lt;part&gt;</code></a></span> tag to define what the part should look like.
+For each part, we can use a 
+  <span class="doc-link tag"><a href="../../language/template/part.html" target="_doc"><code>&lt;part&gt;</code></a></span>
+ tag to define what the part should look like.
 A meaningful name is assigned to each `<part>` tag, like `name=&quot;head&quot;`. Then, we
-can describe how the three parts should be stacked using a <span class="doc-link tag"><a href="../../language/structure/stack.html" target="_doc"><code>&lt;stack&gt;</code></a></span> tag. Note
+can describe how the three parts should be stacked using a 
+  <span class="doc-link tag"><a href="../../language/structure/stack.html" target="_doc"><code>&lt;stack&gt;</code></a></span>
+ tag. Note
 that a negative spacing is used (i.e., <code>space=&quot;-4&quot;</code>) to allow the three parts to
 overlap (so that they can be printed in one piece later).</part></p>
 <p><iframe src="http://localhost:5000/v?content=%3Cpart%20name%3D%22head%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22body%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22legs%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%0A%3Cstack%20spacing%3D%22-4%22%3E%0A%20%20%3Chead%2F%3E%0A%20%20%3Cbody%2F%3E%0A%20%20%3Clegs%2F%3E%0A%3C%2Fstack%3E" width="770" height="315" frameborder="0"></iframe></p>
@@ -1114,7 +1193,9 @@ a row of cubes, and we use the <span class="doc-link transform"><a href="../../l
 at the right place on the sphere.</p>
 <p><iframe src="http://localhost:5000/v?content=%3Cpart%20name%3D%22head%22%3E%0A%20%20%3Csphere%2F%3E%0A%20%20%3Crow%20spacing%3D%222%22%20t%3D%22position%202.5%208%205%22%3E%0A%20%20%20%20%3Ccube%20size%3D%222%202%202%22%2F%3E%0A%20%20%20%20%3Ccube%20size%3D%222%202%202%22%2F%3E%0A%20%20%3C%2Frow%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22body%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%3Cpart%20name%3D%22legs%22%3E%0A%20%20%3Csphere%2F%3E%0A%3C%2Fpart%3E%0A%0A%3Cstack%20spacing%3D%22-4%22%3E%0A%20%20%3Chead%2F%3E%0A%20%20%3Cbody%20t%3D%22scale%201.5%22%2F%3E%0A%20%20%3Clegs%20t%3D%22scale%202%22%2F%3E%0A%3C%2Fstack%3E" width="770" height="315" frameborder="0"></iframe></p>
 <p>Finally, let&apos;s add some colors to make the snowman look pretty! To do so,
-we can add a <span class="doc-link tag"><a href="../../language/css/style.md" target="_doc"><code>&lt;style&gt;</code></a></span>  tag and write some css styling rules. CraftML lets you
+we can add a 
+  <span class="doc-link tag"><a href="../../language/css/font-style.html" target="_doc"><code>&lt;style&gt;</code></a></span>
+  tag and write some css styling rules. CraftML lets you
 style your 3D object just like how one would style a web page. Here, we
 give each part a unique snow color. We color the eyes black. Note that
 a unique id (<code>id=&quot;eyes&quot;</code>) is added to the row representing the eyes so
