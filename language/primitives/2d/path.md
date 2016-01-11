@@ -1,6 +1,7 @@
 # path
 
-Support a subset of SVG path syntax
+Create a 2d path using SVG syntax.
+* `d` is the path descriptor
 
 {% craftml %}
 <!-- rectangle -->
@@ -10,9 +11,9 @@ Support a subset of SVG path syntax
 <path d="M30 10 l 10 10 l 10 -10 z"/>
 {% endcraftml %}
 
-
-You can draw a path using another program and export it as an svg path tag to use
-in craftml.
+Typically, you would use another drawing program to draw a path and export
+it as an SVG tag to use in CraftML, because it is quite difficult to write
+out a path descriptor manually.
 
 {% craftml %}
 <path d="M425.714,298.795c-3.315-25.56-31.224-50.174-59.725-52.675c-1.32-0.116-2.678-0.175-4.035-0.175

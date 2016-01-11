@@ -1,11 +1,8 @@
 # sphere
 
-{% craftml %}
-<sphere/>
-{% endcraftml %}
+Create a sphere solid.
 
-
-## `radius="float"`
+* `radius` controls the radius of the sphere (default = 5).
 
 {% craftml %}
 <row spacing="10">

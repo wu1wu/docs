@@ -1,10 +1,12 @@
 # prism
 
-{% craftml %}
-<prism/>
-{% endcraftml %}
+Create an n-side prism solid.
 
-## `sides="integer"`
+* `sides` controls the number of sides (default = 3).
+* `sideLength` controls the size of each side.
+* `radius` controls the radius of the circle that contains this prism.
+
+### sides="_number_"
 
 {% craftml %}
 <row spacing="10">
@@ -16,7 +18,7 @@
 </row>
 {% endcraftml %}
 
-## `sideLength="float"`
+## sideLength="_number_"
 
 {% craftml %}
 <col>
@@ -25,24 +27,11 @@
 </col>
 {% endcraftml %}
 
-## `radius="float"`
+## radius="_number_"
 
 {% craftml %}
 <stack>
   <prism radius="10" sides="5"/>
   <circle radius="10"/>
 </stack>
-{% endcraftml %}
-
-## Examples
-
-{% craftml %}
-<row spacing="10" l="alignY(100%)">
-  <repeat each="n" in="{:[3,5,7,9]:}">
-    <col>
-      <prism sideLength="10" sides="{:n:}"/>
-      <cube size="10 50 10"/>
-    </col>
-  </repeat>
-</row>
 {% endcraftml %}

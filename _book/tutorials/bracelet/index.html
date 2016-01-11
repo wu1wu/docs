@@ -25,6 +25,10 @@
         
     
         
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/default.min.css">
+        
+    
+        
         <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
@@ -48,7 +52,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.8" data-basepath="../.." data-revision="Sat Jan 09 2016 22:49:44 GMT-0700 (MST)">
+    <div class="book" data-level="1.8" data-basepath="../.." data-revision="Mon Jan 11 2016 06:37:47 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -378,14 +382,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.3" data-path="language/primitives/2d/polygon.html">
+        <li class="chapter " data-level="2.2.3" data-path="language/primitives/2d/triangle.html">
+            
+                
+                    <a href="../../language/primitives/2d/triangle.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.3.</b>
+                        
+                        triangle
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="language/primitives/2d/polygon.html">
             
                 
                     <a href="../../language/primitives/2d/polygon.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.2.3.</b>
+                            <b>2.2.4.</b>
                         
                         polygon
                     </a>
@@ -393,14 +412,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.4" data-path="language/primitives/2d/path.html">
+        <li class="chapter " data-level="2.2.5" data-path="language/primitives/2d/path.html">
             
                 
                     <a href="../../language/primitives/2d/path.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.2.4.</b>
+                            <b>2.2.5.</b>
                         
                         path
                     </a>
@@ -1040,16 +1059,31 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="9.1" data-path="language/script/this.html">
+        <li class="chapter " data-level="9.1" data-path="language/script/query.html">
             
                 
-                    <a href="../../language/script/this.html">
+                    <a href="../../language/script/query.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>9.1.</b>
                         
-                        this
+                        $
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="language/script/$params.html">
+            
+                
+                    <a href="../../language/script/$params.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        $params
                     </a>
             
             
@@ -1187,7 +1221,7 @@ Every 3D model on [craftml.io] has a unique module id. This heart model&apos;s i
 we want to import <code>4yS59</code> and call it <code>foo</code>. We write <code>&lt;foo module=&quot;4yS59&quot;&gt;</code>.
 <code>foo</code> can be any name we want. But it is usually a good idea to choose a
 meaningful and descriptive name, such as <code>heart</code>.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cheart%20module%3D%224yS59%22%20repeat%3D%2212%22%2F%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="http://localhost:5000/v?content=%3Cheart%20module%3D%224yS59%22%20repeat%3D%2212%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
 <h3 id="step-2-ring">Step 2: Ring</h3>
 <p>If you&apos;ve gone through the other tutorials, by now you should probably be
 able to craft your own ring. But let&apos;s just find one we can import to save time.
@@ -1197,7 +1231,7 @@ One good option is the <strong>donut</strong> module at <a href="https://craftml
 be more appropriate in our case. Notice that there are two parameters we can
 set to customize this ring (or donut): <code>diameter</code> and <code>resolution</code>. We
 set the <code>diameter</code> to 80.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cheart%20module%3D%224yS59%22%20repeat%3D%2212%22%2F%3E%0A%3Cring%20module%3D%22awtSY%22%20diameter%3D%2280%22%2F%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="http://localhost:5000/v?content=%3Cheart%20module%3D%224yS59%22%20repeat%3D%2212%22%2F%3E%0A%3Cring%20module%3D%22awtSY%22%20diameter%3D%2280%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
 <h3 id="step-3-layout">Step 3: Layout</h3>
 <p>The last step is to arrange the 12 hearts around
 the ring. Let&apos;s see if there&apos;s an existing layout module that will do this
@@ -1207,12 +1241,12 @@ looks like the one we need. Its
 module ID is <code>uHUIw</code>. It has a <code>radius</code> parameter. It takes all the elements
 inside the tag and arranges them around a circle of that radius. We set
 the <code>radius</code> to 40 in order to match the ring&apos;s diameter, which is 80.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Csun-layout%20module%3D%22uHUIw%22%20radius%3D%2240%22%3E%0A%20%20%3Cheart%20module%3D%224yS59%22%20repeat%3D%2212%22%2F%3E%0A%3C%2Fsun-layout%3E%0A%3Cring%20module%3D%22awtSY%22%20diameter%3D%2280%22%2F%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="http://localhost:5000/v?content=%3Csun-layout%20module%3D%22uHUIw%22%20radius%3D%2240%22%3E%0A%20%20%3Cheart%20module%3D%224yS59%22%20repeat%3D%2212%22%2F%3E%0A%3C%2Fsun-layout%3E%0A%3Cring%20module%3D%22awtSY%22%20diameter%3D%2280%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>Still not quite right because the hearts are lying down on the ground plane.
 We need to rotate them to the right orientation (<span class="doc-link transform"><a href="../../language/transform/rotate.html" target="_doc"><code>rotate</code></a></span> ).</p>
-<p><iframe src="http://localhost:5000/v?content=%3Csun-layout%20module%3D%22uHUIw%22%20radius%3D%2240%22%3E%0A%20%20%3Cheart%20module%3D%224yS59%22%20repeat%3D%2212%22%0A%20%20%20%20t%3D%22rotate%20x%2090%3B%20rotate%20z%2090%22%2F%3E%0A%3C%2Fsun-layout%3E%0A%3Cring%20module%3D%22awtSY%22%20diameter%3D%2280%22%2F%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="http://localhost:5000/v?content=%3Csun-layout%20module%3D%22uHUIw%22%20radius%3D%2240%22%3E%0A%20%20%3Cheart%20module%3D%224yS59%22%20repeat%3D%2212%22%0A%20%20%20%20t%3D%22rotate%20x%2090%3B%20rotate%20z%2090%22%2F%3E%0A%3C%2Fsun-layout%3E%0A%3Cring%20module%3D%22awtSY%22%20diameter%3D%2280%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>Finally, let&apos;s do some centering and styling. Here&apos;s our bracelet!
-<iframe src="http://localhost:5000/v?content=%3Cstyle%3E%0Aheart%20%7B%0A%20%20color%3A%20crimson%3B%0A%7D%0Aring%20%7B%0A%20%20color%3A%20pink%3B%0A%7D%0A%3C%2Fstyle%3E%0A%0A%3Cg%20l%3D%22centerZ()%22%3E%0A%20%20%3Csun-layout%20module%3D%22uHUIw%22%20radius%3D%2240%22%3E%0A%20%20%20%20%3Cheart%20module%3D%224yS59%22%20repeat%3D%2212%22%0A%20%20%20%20%20%20t%3D%22rotate%20x%2090%3B%20rotate%20z%2090%22%2F%3E%0A%20%20%3C%2Fsun-layout%3E%0A%20%20%3Cring%20module%3D%22awtSY%22%20diameter%3D%2280%22%2F%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
+<iframe src="http://localhost:5000/v?content=%3Cstyle%3E%0Aheart%20%7B%0A%20%20color%3A%20crimson%3B%0A%7D%0Aring%20%7B%0A%20%20color%3A%20pink%3B%0A%7D%0A%3C%2Fstyle%3E%0A%0A%3Cg%20l%3D%22centerZ()%22%3E%0A%20%20%3Csun-layout%20module%3D%22uHUIw%22%20radius%3D%2240%22%3E%0A%20%20%20%20%3Cheart%20module%3D%224yS59%22%20repeat%3D%2212%22%0A%20%20%20%20%20%20t%3D%22rotate%20x%2090%3B%20rotate%20z%2090%22%2F%3E%0A%20%20%3C%2Fsun-layout%3E%0A%20%20%3Cring%20module%3D%22awtSY%22%20diameter%3D%2280%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
 
                     
                     </section>
