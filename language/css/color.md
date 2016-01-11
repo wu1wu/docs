@@ -1,6 +1,6 @@
 # color
 
-{{ 'color' | tag }} specifies the color of an element.
+{{ 'color' | attr }} specifies the color of an element.
 
 {% craftml %}
 <style>

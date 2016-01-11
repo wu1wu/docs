@@ -25,9 +25,8 @@ easily create, edit, and share their CraftML models. Each model on
 into your own model.
 
 For example, craft [4yS59](http://craftml.io/4yS59) is a heart, created by [calebhsu](http://craftml.io/~calebhsu).
-You can import this craft and give it any name, say _heart_.
+You can import this model and give it any name, say _heart_.
 
 {% craftml %}
-<craft name="heart" module="4yS59"/>
-<heart></heart>
+<heart module="4yS59"/>
 {% endcraftml %}
