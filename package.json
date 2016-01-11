@@ -6,9 +6,6 @@
   "dependencies": {
     "gitbook-plugin-craftml": "craftml/gitbook-plugin-craftml",
     "gitbook-plugin-toggle-chapters": "^0.0.3",
-    "gitbook-plugin-fancybox": "^1.0.1",
-    "gitbook-plugin-ace": "^0.0.2",
-    "gitbook-plugin-youtubex": "^0.3.0",
     "lodash": "^3.10.1"
   },
   "devDependencies": {},

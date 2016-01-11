@@ -25,6 +25,10 @@
         
     
         
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/default.min.css">
+        
+    
+        
         <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
@@ -48,7 +52,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="5" data-basepath="../.." data-revision="Sat Jan 09 2016 22:49:44 GMT-0700 (MST)">
+    <div class="book" data-level="5" data-basepath="../.." data-revision="Mon Jan 11 2016 06:37:47 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -378,14 +382,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.3" data-path="language/primitives/2d/polygon.html">
+        <li class="chapter " data-level="2.2.3" data-path="language/primitives/2d/triangle.html">
+            
+                
+                    <a href="../../language/primitives/2d/triangle.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.3.</b>
+                        
+                        triangle
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="language/primitives/2d/polygon.html">
             
                 
                     <a href="../../language/primitives/2d/polygon.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.2.3.</b>
+                            <b>2.2.4.</b>
                         
                         polygon
                     </a>
@@ -393,14 +412,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.4" data-path="language/primitives/2d/path.html">
+        <li class="chapter " data-level="2.2.5" data-path="language/primitives/2d/path.html">
             
                 
                     <a href="../../language/primitives/2d/path.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.2.4.</b>
+                            <b>2.2.5.</b>
                         
                         path
                     </a>
@@ -1040,16 +1059,31 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="9.1" data-path="language/script/this.html">
+        <li class="chapter " data-level="9.1" data-path="language/script/query.html">
             
                 
-                    <a href="../../language/script/this.html">
+                    <a href="../../language/script/query.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>9.1.</b>
                         
-                        this
+                        $
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="language/script/$params.html">
+            
+                
+                    <a href="../../language/script/$params.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        $params
                     </a>
             
             
@@ -1177,17 +1211,17 @@
 <p>In the examples below, we compare the effects of <span class="doc-link layout"><a href="align.html" target="_doc"><code>align</code></a></span>,
 <span class="doc-link layout"><a href="center.html" target="_doc"><code>center</code></a></span>, and <span class="doc-link layout"><a href="adjoin.html" target="_doc"><code>adjoin</code></a></span> as they are applied to a group of
 three differently sized cubes.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cg%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2020%3B%20position%20x%200%22%20color%3D%22yellow%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2015%3B%20position%20x%2020%22%20color%3D%22pink%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2010%3B%20position%20x%2040%22%20color%3D%22red%22%2F%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="http://localhost:5000/v?content=%3Cg%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2020%3B%20position%20x%200%22%20color%3D%22yellow%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2015%3B%20position%20x%2020%22%20color%3D%22pink%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2010%3B%20position%20x%2040%22%20color%3D%22red%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p><code>l=&quot;align y max&quot;</code> aligns the pink and red cubes to meet at the max side
 of the yellow cube (first children) along the y axis.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22align%20y%20max%22%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2020%3B%20position%20x%200%22%20color%3D%22yellow%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2015%3B%20position%20x%2020%22%20color%3D%22pink%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2010%3B%20position%20x%2040%22%20color%3D%22red%22%2F%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22align%20y%20max%22%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2020%3B%20position%20x%200%22%20color%3D%22yellow%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2015%3B%20position%20x%2020%22%20color%3D%22pink%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2010%3B%20position%20x%2040%22%20color%3D%22red%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p><code>l=&quot;center y&quot;</code> centers the pink and red cubes to the center
 of the yellow cube (first children) along the y axis.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22center%20y%22%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2020%3B%20position%20x%200%22%20color%3D%22yellow%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2015%3B%20position%20x%2020%22%20color%3D%22pink%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2010%3B%20position%20x%2040%22%20color%3D%22red%22%2F%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22center%20y%22%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2020%3B%20position%20x%200%22%20color%3D%22yellow%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2015%3B%20position%20x%2020%22%20color%3D%22pink%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2010%3B%20position%20x%2040%22%20color%3D%22red%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p><code>l=&quot;adjoin y&quot;</code> moves the pink and red cubes along the y axis
 in such a way that the 2nd adjoins the 1st and the 3rd adjoins
 the 2nd, only along the y axis.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22adjoin%20y%22%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2020%3B%20position%20x%200%22%20color%3D%22yellow%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2015%3B%20position%20x%2020%22%20color%3D%22pink%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2010%3B%20position%20x%2040%22%20color%3D%22red%22%2F%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22adjoin%20y%22%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2020%3B%20position%20x%200%22%20color%3D%22yellow%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2015%3B%20position%20x%2020%22%20color%3D%22pink%22%2F%3E%0A%20%20%3Ccube%20t%3D%22size%20y%2010%3B%20position%20x%2040%22%20color%3D%22red%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>Each layout command uses the first child as the reference, anchors it at
 the same position, and re-aranges the rest of the children with respect to this first child.
 This is why in all the examples above, the yellow cube always remains in the

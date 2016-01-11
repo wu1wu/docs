@@ -25,6 +25,10 @@
         
     
         
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/default.min.css">
+        
+    
+        
         <link rel="stylesheet" href="../../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
@@ -48,7 +52,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="2.2" data-basepath="../../.." data-revision="Sat Jan 09 2016 22:49:44 GMT-0700 (MST)">
+    <div class="book" data-level="2.2" data-basepath="../../.." data-revision="Mon Jan 11 2016 06:37:47 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -378,14 +382,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.3" data-path="language/primitives/2d/polygon.html">
+        <li class="chapter " data-level="2.2.3" data-path="language/primitives/2d/triangle.html">
+            
+                
+                    <a href="../../../language/primitives/2d/triangle.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.3.</b>
+                        
+                        triangle
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="language/primitives/2d/polygon.html">
             
                 
                     <a href="../../../language/primitives/2d/polygon.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.2.3.</b>
+                            <b>2.2.4.</b>
                         
                         polygon
                     </a>
@@ -393,14 +412,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.4" data-path="language/primitives/2d/path.html">
+        <li class="chapter " data-level="2.2.5" data-path="language/primitives/2d/path.html">
             
                 
                     <a href="../../../language/primitives/2d/path.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.2.4.</b>
+                            <b>2.2.5.</b>
                         
                         path
                     </a>
@@ -1040,16 +1059,31 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="9.1" data-path="language/script/this.html">
+        <li class="chapter " data-level="9.1" data-path="language/script/query.html">
             
                 
-                    <a href="../../../language/script/this.html">
+                    <a href="../../../language/script/query.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>9.1.</b>
                         
-                        this
+                        $
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="language/script/$params.html">
+            
+                
+                    <a href="../../../language/script/$params.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        $params
                     </a>
             
             
@@ -1167,7 +1201,33 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="2d-primitives">2D Primitives</h1>
-<p><iframe src="http://localhost:5000/v?content=%3Crow%20spacing%3D%2210%22%3E%0A%20%20%3Ccircle%2F%3E%0A%20%20%3Crectangle%2F%3E%0A%20%20%3Ctriangle%2F%3E%0A%20%20%3Cpolygon%20points%3D%220%2C0%2010%2C0%2010%2C10%205%2C15%200%2C10%22%2F%3E%0A%3C%2Frow%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p>CraftML&apos;s built-in 2D primitives are:</p>
+<ul>
+<li><p><span class="doc-link tag"><a href="circle.html" target="_doc"><code>&lt;circle&gt;</code></a></span></p>
+</li>
+<li><p><span class="doc-link tag"><a href="rectangle.html" target="_doc"><code>&lt;rectangle&gt;</code></a></span></p>
+</li>
+<li><p><span class="doc-link tag"><a href="triangle.html" target="_doc"><code>&lt;triangle&gt;</code></a></span></p>
+</li>
+<li><p><span class="doc-link tag"><a href="polygon.html" target="_doc"><code>&lt;polygon&gt;</code></a></span></p>
+</li>
+<li><p><span class="doc-link tag"><a href="path.html" target="_doc"><code>&lt;path&gt;</code></a></span></p>
+</li>
+</ul>
+<p><iframe src="http://localhost:5000/v?content=%3Crow%20spacing%3D%225%22%3E%0A%20%20%3Ccircle%2F%3E%0A%20%20%3Crectangle%2F%3E%0A%20%20%3Ctriangle%2F%3E%0A%20%20%3Cpolygon%20points%3D%220%2C0%2010%2C0%2010%2C10%205%2C15%200%2C10%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M10%2010%20h%2010%20v%2015%20z%22%2F%3E%0A%3C%2Frow%3E" width="740" height="315" frameborder="0"></iframe></p>
+<h2 id="useful-techniques">Useful Techniques</h2>
+<p>Even though 2D primitives will not be exported for 3D printing, they are useful
+for a number of purposes.</p>
+<h3 id="spatial-markers">Spatial Markers</h3>
+<p>One useful technique is to use a 2D shape as a reference maker to perform
+special layout that&apos;s hard to achieved using only the builtin layout operations,
+such as <span class="doc-link attr"><a href="../../directive/align.html" target="_doc"><code>align</code></a></span>, <span class="doc-link attr"><a href="../../directive/adjoin.html" target="_doc"><code>adjoin</code></a></span>, and <span class="doc-link attr"><a href="../../directive/center.html" target="_doc"><code>center</code></a></span>.
+2D shapes do participate in layout operations , but they do not get exported for 3D printing.</p>
+<p>In the example below, we create a cylinder and place a couple circles to mark two distinct
+areas on the front side of this cylinder. Next, we create a small blue cube and use <code>$</code> in a
+script tag to select the circle, and then select the cube to align this cube
+to that circle.</p>
+<p><iframe src="http://localhost:5000/v?content=%3Cg%3E%0A%20%20%3Ccylinder%20height%3D%2220%22%0A%20%20%20%20style%3D%22opacity%3A0.9%3B%20color%3A%20yellow%22%2F%3E%0A%0A%20%20%3C!--%20define%20two%20circles%20as%20markers%20--%3E%0A%20%20%3Ccircle%20t%3D%22rotate%20x%2090%3B%20position%200%208%209%22%0A%20%20%20%20id%3D%22marker1%22%0A%20%20%20%20style%3D%22color%3A%20red%22%2F%3E%0A%20%20%3Ccircle%20t%3D%22rotate%20x%2090%3B%20position%200%208%202%22%0A%20%20%20%20id%3D%22marker2%22%0A%20%20%20%20style%3D%22color%3A%20red%22%2F%3E%20%20%20%20%0A%3C%2Fg%3E%0A%0A%3Ccube%20t%3D%22scale%200.5%22%20color%3D%22blue%22%2F%3E%0A%3Csphere%20t%3D%22scale%200.5%22%20color%3D%22green%22%2F%3E%0A%0A%3Cscript%3E%0A%20%20%2F%2F%20align%20the%20cube%20with%20%23marker1%0A%20%20%24(&apos;circle%23marker1&apos;).add(&apos;cube&apos;)%0A%20%20%20%20.l(&apos;adjoin%20y%20max%3B%20center%20xz&apos;)%0A%0A%20%20%2F%2F%20align%20the%20sphere%20with%20%23marker2%20%20%0A%20%20%24(&apos;circle%23marker2&apos;).add(&apos;sphere&apos;)%0A%20%20%20%20.l(&apos;adjoin%20y%20max%3B%20center%20xz&apos;)%20%20%20%20%0A%3C%2Fscript%3E" width="740" height="315" frameborder="0"></iframe></p>
 
                     
                     </section>

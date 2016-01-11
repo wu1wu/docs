@@ -25,6 +25,10 @@
         
     
         
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/default.min.css">
+        
+    
+        
         <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
@@ -48,7 +52,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.2" data-basepath="../.." data-revision="Sat Jan 09 2016 22:49:44 GMT-0700 (MST)">
+    <div class="book" data-level="1.2" data-basepath="../.." data-revision="Mon Jan 11 2016 06:37:47 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -378,14 +382,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.3" data-path="language/primitives/2d/polygon.html">
+        <li class="chapter " data-level="2.2.3" data-path="language/primitives/2d/triangle.html">
+            
+                
+                    <a href="../../language/primitives/2d/triangle.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.3.</b>
+                        
+                        triangle
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="language/primitives/2d/polygon.html">
             
                 
                     <a href="../../language/primitives/2d/polygon.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.2.3.</b>
+                            <b>2.2.4.</b>
                         
                         polygon
                     </a>
@@ -393,14 +412,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.4" data-path="language/primitives/2d/path.html">
+        <li class="chapter " data-level="2.2.5" data-path="language/primitives/2d/path.html">
             
                 
                     <a href="../../language/primitives/2d/path.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.2.4.</b>
+                            <b>2.2.5.</b>
                         
                         path
                     </a>
@@ -1040,16 +1059,31 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="9.1" data-path="language/script/this.html">
+        <li class="chapter " data-level="9.1" data-path="language/script/query.html">
             
                 
-                    <a href="../../language/script/this.html">
+                    <a href="../../language/script/query.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>9.1.</b>
                         
-                        this
+                        $
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="language/script/$params.html">
+            
+                
+                    <a href="../../language/script/$params.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        $params
                     </a>
             
             
@@ -1187,23 +1221,23 @@ looks like a flat disk with a circular hole inside.</p>
  primitive. Set the height
 of this cylinder to <code>2</code>. We can set the height to an even smaller value to
 make the disk thinner.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Ccylinder%20height%3D%222%22%2F%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="http://localhost:5000/v?content=%3Ccylinder%20height%3D%222%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>Next, create a smaller flat disk with the height. By default, a cylinder has a
 radius of <code>5</code>. So we set this second cylinder&apos;s radius to <code>3</code> so that it is smaller
 than the previous cylinder. The purpose of this smaller disk is to mark the region
 we want to cut out of the bigger disk later.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Ccylinder%20height%3D%222%22%2F%3E%0A%3Ccylinder%20radius%3D%223%22%2F%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="http://localhost:5000/v?content=%3Ccylinder%20height%3D%222%22%2F%3E%0A%3Ccylinder%20radius%3D%223%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>We want to center the two disks. We can accomplish this by grouping the two by
 a <code>&lt;g&gt;</code> tag with a layout command <span class="doc-link layout"><a href="../../language/layout/center.html" target="_doc"><code>center</code></a></span> to center them
 along the x and y axes.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22center%20xy%22%3E%0A%20%20%3Ccylinder%20height%3D%222%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%223%22%2F%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22center%20xy%22%3E%0A%20%20%3Ccylinder%20height%3D%222%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%223%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
 <p>Now that the two disks are positioned in the way we want, we can cut the second,
 smaller disk from the bigger one using the transform command <span class="doc-link transform"><a href="../../language/transform/cut.html" target="_doc"><code>cut</code></a></span>. To indicate
 it&apos;s the second cylinder we really want to cut, we assign an <code>id</code> to that cylinder
 by <code>id=&quot;hole&quot;</code>. Then, we can give <code>#hole</code> as an argument to the cut command
 like <code>cut #hole</code>. Note that <code>#something</code> is just a standard css selector for selecting
 elements whose id is <code>something</code>.</p>
-<p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22center%20xy%22%20t%3D%22cut%20%23hole%22%3E%0A%20%20%3Ccylinder%20height%3D%222%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%223%22%20id%3D%22hole%22%2F%3E%0A%3C%2Fg%3E" width="770" height="315" frameborder="0"></iframe></p>
+<p><iframe src="http://localhost:5000/v?content=%3Cg%20l%3D%22center%20xy%22%20t%3D%22cut%20%23hole%22%3E%0A%20%20%3Ccylinder%20height%3D%222%22%2F%3E%0A%20%20%3Ccylinder%20radius%3D%223%22%20id%3D%22hole%22%2F%3E%0A%3C%2Fg%3E" width="740" height="315" frameborder="0"></iframe></p>
 <h2 id="exercises">Exercises</h2>
 <p>Can you apply what you&apos;ve learned to craft the following objects?</p>
 <ol>

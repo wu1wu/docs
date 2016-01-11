@@ -25,6 +25,10 @@
         
     
         
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/default.min.css">
+        
+    
+        
         <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
@@ -37,7 +41,7 @@
         
     
     
-    <link rel="next" href="../../language/script/this.html" />
+    <link rel="next" href="../../language/script/query.html" />
     
     
     <link rel="prev" href="../../language/html/headings.html" />
@@ -48,7 +52,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="9" data-basepath="../.." data-revision="Sat Jan 09 2016 22:49:44 GMT-0700 (MST)">
+    <div class="book" data-level="9" data-basepath="../.." data-revision="Mon Jan 11 2016 06:37:47 GMT-0700 (MST)">
     
 
 <div class="book-summary">
@@ -378,14 +382,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.3" data-path="language/primitives/2d/polygon.html">
+        <li class="chapter " data-level="2.2.3" data-path="language/primitives/2d/triangle.html">
+            
+                
+                    <a href="../../language/primitives/2d/triangle.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.3.</b>
+                        
+                        triangle
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="language/primitives/2d/polygon.html">
             
                 
                     <a href="../../language/primitives/2d/polygon.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.2.3.</b>
+                            <b>2.2.4.</b>
                         
                         polygon
                     </a>
@@ -393,14 +412,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.4" data-path="language/primitives/2d/path.html">
+        <li class="chapter " data-level="2.2.5" data-path="language/primitives/2d/path.html">
             
                 
                     <a href="../../language/primitives/2d/path.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.2.4.</b>
+                            <b>2.2.5.</b>
                         
                         path
                     </a>
@@ -1040,16 +1059,31 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="9.1" data-path="language/script/this.html">
+        <li class="chapter " data-level="9.1" data-path="language/script/query.html">
             
                 
-                    <a href="../../language/script/this.html">
+                    <a href="../../language/script/query.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>9.1.</b>
                         
-                        this
+                        $
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="language/script/$params.html">
+            
+                
+                    <a href="../../language/script/$params.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        $params
                     </a>
             
             
@@ -1167,20 +1201,63 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="script">script</h1>
-<p>CraftML&apos;s rendering engine takes a source DOM and transforms it a solid DOM.
-The <code>&lt;script&gt;</code>tag makes it possible to define custom transformations.</p>
-<p>Three special variables are made available in a script block.</p>
+<p>CraftML provides a rich vocabulary of tags and transformation / layout commands
+that can meet most of the 3D modeling needs. But there are special situations when
+this vocabulary is insufficient. For instance, we may want to layout elements
+in a wave pattern or enlarge any element that is smaller than 20mm in <em>x</em>. In such
+situations, we can use a 
+  <span class="doc-link tag"><a href="" target="_doc"><code>&lt;script&gt;</code></a></span>
+ tag to contain custom code to
+achieve what we want.</p>
+<p>Inside each 
+  <span class="doc-link tag"><a href="" target="_doc"><code>&lt;script&gt;</code></a></span>
+, three special variables are exposed to let us
+modify various aspects of the model we are designing:</p>
 <ul>
-<li><code>this</code> the current solid element</li>
-<li><code>$params</code> the parameters available for this solid element</li>
-<li><code>$</code> the query function for searching, navigating, and manipulating the solid DOM</li>
+<li><code>$params</code> a Javascript object whose properties are the parameters available within the scope.</li>
+<li><code>$</code> a query object providing a jQuery-like API for searching and manipulating the <em>this</em> element
+and its descendants.</li>
+<li><code>this</code> a reference to the element that contains this script tag.</li>
 </ul>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
+<h2 id="-params"><code>$params</code></h2>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">param</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;foo&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;number&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;5&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">param</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;bar&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;string&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;hello&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
+    $params.foo
+    <span class="hljs-comment">// =&gt; 5</span>
+    $params.bar
+    <span class="hljs-comment">// =&gt; &apos;hello&apos;</span>
     <span class="hljs-keyword">this</span>
-    $params
-    $
 </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 </code></pre>
+<h2 id=""><code>$</code></h2>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">cube</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-comment">// select cube and scale it by 2</span>
+    $(<span class="hljs-string">&apos;cube&apos;</span>).t(<span class="hljs-string">&apos;scale 2&apos;</span>)
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- is equivalent to --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">cube</span> <span class="hljs-attribute">t</span>=<span class="hljs-value">&quot;scale 2&quot;</span>/&gt;</span>
+</code></pre>
+<h2 id="-this"><code>this</code></h2>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">g</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">cube</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">cube</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
+        <span class="hljs-keyword">this</span>.children.length
+        <span class="hljs-comment">// =&gt; 2</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">cube</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">cube</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
+        <span class="hljs-keyword">this</span>.children.length
+        <span class="hljs-comment">// =&gt; 4</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
+</code></pre>
+<h2 id="live-example">Live Example</h2>
+<p><iframe src="http://localhost:5000/v?content=%3Ccube%2F%3E%0A%0A%3Cscript%3E%0A%09%2F%2F%20add%20a%20new%20parameter%20&apos;foo&apos;%0A%09%24params.foo%20%3D%205%0A%0A%09%2F%2F%20select%20the%20cube%20and%20scale%20it%20by%202%0A%09%24(&apos;cube&apos;).t(&apos;scale%20%7B%7Bfoo%7D%7D&apos;)%0A%3C%2Fscript%3E%0A%0A%3C!--%20foo%20can%20now%20be%20used%20as%20a%20parameter%20--%3E%0A%3Ccylinder%20t%3D%22translate%20z%20%7B%7Bfoo%20*%2010%7D%7D%22%2F%3E" width="740" height="315" frameborder="0"></iframe></p>
 
                     
                     </section>
@@ -1194,7 +1271,7 @@ The <code>&lt;script&gt;</code>tag makes it possible to define custom transforma
         <a href="../../language/html/headings.html" class="navigation navigation-prev " aria-label="Previous page: headings"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../language/script/this.html" class="navigation navigation-next " aria-label="Next page: this"><i class="fa fa-angle-right"></i></a>
+        <a href="../../language/script/query.html" class="navigation navigation-next " aria-label="Next page: $"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
